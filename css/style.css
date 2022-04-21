@@ -21,7 +21,7 @@ h1 {
 .navBar li{
   display: inline;
 }
-/* CSS Formatting for Lakes/Rivers page*/
+/* CSS Styling for Lakes/Rivers page*/
 .mainImageLakeRiver img{
   float:left;
   padding-top: 5%;
@@ -104,4 +104,96 @@ h1 {
   float:right;
   margin-right: 10%;
 }
-/*End of formatting for lakes/Rivers Page*/
+/*End of styling for lakes/Rivers Page
+
+Start of styling for Fish Page*/
+
+.mainImageFish img{
+  float:left;
+  padding-top: 5%;
+}
+
+.fish1Container{
+  width: 45%;
+  height: 150px;
+  float: right;
+  margin-top: 5%;
+  margin-right: 10%;
+}
+
+.fish1Image{
+  width:150px;
+  height: 150px;
+  background-color: grey;
+  float: left;
+  text-align: center;
+}
+
+
+.fish1Content{
+  width:500px;
+  height: 150px;
+  background-color: grey;
+  text-align: center;
+  float:right;
+  margin-right: 10%;
+}
+
+.fish2Container{
+  width: 45%;
+  height: 150px;
+  float: right;
+  margin-top: 1%;
+  margin-right: 10%;
+}
+
+.fish2Image{
+  width:150px;
+  height: 150px;
+  background-color: grey;
+  float: left;
+  text-align: center;
+}
+
+
+.fish2Content{
+  width:500px;
+  height: 150px;
+  background-color: grey;
+  text-align: center;
+  float:right;
+  margin-right: 10%;
+}
+
+.fish3Container{
+  width: 45%;
+  height: 150px;
+  float: right;
+  margin-top: 1%;
+  margin-right: 10%;
+}
+
+.fish3Image{
+  width:150px;
+  height: 150px;
+  background-color: grey;
+  float: left;
+  text-align: center;
+}
+
+
+.fish3Content{
+  width:500px;
+  height: 150px;
+  background-color: grey;
+  text-align: center;
+  float:right;
+  margin-right: 10%;
+}
+/* End of styling for Fish page
+   Start of styling for Fun Facts page*/
+
+   .mainImageFunFacts img{
+    float:right;
+    padding-top: 5%;
+  }
