@@ -1,3 +1,107 @@
 h1 {
-  color: red;
+  text-align: center;
 }
+
+.navBar{
+  background-color: #333;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navBar a{
+  display: inline-block;
+  padding: 10px;
+  color:white;
+  text-decoration: none;
+}
+
+.navBar li{
+  display: inline;
+}
+/* CSS Formatting for Lakes/Rivers page*/
+.mainImageLakeRiver img{
+  float:left;
+  padding-top: 5%;
+}
+
+.lake1Container{
+  width: 45%;
+  height: 150px;
+  float: right;
+  margin-top: 5%;
+  margin-right: 10%;
+}
+
+.lake1Image{
+  width:150px;
+  height: 150px;
+  background-color: grey;
+  float: left;
+  text-align: center;
+}
+
+
+.lake1Content{
+  width:500px;
+  height: 150px;
+  background-color: grey;
+  text-align: center;
+  float:right;
+  margin-right: 10%;
+}
+
+.lake2Container{
+  width: 45%;
+  height: 150px;
+  float: right;
+  margin-top: 1%;
+  margin-right: 10%;
+}
+
+.lake2Image{
+  width:150px;
+  height: 150px;
+  background-color: grey;
+  float: left;
+  text-align: center;
+}
+
+
+.lake2Content{
+  width:500px;
+  height: 150px;
+  background-color: grey;
+  text-align: center;
+  float:right;
+  margin-right: 10%;
+}
+
+.lake3Container{
+  width: 45%;
+  height: 150px;
+  float: right;
+  margin-top: 1%;
+  margin-right: 10%;
+}
+
+.lake3Image{
+  width:150px;
+  height: 150px;
+  background-color: grey;
+  float: left;
+  text-align: center;
+}
+
+
+.lake3Content{
+  width:500px;
+  height: 150px;
+  background-color: grey;
+  text-align: center;
+  float:right;
+  margin-right: 10%;
+}
+/*End of formatting for lakes/Rivers Page*/
