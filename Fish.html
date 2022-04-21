@@ -62,8 +62,24 @@
                     Aenean hendrerit ullamcorper enim, in laoreet elit suscipit eget. Nullam molestie euismod tortor, 
                     non placerat sapien dapibus at.</p>
             </div>
-        </div>
-        
+        </div>    
+
     </section>
+    
+    <section class="fish-search">
+        <h2>Fish Search</h2>
+        <input id="usersFishName" type="text" value="Largemouth Bass">
+        <button id="fishSearch">Search For A Fish</button>
+        <div class="fish-search-details">
+            <div id="fishData"><p>You fish details will display here.</p></div>
+        </div>
+    </section>   
+
+    <!-- The order of the JS files is critical -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/fishDetails.js"></script>
+    <script src="js/functions.js"></script> 
+    <script src="js/dom.js"></script>
+    <script src="js/main.js"></script>    
 </body>
 </html>

@@ -193,7 +193,23 @@ Start of styling for Fish Page*/
 /* End of styling for Fish page
    Start of styling for Fun Facts page*/
 
-   .mainImageFunFacts img{
-    float:right;
-    padding-top: 5%;
-  }
+.mainImageFunFacts img{
+  float:right;
+  padding-top: 5%;
+}
+
+.fish-search {
+  clear: both;
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
+}
+
+.fish-search-details {
+  border: 1px solid black;
+  text-align: left;
+}
+
+.fish-search-details li {
+  list-style: none;
+}
