@@ -2,7 +2,7 @@ h1 {
   text-align: center;
 }
 
-.navBar{
+.navbar {
   background-color: #333;
   overflow: hidden;
   list-style: none;
@@ -11,23 +11,24 @@ h1 {
   text-align: center;
 }
 
-.navBar a{
+.navbar a {
   display: inline-block;
   padding: 10px;
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
-.navBar li{
+.navbar li {
   display: inline;
 }
-/* CSS Styling for Lakes/Rivers page*/
-.mainImageLakeRiver img{
-  float:left;
+
+/* CSS Styling for Lakes/Rivers page */
+.mainimagelakeriver img {
+  float: left;
   padding-top: 5%;
 }
 
-.lake1Container{
+.lake-1-container {
   width: 45%;
   height: 150px;
   float: right;
@@ -35,25 +36,24 @@ h1 {
   margin-right: 10%;
 }
 
-.lake1Image{
-  width:150px;
+.lake-1-image {
+  width: 150px;
   height: 150px;
   background-color: grey;
   float: left;
   text-align: center;
 }
 
-
-.lake1Content{
-  width:500px;
+.lake-1-content {
+  width: 500px;
   height: 150px;
   background-color: grey;
   text-align: center;
-  float:right;
+  float: right;
   margin-right: 10%;
 }
 
-.lake2Container{
+.lake-2-container {
   width: 45%;
   height: 150px;
   float: right;
@@ -61,25 +61,24 @@ h1 {
   margin-right: 10%;
 }
 
-.lake2Image{
-  width:150px;
+.lake-2-image {
+  width: 150px;
   height: 150px;
   background-color: grey;
   float: left;
   text-align: center;
 }
 
-
-.lake2Content{
-  width:500px;
+.lake-2-content {
+  width: 500px;
   height: 150px;
   background-color: grey;
   text-align: center;
-  float:right;
+  float: right;
   margin-right: 10%;
 }
 
-.lake3Container{
+.lake-3-container {
   width: 45%;
   height: 150px;
   float: right;
@@ -87,33 +86,33 @@ h1 {
   margin-right: 10%;
 }
 
-.lake3Image{
-  width:150px;
+.lake-3-image {
+  width: 150px;
   height: 150px;
   background-color: grey;
   float: left;
   text-align: center;
 }
 
-
-.lake3Content{
-  width:500px;
+.lake-3-content {
+  width: 500px;
   height: 150px;
   background-color: grey;
   text-align: center;
-  float:right;
+  float: right;
   margin-right: 10%;
 }
-/*End of styling for lakes/Rivers Page
 
-Start of styling for Fish Page*/
+/* End of styling for lakes/Rivers Page
 
-.mainImageFish img{
-  float:left;
+Start of styling for Fish Page */
+
+.main-image-fish img {
+  float: left;
   padding-top: 5%;
 }
 
-.fish1Container{
+.fish-1-container {
   width: 45%;
   height: 150px;
   float: right;
@@ -121,25 +120,24 @@ Start of styling for Fish Page*/
   margin-right: 10%;
 }
 
-.fish1Image{
-  width:150px;
+.fish-1-image {
+  width: 150px;
   height: 150px;
   background-color: grey;
   float: left;
   text-align: center;
 }
 
-
-.fish1Content{
-  width:500px;
+.fish-1-content {
+  width: 500px;
   height: 150px;
   background-color: grey;
   text-align: center;
-  float:right;
+  float: right;
   margin-right: 10%;
 }
 
-.fish2Container{
+.fish-2-container {
   width: 45%;
   height: 150px;
   float: right;
@@ -147,25 +145,24 @@ Start of styling for Fish Page*/
   margin-right: 10%;
 }
 
-.fish2Image{
-  width:150px;
+.fish-2-image {
+  width: 150px;
   height: 150px;
   background-color: grey;
   float: left;
   text-align: center;
 }
 
-
-.fish2Content{
-  width:500px;
+.fish-2-content {
+  width: 500px;
   height: 150px;
   background-color: grey;
   text-align: center;
-  float:right;
+  float: right;
   margin-right: 10%;
 }
 
-.fish3Container{
+.fish-3-container {
   width: 45%;
   height: 150px;
   float: right;
@@ -173,28 +170,28 @@ Start of styling for Fish Page*/
   margin-right: 10%;
 }
 
-.fish3Image{
-  width:150px;
+.fish-3-image {
+  width: 150px;
   height: 150px;
   background-color: grey;
   float: left;
   text-align: center;
 }
 
-
-.fish3Content{
-  width:500px;
+.fish-3-content {
+  width: 500px;
   height: 150px;
   background-color: grey;
   text-align: center;
-  float:right;
+  float: right;
   margin-right: 10%;
 }
+
 /* End of styling for Fish page
-   Start of styling for Fun Facts page*/
+   Start of styling for Fun Facts page */
 
-.mainImageFunFacts img{
-  float:right;
+.main-image-fun-facts img {
+  float: right;
   padding-top: 5%;
 }
 
