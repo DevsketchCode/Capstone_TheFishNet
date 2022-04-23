@@ -1,10 +1,12 @@
 // Array object of all the fish details available
 // Scientific_name is not needed, as it is populated automatically for the ones listed here.
-// Test after adding a fish.  If it isn't found in the online database, then you can add it here instead.
+// Test using console.log at the bottom, after adding a fish.  If the scientific name isn't found in the online database, then you can add it here instead.
+// For reference only, the scientific_names that are populated from the API have the populatedFromAPI placeholder name.
+// That field is overwritten by the API.
 const knownFishDetails = [
   {
     "name": "Largemouth black bass", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "Largemouth Bass",
     "appearance": "Olive-green to greenish gray with the lower jaw extruding further than the upper.",
     "average_size": "18 inches",
@@ -21,24 +23,24 @@ const knownFishDetails = [
   },
   {
     "name": "Rock bass", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
-    "appearance": "",
-    "average_size": "",
+    "appearance": "Red eyes with six spines in the anal fin. Rows of black dots on its sides. A spined dorsal fin united with a soft-rayed one.",
+    "average_size": "7 inches",
     "estimated_population": "",
     "states": ["Wisconsin"],
-    "popular_lakes": [""],
+    "popular_lakes": ["Lake Superior", "Lake Michigan"],
     "popular_rivers": [""],
-    "bait": [""],
-    "hotspots": "",
-    "season": "",
-    "time_of_day": "",
-    "lifespan": "",
+    "bait": ["Small fish", "Young rock bass", "Yellow perch", "Minnows", "Crawfish"],
+    "hotspots": "Rocky lakes and rivers",
+    "season": "Spring",
+    "time_of_day": "Early morning or evening",
+    "lifespan": "10 years",
     "image": "",
   },
   {
     "name": "Smallmouth bass", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -55,7 +57,7 @@ const knownFishDetails = [
   },
   {
     "name": "White bass", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -72,7 +74,7 @@ const knownFishDetails = [
   },
   {
     "name": "Bluegill", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -89,7 +91,7 @@ const knownFishDetails = [
   },
   {
     "name": "Black bullhead", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -106,7 +108,7 @@ const knownFishDetails = [
   },
   {
     "name": "Yellow bullhead", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -123,7 +125,7 @@ const knownFishDetails = [
   },
   {
     "name": "Brown bullhead", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -140,7 +142,7 @@ const knownFishDetails = [
   },
   {
     "name": "Channel catfish", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -157,7 +159,7 @@ const knownFishDetails = [
   },
   {
     "name": "Flathead catfish", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -174,7 +176,7 @@ const knownFishDetails = [
   },
   {
     "name": "Black crappie", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -208,7 +210,7 @@ const knownFishDetails = [
   },
   {
     "name": "American yellow perch", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "Yellow perch",
     "appearance": "",
     "average_size": "",
@@ -225,7 +227,7 @@ const knownFishDetails = [
   },
   {
     "name": "Northern pike", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -242,7 +244,7 @@ const knownFishDetails = [
   },
   {
     "name": "Pumpkinseed", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -259,7 +261,7 @@ const knownFishDetails = [
   },
   {
     "name": "Chinook(=Spring=King)salmon", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "Chinook salmon",
     "appearance": "",
     "average_size": "",
@@ -276,7 +278,7 @@ const knownFishDetails = [
   },
   {
     "name": "Coho(=Silver)salmon", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "Coho salmon",
     "appearance": "",
     "average_size": "",
@@ -293,7 +295,7 @@ const knownFishDetails = [
   },
   {
     "name": "Lake sturgeon", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -310,7 +312,7 @@ const knownFishDetails = [
   },
   {
     "name": "Brook trout", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
@@ -327,7 +329,7 @@ const knownFishDetails = [
   },
   {
     "name": "Lake trout(=Char)",     
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "Lake trout",     
     "appearance": "",
     "average_size": "",
@@ -361,7 +363,7 @@ const knownFishDetails = [
   },
   {
     "name": "Walleye", 
-    "scientific_name": "",
+    "scientific_name": "populatedFromAPI",
     "alt_name": "",
     "appearance": "",
     "average_size": "",
