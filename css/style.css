@@ -103,6 +103,13 @@ h1 {
   margin-right: 10%;
 }
 
+#weather {
+  display: none;
+  height: 20em;
+  width: 20em;
+  background-color: rgb(136, 209, 252);
+}
+
 /* End of styling for lakes/Rivers Page
 
 Start of styling for Fish Page */

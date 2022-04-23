@@ -19,6 +19,19 @@
         <li><a href="FunFacts.html">FunFacts</a></li>
         <li><a href="Resources.html">Resources</a></li>
     </ul>
+
+    <div>
+        <h3>Weather Search</h3>
+        <form method="get">
+            <div id="input-zip">
+                <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Five digit zip code" maxlength="5">
+                <input type="submit" value="Submit" id="btn-submit"><br><br>
+            </div>
+        </form>
+        <div id="weather"></div>
+        </div>
+    </div>
+
     <div class="mainimagelakeriver">
         <img src="images/lake1.jpg" alt="Calm Lake">
     </div>
@@ -65,5 +78,8 @@
         </div>
         
     </section>
+    <!-- The order of the JS files can be critical -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 </html>
