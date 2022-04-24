@@ -327,9 +327,17 @@ Start of styling for Fish Page */
   text-decoration: none;
 }
 
+.water {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .resource-list a:hover {
   text-decoration: underline;
 }
+
+/* End of resource styling */
 
 .fish-search {
   clear: both;
@@ -345,4 +353,8 @@ Start of styling for Fish Page */
 
 .fish-search-details li {
   list-style: none;
+}
+
+.navbar a:hover {
+  font-size: larger;
 }
