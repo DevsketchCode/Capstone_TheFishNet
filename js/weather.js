@@ -39,7 +39,7 @@ $(function() {
       const icon = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
 
       // Creates weather card
-      $("#weather").show("slow").append(`<li>`);
+      $("#weather").append(`<li>`);
       const cardData = `
         <h2 class="city-name" data-name="${name}">
           <span>${name}</span>
@@ -64,7 +64,10 @@ $(function() {
       $("#weather").append(cardData).append(`</li>`);
 
       // Hides the seach option
-      $("#input-zip").hide("normal");
+      $("#input-zip").hide("fast");
+
+      // Displays the weather card and refresh button
+      $("#weather").show("normal");
       $("#btn-refresh").show("slow");
     })
     .catch((err) => {
