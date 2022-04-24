@@ -14,8 +14,6 @@ $(function() {
     // Converts the inputted degree angle to the quadrant direction between 0 and 360 degrees
     const converted = Math.round((degree * Math.PI / 180) - 1);
 
-    alert("Converted = " + converted);
-
     // returns the direction text
     return direction[converted];
   }
