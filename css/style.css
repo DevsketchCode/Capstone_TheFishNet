@@ -61,8 +61,10 @@ h1 {
 
 /* CSS Styling for Lakes/Rivers page */
 .mainimagelakeriver img {
+  width: 100%;
   float: left;
   padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .lake-1-container {
@@ -142,9 +144,36 @@ h1 {
 
 #weather {
   display: none;
-  height: 20em;
-  width: 20em;
-  background-color: rgb(136, 209, 252);
+  height: fit-content;
+  width: fit-content;
+  text-transform: capitalize;
+  text-align: center;
+  background-color: rgb(136 209 252);
+  box-shadow: 0 4px 8px 0 rgba(0 0 0 / 20%);
+  transition: 0.3s;
+  border-radius: 5px;
+  list-style-type: none;
+}
+
+.temp-span {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* Add some padding inside the card container */
+.city-temp {
+  padding: 2px 16px;
+  background-color: #fff;
+}
+
+.city-temp h4,
+.icon-weather h5 {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+#btn-refresh {
+  display: none;
 }
 
 /* End of styling for lakes/Rivers Page
@@ -239,6 +268,114 @@ Start of styling for Fish Page */
   padding-top: 5%;
 }
 
+.fact-1-container {
+  width: 45%;
+  height: 150px;
+  float: left;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.fact-1-image {
+  width: 150px;
+  height: 150px;
+  background-color: grey;
+  float: left;
+  text-align: center;
+}
+
+.fact-1-content {
+  width: 500px;
+  height: 150px;
+  background-color: grey;
+  text-align: center;
+  float: left;
+  margin-left: 10%;
+}
+
+.fact-2-container {
+  width: 45%;
+  height: 150px;
+  float: left;
+  margin-top: 1%;
+  margin-left: 10%;
+}
+
+.fact-2-image {
+  width: 150px;
+  height: 150px;
+  background-color: grey;
+  float: left;
+  text-align: center;
+}
+
+.fact-2-content {
+  width: 500px;
+  height: 150px;
+  background-color: grey;
+  text-align: center;
+  float: left;
+  margin-left: 10%;
+}
+
+.fact-3-container {
+  width: 45%;
+  height: 150px;
+  float: left;
+  margin-top: 1%;
+  margin-left: 10%;
+}
+
+.fact-3-image {
+  width: 150px;
+  height: 150px;
+  background-color: grey;
+  float: left;
+  text-align: center;
+}
+
+.fact-3-content {
+  width: 500px;
+  height: 150px;
+  background-color: grey;
+  text-align: center;
+  float: left;
+  margin-left: 10%;
+}
+
+/* End of fun facts styling
+   Start of resource styling */
+
+.resource-list h2 {
+  text-align: center;
+}
+
+.resource-list p {
+  text-align: center;
+  font-style: italic;
+}
+
+.resource-list ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.resource-list a {
+  text-decoration: none;
+}
+
+.water {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resource-list a:hover {
+  text-decoration: underline;
+}
+
+/* End of resource styling */
+
 .fish-search {
   clear: both;
   margin: 0 auto;
@@ -253,4 +390,8 @@ Start of styling for Fish Page */
 
 .fish-search-details li {
   list-style: none;
+}
+
+.navbar a:hover {
+  font-size: larger;
 }
