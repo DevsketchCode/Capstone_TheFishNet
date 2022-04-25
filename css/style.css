@@ -32,11 +32,11 @@ h1 {
   margin-right: 37%;
 }
 
-#homeImg {
+#home-img {
   width: 100%
 }
 
-#aboutTFNHead {
+#about-tfn-head {
   color: white;
   background-color: #333;
   padding-top: 1%;
@@ -45,21 +45,19 @@ h1 {
   margin-right: 37%;
 }
 
-#aboutTFNText {
+#about-tfn-text {
   color: white;
   background-color: #333;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  padding-right: 2%;
-  padding-left: 2%;
+  padding: 1% 2%;
   margin-left: 20%;
   margin-right: 20%;
   font-size: 125%;
-  
 }
-/* End of styling for the Home Page */
 
-/* CSS Styling for Lakes/Rivers page */
+/* End of styling for the Home Page 
+
+CSS Styling for Lakes/Rivers page */
+
 .mainimagelakeriver img {
   width: 100%;
   float: left;
