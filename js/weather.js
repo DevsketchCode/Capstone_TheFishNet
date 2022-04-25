@@ -77,5 +77,13 @@ $(function() {
     });
 
   });
+
+  $("#btn-refresh").click(function(event) {
+    // Stops the default form action
+    event.preventDefault();
+
+    // Refreshes the page
+    location.reload();
+  });
   
 });
