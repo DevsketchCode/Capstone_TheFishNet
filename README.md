@@ -15,3 +15,6 @@ This website requires users to have an internet connection and a javascript-enab
 
 ## OpenWeatherMap API
 The information for this API can be found on the API's [website](https://openweathermap.org/). There are multiple API's available through OpenWeatherMap depending on what is needed for the website, but The Fish Net currently only uses the Current Weather Data API. To use this OpenWeatherMap's APIs you will need to create an account, verify the email used for the account, subscribe to any of the APIs you need, and input the API key(s) in the url(s) fetching data from the API(s). There currently is a valid API key in the code to use the Current Weather Data API for the Weather Search container on the LakesRivers.html page. 
+
+## Fish API and Data
+Scientific names for the fish search engine are found from the OpenFisheries API at [website](http://www.openfisheries.org/).  There is no login or key required to access this API's list. The rest of the local fish details are provided from research that is entered into an internal custom data list.  This information is currently available on the Fish.html page.
