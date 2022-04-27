@@ -375,19 +375,35 @@ Start of styling for Fish Page */
 /* End of resource styling */
 
 .fish-search {
-  clear: both;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
   width: fit-content;
 }
 
-.fish-search-details {
-  border: 1px solid black;
+#fish-search-details {
+  border: 1px solid #ccc;
+  display: none;
+  margin: 2px;
+  padding: 0 15px;
   text-align: left;
 }
 
-.fish-search-details li {
-  list-style: none;
+#fish-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fish-search-photo {
+  height: 200px;
+}
+
+.fish-search-inner-details {
+  padding: 0 15px;
+}
+
+.fish-search-inner-details li {
+  list-style-type: " - ";
 }
 
 .navbar a:hover {
