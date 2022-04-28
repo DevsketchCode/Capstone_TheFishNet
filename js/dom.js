@@ -54,3 +54,15 @@ $("#fish-search").click(function(){
   // Display the fish search results
   $("#fish-search-details").show();
 });
+
+let fishTitle = document.querySelector("#fish-title");
+let fishContent = document.querySelector("#fish-content");
+let currentFishString = "";
+currentFishString += "<div>";
+currentFishString += "<ul>";
+currentFishString += "<li>Scientific Name: " + fish[knownFishDetails[0].api_id_name] + "</li>";
+currentFishString += "<li>Appearance: " + knownFishDetails[0].appearance + "</li>"
+currentFishString += "</ul>";
+currentFishString += "</div>";
+fishTitle.innerHTML = knownFishDetails[0].common_name;
+fishContent.innerHTML = currentFishString;
