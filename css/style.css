@@ -6,7 +6,7 @@ h1 {
 }
 
 header {
-  background-image: url("/images/fishing-net-md.jpg");
+  background-image: url("../images/fishing-net-md.jpg");
   background-size: 300px;
   position: sticky;
   align-self: flex-start;
