@@ -1,63 +1,96 @@
 h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px 0;
   text-align: center;
 }
 
-.navbar {
-  background-color: #333;
-  overflow: hidden;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+header {
+  background-image: url("/images/fishing-net-md.jpg");
+  background-size: 300px;
+  position: sticky;
+  align-self: flex-start;
+  top: 0;
+  overflow-y: auto;
+  z-index: 1000;
 }
 
-.navbar a {
-  display: inline-block;
-  padding: 10px;
-  color: white;
-  text-decoration: none;
-}
-
-.navbar li {
-  display: inline;
-}
-
-/* CSS Styling for the Home page */
-#welcome {
-  color: white;
-  background-color: #333;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  margin-left: 37%;
-  margin-right: 37%;
-}
-
-#home-img {
+#title {
+  background-color: #23232333;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  font-family: Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3.5em;
+  font-weight: bold;
+  padding: 30px 0;
   width: 100%;
 }
 
-#about-tfn-head {
-  color: white;
-  background-color: #333;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  margin-left: 37%;
-  margin-right: 37%;
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #222;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-#about-tfn-text {
-  color: white;
-  background-color: #333;
-  padding: 1% 2%;
-  margin-left: 20%;
-  margin-right: 20%;
-  font-size: 125%;
+nav a {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 5px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #4abdff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* CSS Styling for the Home page */
+
+/* Slideshow */
+#slideshow-wrapper {
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+/* Overlap all of the slideshow images to allow for crossfade */
+#slideshow img {
+  position: absolute;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: middle center;
+}
+
+.site-description-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.site-description-card {
+  color: #fff;
+  background-color: #444;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+  width: 40%;
+}
+
+.site-description-card h2 {
+  color: #4abdff;
+  text-shadow: 2px 2px 2px #000;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 /* End of styling for the Home Page
-
 CSS Styling for Lakes/Rivers page */
-
 .mainimagelakeriver img {
   width: 100%;
   float: left;
@@ -406,6 +439,12 @@ Start of styling for Fish Page */
   list-style-type: " - ";
 }
 
-.navbar a:hover {
-  font-size: larger;
+footer {
+  clear: both;
+  background-color: #222;
+  color: #fff;
+  margin-top: 20px;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
 }

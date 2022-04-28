@@ -4,86 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakes and Rivers</title>
+    <title>The Fish Net: Lakes and Rivers</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <div>
-        <h1>Lakes and Rivers</h1>
-    </div>
-    
-    <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="LakesRivers.html">Lakes/Rivers</a></li>
-        <li><a href="Fish.html">Fish</a></li>
-        <li><a href="FunFacts.html">FunFacts</a></li>
-        <li><a href="Resources.html">Resources</a></li>
-    </ul>
+    <header>
+        <h1 id="title">The Fish Net</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="LakesRivers.html">Lakes & Rivers</a>
+            <a href="Fish.html">Fish</a>
+            <a href="FunFacts.html">Fun Facts</a>
+            <a href="Resources.html">Resources</a>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1>Lakes and Rivers</h1>
+        </div>
 
-    <div class="mainimagelakeriver">
-        <img src="images/lake1.jpg" alt="Calm Lake">
-    </div><br>
+        <div class="mainimagelakeriver">
+            <img src="images/lake1.jpg" alt="Calm Lake">
+        </div><br>
 
-    <div id="weather-search">
-        <h3>Weather Search</h3>
-        <form method="post">
-            <div id="input-zip">
-                <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Five digit zip code" maxlength="5">
-                <input type="submit" value="Submit" id="btn-submit"><br>
-            </div> 
-        </form>
-        <div id="weather"></div><br>
-        <div id="refresh">
+        <div id="weather-search">
+            <h3>Weather Search</h3>
             <form method="post">
-                <input type="submit" value="Refresh" id="btn-refresh"><br>
+                <div id="input-zip">
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Five digit zip code" maxlength="5">
+                    <input type="submit" value="Submit" id="btn-submit"><br>
+                </div> 
             </form>
-        </div> 
-    </div>
-
-    <div>
-        <!--Content for page....Using divs for the moment just to show
-        rough layout. Will switch images and content in soon-->
-        <div class="lake-1-container">
-            <div class="lake-1-image">
-                <p>Lake One Image</p>
-            </div>
-            <div class="lake-1-content">
-                <h3>Lake1 Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices, augue ullamcorper hendrerit 
-                    condimentum, nisi ante interdum ante, at rutrum diam tellus vel elit. 
-                    Aenean hendrerit ullamcorper enim, in laoreet elit suscipit eget. Nullam molestie euismod tortor, 
-                    non placerat sapien dapibus at.</p>
-            </div>
+            <div id="weather"></div><br>
+            <div id="refresh">
+                <form method="post">
+                    <input type="submit" value="Refresh" id="btn-refresh"><br>
+                </form>
+            </div> 
         </div>
 
-        <div class="lake-2-container">
-            <div class="lake-2-image">
-                <p>Lake Two Image</p>
+        <div>
+            <!--Content for page....Using divs for the moment just to show
+            rough layout. Will switch images and content in soon-->
+            <div class="lake-1-container">
+                <div class="lake-1-image">
+                    <p>Lake One Image</p>
+                </div>
+                <div class="lake-1-content">
+                    <h3>Lake1 Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices, augue ullamcorper hendrerit 
+                        condimentum, nisi ante interdum ante, at rutrum diam tellus vel elit. 
+                        Aenean hendrerit ullamcorper enim, in laoreet elit suscipit eget. Nullam molestie euismod tortor, 
+                        non placerat sapien dapibus at.</p>
+                </div>
             </div>
-            <div class="lake-2-content">
-                <h3>Lake2 Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices, augue ullamcorper hendrerit 
-                    condimentum, nisi ante interdum ante, at rutrum diam tellus vel elit. 
-                    Aenean hendrerit ullamcorper enim, in laoreet elit suscipit eget. Nullam molestie euismod tortor, 
-                    non placerat sapien dapibus at.</p>
-            </div>
-        </div>
 
-        <div class="lake-3-container">
-            <div class="lake-3-image">
-                <p>Lake Three Image</p>
+            <div class="lake-2-container">
+                <div class="lake-2-image">
+                    <p>Lake Two Image</p>
+                </div>
+                <div class="lake-2-content">
+                    <h3>Lake2 Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices, augue ullamcorper hendrerit 
+                        condimentum, nisi ante interdum ante, at rutrum diam tellus vel elit. 
+                        Aenean hendrerit ullamcorper enim, in laoreet elit suscipit eget. Nullam molestie euismod tortor, 
+                        non placerat sapien dapibus at.</p>
+                </div>
             </div>
-            <div class="lake-3-content">
-                <h3>Lake3 Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices, augue ullamcorper hendrerit 
-                    condimentum, nisi ante interdum ante, at rutrum diam tellus vel elit. 
-                    Aenean hendrerit ullamcorper enim, in laoreet elit suscipit eget. Nullam molestie euismod tortor, 
-                    non placerat sapien dapibus at.</p>
+
+            <div class="lake-3-container">
+                <div class="lake-3-image">
+                    <p>Lake Three Image</p>
+                </div>
+                <div class="lake-3-content">
+                    <h3>Lake3 Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices, augue ullamcorper hendrerit 
+                        condimentum, nisi ante interdum ante, at rutrum diam tellus vel elit. 
+                        Aenean hendrerit ullamcorper enim, in laoreet elit suscipit eget. Nullam molestie euismod tortor, 
+                        non placerat sapien dapibus at.</p>
+                </div>
             </div>
+            
         </div>
-        
-    </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2022; Developed by: Bruce Brown, David Oberlander, Mason Johnson, and Timothy Harper</p>
+    </footer>
     <!-- The order of the JS files can be critical -->
     <script src="js/weather.js"></script>
 </body>
