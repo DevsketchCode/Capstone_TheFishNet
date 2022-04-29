@@ -487,8 +487,8 @@ footer {
 }
 
 .fish-list-wrapper {
-  display:flex;
-  justify-content:left;
+  display: flex;
+  justify-content: left;
 }
 
 .fish-list-image {
