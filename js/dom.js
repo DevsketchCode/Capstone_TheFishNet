@@ -84,4 +84,4 @@ function displayFish(){
     fishListBody.innerHTML += currentFishString;
     
   }
-};
+}
