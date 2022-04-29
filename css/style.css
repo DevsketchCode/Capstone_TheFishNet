@@ -69,6 +69,10 @@ nav a {
   text-decoration: none;
 }
 
+.site-description-card a {
+  color: #ffa500;
+}
+
 nav a:hover {
   color: #4abdff;
   text-shadow: 2px 2px 4px #000;
@@ -114,7 +118,7 @@ nav a:hover {
   text-shadow: 2px 2px 2px #000;
   font-size: 1.5em;
   font-weight: bold;
-  margin: 0px;
+  margin: 0;
 }
 
 .site-description-card p {
@@ -123,10 +127,6 @@ nav a:hover {
 
 .site-description-card li {
   margin: 10px 0;
-}
-
-.site-description-card a {
-  color: #ffa500;
 }
 
 .site-description-card a:hover {
@@ -213,7 +213,7 @@ CSS Styling for Lakes/Rivers page */
 }
 
 #weather-search {
-  padding: 10px 10px;
+  padding: 10px;
 }
 
 #weather {
@@ -222,13 +222,13 @@ CSS Styling for Lakes/Rivers page */
   width: fit-content;
   text-transform: capitalize;
   text-align: center;
-  background-color: rgb(136 209 252);;
+  background-color: rgb(136 209 252);
   box-shadow: 0 4px 8px 0 rgba(0 0 0 / 20%);
   transition: 0.3s;
   border: 1rem outset lightsteelblue;
   border-radius: 5px;
   list-style-type: none;
-  padding: 10px 10px;
+  padding: 10px;
 }
 
 /* Add some padding inside the card container */
