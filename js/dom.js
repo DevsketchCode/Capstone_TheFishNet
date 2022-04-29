@@ -55,14 +55,33 @@ $("#fish-search").click(function(){
   $("#fish-search-details").show();
 });
 
-let fishTitle = document.querySelector("#fish-title");
-let fishContent = document.querySelector("#fish-content");
-let currentFishString = "";
-currentFishString += "<div>";
-currentFishString += "<ul>";
-currentFishString += "<li>Scientific Name: " + fish[knownFishDetails[0].api_id_name] + "</li>";
-currentFishString += "<li>Appearance: " + knownFishDetails[0].appearance + "</li>"
-currentFishString += "</ul>";
-currentFishString += "</div>";
-fishTitle.innerHTML = knownFishDetails[0].common_name;
-fishContent.innerHTML = currentFishString;
+function displayFish(){
+  for(let i = 0; i < 10; i++){
+    
+    let index = FindFishData(knownFishDetails[i].common_name);
+    
+
+    let currentFishString = "";
+    currentFishString += "<h3 id='fish-list-title'>" + knownFishDetails[i].common_name + "</h3>";
+    currentFishString += "<div class='fish-list-wrapper'>";
+    currentFishString += "<div>";
+    currentFishString += (fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>";
+    currentFishString += "</div>";
+    currentFishString += "<div>";
+    currentFishString += "<ul>";
+    currentFishString += "<li>Scientific Name: " + fish[index].scientific_name + "</li>";
+    currentFishString += "<li>Appearance: " + knownFishDetails[i].appearance + "</li>";
+    currentFishString += "<li>Average Size: " + knownFishDetails[i].average_size + "</li>";
+    currentFishString += "<li>Baits: " + knownFishDetails[i].bait + "</li>";
+    currentFishString += "<li>Hotspot Tips: " + knownFishDetails[i].hotspots + "</li>";
+    currentFishString += "<li>Season: " + knownFishDetails[i].season + "</li>";
+    currentFishString += "<li>Best Time of Day: " + knownFishDetails[i].time_of_day + "</li>";
+    currentFishString += "<li>Lifespan: " + knownFishDetails[i].lifespan + "</li>";
+    currentFishString += "</ul>";
+    currentFishString += "</div>";
+    currentFishString += "</div>";
+    let fishListBody = document.querySelector("#fish-list-body");
+    fishListBody.innerHTML += currentFishString;
+    
+  }
+};

@@ -15,6 +15,23 @@ header {
   z-index: 1000;
 }
 
+.mainimagelakeriver img {
+  width: 100%;
+  float: left;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.main-image-fish img {
+  float: left;
+  padding-top: 5%;
+}
+
+.main-image-fun-facts img {
+  float: right;
+  padding-top: 5%;
+}
+
 #title {
   background-color: #23232333;
   color: #fff;
@@ -41,6 +58,10 @@ nav a {
   font-size: 1.5em;
   font-weight: bold;
   padding: 5px;
+  text-decoration: none;
+}
+
+.resource-list a {
   text-decoration: none;
 }
 
@@ -91,12 +112,6 @@ nav a:hover {
 
 /* End of styling for the Home Page
 CSS Styling for Lakes/Rivers page */
-.mainimagelakeriver img {
-  width: 100%;
-  float: left;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
 
 .lake-1-container {
   width: 45%;
@@ -211,15 +226,9 @@ CSS Styling for Lakes/Rivers page */
 
 Start of styling for Fish Page */
 
-.main-image-fish img {
-  float: left;
-  padding-top: 5%;
-}
-
 .fish-1-container {
   width: 50%;
   height: 150px;
-  margin-top: 5%;
   margin: auto;
 }
 
@@ -295,11 +304,6 @@ Start of styling for Fish Page */
 
 /* End of styling for Fish page
    Start of styling for Fun Facts page */
-
-.main-image-fun-facts img {
-  float: right;
-  padding-top: 5%;
-}
 
 .fact-1-container {
   width: 45%;
@@ -393,10 +397,6 @@ Start of styling for Fish Page */
   text-align: center;
 }
 
-.resource-list a {
-  text-decoration: none;
-}
-
 .water {
   display: block;
   margin-left: auto;
@@ -449,4 +449,51 @@ footer {
   padding: 15px 0;
   text-align: center;
   width: 100%;
+}
+
+.old-place-holders {
+  display: none;
+}
+
+.fish-list {
+  width: 50%;
+  height: 150px;
+  margin-top: 1%;
+  margin-bottom: 1%;;
+  margin: auto;
+  padding-bottom: 1%;
+  clear: both;
+}
+
+.fish-list-wrapper {
+  display:flex;
+  justify-content: center;
+}
+
+.fish-list-image {
+  width: 150px;
+  height: 150px;
+  background-color: grey;
+  text-align: center;
+  margin: auto;
+}
+
+.fish-list-content {
+  width: 500px;
+  height: fit-content;
+  background-color: grey;
+  margin-right: 10%;
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.fish-list-content li {
+  padding: 2px;;
+}
+
+.fish-list-title {
+  padding-top: 1%;
 }
