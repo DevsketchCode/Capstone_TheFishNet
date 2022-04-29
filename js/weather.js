@@ -8,14 +8,19 @@ $(function() {
   }
 
   function windDirection(degree) {
-    // Sets the array for the direction
+    /*// Sets the array for the direction
     const direction =  ["N", "NW", "W", "SW", "S", "SE", "E", "NE"];
+    
 
     // Converts the inputted degree angle to the quadrant direction between 0 and 360 degrees
     const converted = Math.round((degree * Math.PI / 180) - 1);
 
     // returns the direction text
-    return direction[converted];
+    return direction[converted];*/
+    const direction = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+    const converted = Math.floor((degree / 22.5) + 0.5);
+    
+    return direction[(converted % 16)];
   }
 
   // Call on API logic after submit button is clicked
@@ -43,23 +48,18 @@ $(function() {
       const cardData = `
         <h2 class="city-name" data-name="${name}">
           <span>${name}</span>
-        </h2>
-        <div class="temp-span">
-          <strong>High: ${Math.round(main.temp_max)}<sup>°F</sup><strong>
-        </div>
-        <div class="temp-span">
-          <strong>Low: ${Math.round(main.temp_min)}<sup>°F</sup><strong>
+        </h2><br>
+        <div class="city-temp">
+          <h4>Temp: ${Math.round(main.temp)}<sup>°</sup>F</h4>
+          <h4>Feels Like: ${Math.round(main.feels_like)}<sup>°</sup>F</h4>
         </div>
         <figure class="icon-weather">
           <img class="icon" src=${icon} alt=${weather[0].main}>
-          <figcaption><strong>${weather[0].description}</strong></figcaption>
+          <figcaption><strong>${weather[0].description}</strong></figcaption><br>
           <h5>Wind: ${windDirection(wind.deg)} ${Math.round(wind.speed)} mph</h5>
           <h5>Humidity: ${Math.round(main.humidity)}%</h5>
-        </figure>
-        <div class="city-temp">
-          <h4>Temp: ${Math.round(main.temp)}<sup>°F</sup></h4>
-          <h4>Feels Like: ${Math.round(main.feels_like)}<sup>°F</sup></h4>
-        </div>
+        </figure><br>
+        
       `;
       $("#weather").append(cardData).append(`</li>`);
 
