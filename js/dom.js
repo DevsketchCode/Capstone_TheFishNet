@@ -55,12 +55,15 @@ $("#fish-search").click(function(){
   $("#fish-search-details").show();
 });
 
+// Function displays 10 fish on fish page
+// Function cannot be called on page load due to API needed to be loaded
+// Function call comes on main.js
 function displayFish(){
   for(let i = 0; i < 10; i++){
-    
+    // Create index for fish API
     let index = FindFishData(knownFishDetails[i].common_name);
     
-
+    // Create string to insert into html
     let currentFishString = "";
     currentFishString += "<div class='fish-list-title'>" + knownFishDetails[i].common_name + "</div>";
     currentFishString += "<div class='fish-list-wrapper'>";
@@ -80,6 +83,8 @@ function displayFish(){
     currentFishString += "</ul>";
     currentFishString += "</div>";
     currentFishString += "</div>";
+
+    // Grab html element and insert string into it
     let fishListBody = document.querySelector("#fish-list-body");
     fishListBody.innerHTML += currentFishString;
     
