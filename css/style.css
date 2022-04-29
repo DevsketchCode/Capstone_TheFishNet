@@ -188,28 +188,28 @@ CSS Styling for Lakes/Rivers page */
   margin-right: 10%;
 }
 
+#weather-search {
+  padding: 10px 10px;
+}
+
 #weather {
   display: none;
   height: fit-content;
   width: fit-content;
   text-transform: capitalize;
   text-align: center;
-  background-color: rgb(136 209 252);
+  background-color: rgb(136 209 252);;
   box-shadow: 0 4px 8px 0 rgba(0 0 0 / 20%);
   transition: 0.3s;
+  border: 1rem outset lightsteelblue;
   border-radius: 5px;
   list-style-type: none;
-}
-
-.temp-span {
-  display: inline-block;
-  padding: 0 10px;
+  padding: 10px 10px;
 }
 
 /* Add some padding inside the card container */
 .city-temp {
   padding: 2px 16px;
-  background-color: #fff;
 }
 
 .city-temp h4,
