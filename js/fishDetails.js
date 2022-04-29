@@ -21,7 +21,7 @@ const knownFishDetails = [
     "season": "Spring and Summer when the weather is warm. Inactive during winter.",
     "time_of_day": "Early morning or evening",
     "lifespan": "16 years",
-    "image": "",
+    "image": "largemouthBass.png",
   },
   {
     "api_id_name": "Rock bass",
@@ -39,7 +39,7 @@ const knownFishDetails = [
     "season": "Spring",
     "time_of_day": "Early morning or evening",
     "lifespan": "10 years",
-    "image": "",
+    "image": "rockBass.png",
   },
   {
     "api_id_name": "Smallmouth bass",
@@ -57,7 +57,7 @@ const knownFishDetails = [
     "season": "Spring and summer. Inactive in the winter.",
     "time_of_day": "Early morning or evening",
     "lifespan": "6-14 years.",
-    "image": "",
+    "image": "smallmouthBass.png",
   },
   {
     "api_id_name": "White bass",
@@ -75,7 +75,7 @@ const knownFishDetails = [
     "season": "March to May",
     "time_of_day": "Prior to sunrise and just after sunset.",
     "lifespan": "8 years",
-    "image": "",
+    "image": "whiteBass.png",
   },
   {
     "api_id_name": "Bluegill",  
@@ -93,7 +93,7 @@ const knownFishDetails = [
     "season": "Anytime of year. Spawn in spring.",
     "time_of_day": "Daytime usually is best",
     "lifespan": "6 years",
-    "image": "",
+    "image": "bluegill.png",
   },
   {
     "api_id_name": "Black bullhead",
@@ -111,7 +111,7 @@ const knownFishDetails = [
     "season": "April to June",
     "time_of_day": "During day will work but they are more active at night.",
     "lifespan": "5 years",
-    "image": "",
+    "image": "blackBullhead.png",
   },
   {
     "api_id_name": "Yellow bullhead",
@@ -129,7 +129,7 @@ const knownFishDetails = [
     "season": "April to June",
     "time_of_day": "During day will work but better luck at night.",
     "lifespan": "7 years",
-    "image": "",
+    "image": "yellowBullhead.png",
   },
   {
     "api_id_name": "Brown bullhead",
@@ -147,7 +147,7 @@ const knownFishDetails = [
     "season": "April to June",
     "time_of_day": "Anytime, but low light hours being best.",
     "lifespan": "7 years",
-    "image": "",
+    "image": "brownBullhead.png",
   },
   {
     "api_id_name": "Channel catfish",
@@ -165,7 +165,7 @@ const knownFishDetails = [
     "season": "Any season but summer is best.",
     "time_of_day": "Low light hours in summer and daytime in winter.",
     "lifespan": "15 years",
-    "image": "",
+    "image": "channelCatfish.png",
   },
   {
     "api_id_name": "Flathead catfish",
@@ -183,7 +183,7 @@ const knownFishDetails = [
     "season": "Pre winter or March to May.",
     "time_of_day": "Lower light hours",
     "lifespan": "5-22 years",
-    "image": "",
+    "image": "flatheadCatfish.png",
   },
   {
     "api_id_name": "Black crappie",
