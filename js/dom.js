@@ -62,7 +62,7 @@ function displayFish(){
     
 
     let currentFishString = "";
-    currentFishString += "<h3 id='fish-list-title'>" + knownFishDetails[i].common_name + "</h3>";
+    currentFishString += "<div class='fish-list-title'>" + knownFishDetails[i].common_name + "</div>";
     currentFishString += "<div class='fish-list-wrapper'>";
     currentFishString += "<div>";
     currentFishString += (fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>";

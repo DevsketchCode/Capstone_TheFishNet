@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 h1 {
   font-size: 2em;
   font-weight: bold;
@@ -91,15 +95,18 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 5%;
+  margin: 2% 5%;
 }
 
 .site-description-card {
   color: #fff;
   background-color: #444;
   border-radius: 10px;
+  font-size: 1.2em;
   margin: 10px;
-  padding: 15px;
-  width: 40%;
+  padding: 2%;
+  flex: 1 40%;
 }
 
 .site-description-card h2 {
@@ -107,7 +114,24 @@ nav a:hover {
   text-shadow: 2px 2px 2px #000;
   font-size: 1.5em;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin: 0px;
+}
+
+.site-description-card p {
+  margin: 10px 0;
+}
+
+.site-description-card li {
+  margin: 10px 0;
+}
+
+.site-description-card a {
+  color: #ffa500;
+}
+
+.site-description-card a:hover {
+  color: #4abdff;
+  text-shadow: 2px 2px 4px #000;
 }
 
 /* End of styling for the Home Page
@@ -456,18 +480,15 @@ footer {
 }
 
 .fish-list {
+  clear: both;
   width: 50%;
-  height: 150px;
-  margin-top: 1%;
-  margin-bottom: 1%;;
   margin: auto;
   padding-bottom: 1%;
-  clear: both;
 }
 
 .fish-list-wrapper {
   display:flex;
-  justify-content: center;
+  justify-content:left;
 }
 
 .fish-list-image {
@@ -478,22 +499,10 @@ footer {
   margin: auto;
 }
 
-.fish-list-content {
-  width: 500px;
-  height: fit-content;
-  background-color: grey;
-  margin-right: 10%;
-  display:flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 5px;
-}
-
-.fish-list-content li {
-  padding: 2px;;
-}
-
 .fish-list-title {
   padding-top: 1%;
+}
+
+.fish-list-wrapper li {
+  padding: 2px;
 }
