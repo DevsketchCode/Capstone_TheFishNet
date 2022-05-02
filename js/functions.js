@@ -26,6 +26,7 @@ function FishObject(api_id_name, scientific_name, common_name, alt_names, appear
   this.image = image || "";
 }
 
+// NOTE: This function MUST be called from the main.js file, the last file loaded or to a file after main.js
 function FindFishData(fishName) {
   // instantiate variable
   let index = -1;
