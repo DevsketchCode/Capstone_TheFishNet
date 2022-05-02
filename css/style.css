@@ -19,7 +19,8 @@ header {
   z-index: 1000;
 }
 
-.mainimagelakeriver img, .water {
+.mainimagelakeriver img,
+.water {
   height: 300px;
   width: 100%;
   object-fit: cover;
@@ -561,5 +562,4 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-
 }
