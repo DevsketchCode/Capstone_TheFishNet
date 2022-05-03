@@ -18,3 +18,6 @@ The information for this API can be found on the API's [website](https://openwea
 
 ## Fish API and Data
 Scientific names for the fish search engine are found from the OpenFisheries API at [www.openfisheries.org](http://www.openfisheries.org/).  There is no login or key required to access this API's data. The rest of the local fish details are provided from research that has been entered into an internal custom list.  This information is currently available on the Fish.html page.
+
+## Reponsive Design
+This site has a responsive design. You will be able to enjoy the helpful information on your desktop, tablet, or mobile phone.
