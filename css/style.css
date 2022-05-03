@@ -19,12 +19,11 @@ header {
   z-index: 1000;
 }
 
-.mainimagelakeriver img,
-.water {
+.main-image-lake-river img {
   height: 300px;
   width: 100%;
   object-fit: cover;
-  object-position: center 53%;
+  object-position: center 40%;
 }
 
 .main-image-fish img {
@@ -35,6 +34,13 @@ header {
 .main-image-fun-facts img {
   float: right;
   padding-top: 5%;
+}
+
+.main-image-resources {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 90%;
 }
 
 #title {
