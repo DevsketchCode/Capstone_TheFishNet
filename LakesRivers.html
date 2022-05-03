@@ -13,21 +13,16 @@
         <h1 id="title">The Fish Net</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="LakesRivers.html">Lakes & Rivers</a>
+            <a href="LakesRivers.html" class="selected">Lakes & Rivers</a>
             <a href="Fish.html">Fish</a>
             <a href="FunFacts.html">Fun Facts</a>
             <a href="Resources.html">Resources</a>
         </nav>
     </header>
     <main>
-        <div>
-            <h1>Lakes and Rivers</h1>
-        </div>
-
         <div class="mainimagelakeriver">
             <img src="images/lake1.jpg" alt="Calm Lake">
-        </div><br>
-
+        </div>
         <div id="weather-search">
             <h3>Search Weather by Zip Code</h3><br>
             <form method="post">
@@ -44,18 +39,20 @@
             </div> 
         </div>
 
-        
-
         <div>
+            <h1>Lakes and Rivers</h1>
+        </div>
+
+        <div class="lake-river-list">
             <!--Content for page....Using divs for the moment just to show
             rough layout. Will switch images and content in soon-->
             <h2>Lakes</h2>
-            <div class="lake-1-container">
-                <div class="lake-1-image">
+            <div id="lake-1-container" class="lake-river-container">
+                <div id="lake-1-image" class="lake-river-image">
                     <p>Big Saint Germain Lake</p>
                     <img src="images/lakes/bigsaintgermainlake.jpg" alt="Big Saint Germain Lake">
                 </div>
-                <div class="lake-1-content">
+                <div id="lake-1-content" class="lake-river-content">
                     <h3>Big Saint Germain Lake</h3>
                     <p>
                         This 1,622 acre lake is located in Vilas County. It has a maximum depth of 42 feet, and the water clarity is low.
@@ -73,12 +70,12 @@
                 </div>
             </div>
 
-            <div class="lake-2-container">
-                <div class="lake-2-image">
+            <div id="lake-2-container" class="lake-river-container">
+                <div id="lake-2-image" class="lake-river-image">
                     <p>Lake Winnebago</p>
                     <img src="images/lakes/lakewinnebago.jpg" alt="Lake Winnebago">
                 </div>
-                <div class="lake-2-content">
+                <div id="lake-2-content" class="lake-river-content">
                     <h3>Lake Winnebago</h3>
                     <p>
                         This 131,939 acre lake is located in Winnebago, Calumet, and Fond du Lac Counties. It has a maximum depth of 21 feet, and the water clarity is low.
@@ -99,12 +96,12 @@
                 </div>
             </div>
 
-            <div class="lake-3-container">
-                <div class="lake-3-image">
+            <div id="lake-3-container" class="lake-river-container">
+                <div id="lake-3-image" class="lake-river-image">
                     <p>Lake Eau Claire</p>
                     <img src="images/lakes/lakeeauclaire.jpg" alt="Lake Eau Claire">
                 </div>
-                <div class="lake-3-content">
+                <div id="lake-3-content" class="lake-river-content">
                     <h3>Lake Eau Claire</h3>
                     <p>
                         This 870 acre lake is located in Eau Claire County. It has a maximum depth of 25 feet, and the water clarity is low.
@@ -121,12 +118,12 @@
                 </div>
             </div>
 
-            <div class="lake-4-container">
-                <div class="lake-4-image">
+            <div id="lake-4-container" class="lake-river-container">
+                <div id="lake-4-image" class="lake-river-image">
                     <p>Jute Lake</p>
                     <img src="images/lakes/jutelake.jpg" alt="Jute Lake">
                 </div>
-                <div class="lake-4-content">
+                <div id="lake-4-content" class="lake-river-content">
                     <h3>Jute Lake</h3>
                     <p>
                         This 191 acre lake is located in Vilas County. It has a maximum depth of 23 feet.
@@ -141,12 +138,12 @@
                 </div>
             </div>
 
-            <div class="lake-5-container">
-                <div class="lake-5-image">
+            <div id="lake-5-container" class="lake-river-container">
+                <div id="lake-5-image" class="lake-river-image">
                     <p>Lake Wisconsin</p>
                     <img src="images/lakes/lakewisconsin.jpg" alt="Lake Wisconsin">
                 </div>
-                <div class="lake-5-content">
+                <div id="lake-5-content" class="lake-river-content">
                     <h3>Lake Wisconsin</h3>
                     <p>
                         This 7,197 acre lake is located in Sauk and Columbia Counties. It has a maximum depth of 24 feet, and the water clarity is low.
@@ -163,12 +160,12 @@
                 </div>
             </div>
 
-            <div class="lake-6-container">
-                <div class="lake-6-image">
+            <div id="lake-6-container" class="lake-river-container">
+                <div id="lake-6-image" class="lake-river-image">
                     <p>Callahan Lake</p>
                     <img src="images/lakes/callahanlake.jpg" alt="Callahan Lake">
                 </div>
-                <div class="lake-6-content">
+                <div id="lake-6-content" class="lake-river-content">
                     <h3>Callahan Lake</h3>
                     <p>
                         This 138 acre lake is located in Sawyer County. It has a maximum depth of 18 feet.
@@ -183,12 +180,12 @@
                 </div>
             </div>
 
-            <div class="lake-7-container">
-                <div class="lake-7-image">
+            <div id="lake-7-container" class="lake-river-container">
+                <div id="lake-7-image" class="lake-river-image">
                     <p>Lake Pepin</p>
                     <img src="images/lakes/lakepepin.jpg" alt="Lake Pepin">
                 </div>
-                <div class="lake-7-content">
+                <div id="lake-7-content" class="lake-river-content">
                     <h3>Lake Pepin</h3>
                     <p>
                         This 24,550 acre lake is located in Pepin, Pierce, and Buffalo Counties. It has a maximum depth of 59 feet.
@@ -205,12 +202,12 @@
                 </div>
             </div>
 
-            <div class="lake-8-container">
-                <div class="lake-8-image">
+            <div id="lake-8-container" class="lake-river-container">
+                <div id="lake-8-image" class="lake-river-image">
                     <p>Lac La Belle</p>
                     <img src="images/lakes/laclabelle.jpg" alt="Lac La Belle">
                 </div>
-                <div class="lake-8-content">
+                <div id="lake-8-content" class="lake-river-content">
                     <h3>Lac La Belle</h3>
                     <p>
                         This 1,154 acre lake is located in Waukesha County. It has a maximum depth of 45 feet, and the water clarity is moderately clear.
@@ -226,12 +223,12 @@
                 </div>
             </div>
 
-            <div class="lake-9-container">
-                <div class="lake-9-image">
+            <div id="lake-9-container" class="lake-river-container">
+                <div id="lake-9-image" class="lake-river-image">
                     <p>Lake Monona</p>
                     <img src="images/lakes/lakemonona.jpg" alt="Lake Monona">
                 </div>
-                <div class="lake-9-content">
+                <div id="lake-9-content" class="lake-river-content">
                     <h3>Lake Monona</h3>
                     <p>
                         This 3,359 acre lake is located in Dane County. It has a maximum depth of 74 feet.
@@ -250,12 +247,12 @@
                 </div>
             </div>
 
-            <div class="lake-10-container">
-                <div class="lake-10-image">
+            <div id="lake-10-container" class="lake-river-container">
+                <div id="lake-10-image" class="lake-river-image">
                     <p>Lake Chippewa</p>
                     <img src="images/lakes/lakechippewa.jpg" alt="Lake Chippewa">
                 </div>
-                <div class="lake-10-content">
+                <div id="lake-10-content" class="lake-river-content">
                     <h3>Lake Chippewa</h3>
                     <p>
                         This 14,593 acre lake is located in Sawyer County. It has a maximum depth of 92 feet.
@@ -276,16 +273,16 @@
             
         </div>
 
-        <div>
+        <div class="lake-river-list">
             <!--Content for page....Using divs for the moment just to show
             rough layout. Will switch images and content in soon-->
             <h2>Rivers</h2>
-            <div class="river-1-container">
-                <div class="river-1-image">
+            <div id="river-1-container" class="lake-river-container">
+                <div id="river-1-image" class="lake-river-image">
                     <p>Kickapoo River</p>
                     <img src="images/rivers/kickapooriver.jpg" alt="Kickapoo River">
                 </div>
-                <div class="river-1-content">
+                <div id="river-1-content" class="lake-river-content">
                     <h3>Kickapoo River</h3>
                     <p>
                         This 126 mile river was named after the Kickapoo tribe that once inhabited this area of Wisconsin. Known as the crookedest river in the world.
@@ -301,12 +298,12 @@
                 </div>
             </div>
 
-            <div class="river-2-container">
-                <div class="river-2-image">
+            <div id="river-2-container" class="lake-river-container">
+                <div id="river-2-image" class="lake-river-image">
                     <p>Black Earth Creek</p>
                     <img src="images/rivers/blackearthcreek.jpg" alt="Black Earth Creek">
                 </div>
-                <div class="river-2-content">
+                <div id="river-2-content" class="lake-river-content">
                     <h3>Black Earth Creek</h3>
                     <p>
                         This spring-fed stream flows through the Village of Cross Plains. It begins as a cold-water spring just west of Madison, and empties past Mazomanie into the Wisconsin River. The water quality is clean and very clear.
@@ -320,12 +317,12 @@
                 </div>
             </div>
 
-            <div class="river-3-container">
-                <div class="river-3-image">
+            <div id="river-3-container" class="lake-river-container">
+                <div id="river-3-image" class="lake-river-image">
                     <p>Mississippi River</p>
                     <img src="images/rivers/mississippiriver.jpg" alt="Mississippi River">
                 </div>
-                <div class="river-3-content">
+                <div id="river-3-content" class="lake-river-content">
                     <h3>Mississippi River (Upper)</h3>
                     <p>
                         The upper Mississippi River borders the western part of Wisconsin. Mississippi is an Ojibwa word meaning great river or gathering of waters. Home to over 100 species of fish.
@@ -344,12 +341,12 @@
                 </div>
             </div>
 
-            <div class="river-4-container">
-                <div class="river-4-image">
+            <div id="river-4-container" class="lake-river-container">
+                <div id="river-4-image" class="lake-river-image">
                     <p>Eagle River</p>
                     <img src="images/rivers/eagleriver.jpg" alt="Eagle River">
                 </div>
-                <div class="river-4-content">
+                <div id="river-4-content" class="lake-river-content">
                     <h3>Eagle River</h3>
                     <p>
                         This river is a tributary of the Wisconsin River in northeastern Wisconsin and part of the watershed of the Mississippi River.
@@ -369,12 +366,12 @@
                 </div>
             </div>
 
-            <div class="river-5-container">
-                <div class="river-5-image">
+            <div id="river-5-container" class="lake-river-container">
+                <div id="river-5-image" class="lake-river-image">
                     <p>Chippewa River</p>
                     <img src="images/rivers/chippewariver.jpg" alt="Chippewa River">
                 </div>
-                <div class="river-5-content">
+                <div id="river-5-content" class="lake-river-content">
                     <h3>Chippewa River</h3>
                     <p>
                         This river flows approximately 183 miles through west-central and northwestern Wisconsin. The river is easily accessible via the Chippewa River State Trail, which follows the river from Eau Claire to Durand.
@@ -391,12 +388,12 @@
                 </div>
             </div>
 
-            <div class="river-6-container">
-                <div class="river-6-image">
+            <div id="river-6-container" class="lake-river-container">
+                <div id="river-6-image" class="lake-river-image">
                     <p>Pike River</p>
                     <img src="images/rivers/pikeriver.jpg" alt="Pike River">
                 </div>
-                <div class="river-6-content">
+                <div id="river-6-content" class="lake-river-content">
                     <h3>Pike River</h3>
                     <p>
                         This river is 15.8 miles long. It is a tributary of the Menominee River and its entire length is in Marinette County.
@@ -418,12 +415,12 @@
                 </div>
             </div>
 
-            <div class="river-7-container">
-                <div class="river-7-image">
+            <div id="river-7-container" class="lake-river-container">
+                <div id="river-7-image" class="lake-river-image">
                     <p>Flambeau River</p>
                     <img src="images/rivers/flambeauriver.jpg" alt="Flambeau River">
                 </div>
-                <div class="river-7-content">
+                <div id="river-7-content" class="lake-river-content">
                     <h3>Flambeau River</h3>
                     <p>
                         This river is a tributary of the Chippewa River in northern Wisconsin. Known as one of the best whitewater rivers in the Midwest.
@@ -439,12 +436,12 @@
                 </div>
             </div>
 
-            <div class="river-8-container">
-                <div class="river-8-image">
+            <div id="river-8-container" class="lake-river-container">
+                <div id="river-8-image" class="lake-river-image">
                     <p>Kinnickinnic River</p>
                     <img src="images/rivers/kinnickinnicriver.jpg" alt="Kinnickinnic River">
                 </div>
-                <div class="river-8-content">
+                <div id="river-8-content" class="lake-river-content">
                     <h3>Kinnickinnic River</h3>
                     <p>
                         This 22-mile-long river in northwestern Wisconsin is called "Kinni" for short. It is a world-class trout stream with over 8,000 trout per mile in some areas. Flows through the city of River Falls.
@@ -459,12 +456,12 @@
                 </div>
             </div>
 
-            <div class="river-9-container">
-                <div class="river-9-image">
+            <div id="river-9-container" class="lake-river-container">
+                <div id="river-9-image" class="lake-river-image">
                     <p>Namekagon River</p>
                     <img src="images/rivers/namekagonriver.jpg" alt="Namekagon River">
                 </div>
-                <div class="river-9-content">
+                <div id="river-9-content" class="lake-river-content">
                     <h3>Namekagon River</h3>
                     <p>
                         This river is a tributary of the St. Croix River. It is 101 miles long and located in northwestern Wisconsin. Its name comes from an Ojibwa word meaning "river at the place abundant with sturgeons".
@@ -484,12 +481,12 @@
                 </div>
             </div>
 
-            <div class="river-10-container">
-                <div class="river-10-image">
+            <div id="river-10-container" class="lake-river-container">
+                <div id="river-10-image" class="lake-river-image">
                     <p>Bad River</p>
                     <img src="images/rivers/badriver.jpg" alt="Bad River">
                 </div>
-                <div class="river-10-content">
+                <div id="river-10-content" class="lake-river-content">
                     <h3>Bad River</h3>
                     <p>
                         This 74.3 mile long river flows to Lake Superior in northern Wisconsin through portions of Ashland, Bayfield and Iron counties.

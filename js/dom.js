@@ -22,20 +22,21 @@ $("#fish-search").click(function(){
       fishDataHtmlString += "<div class='fish-search-inner-details'>";      
       fishDataHtmlString += (fish[index].common_name !== "") ? "<h3>" + fish[index].common_name + "</h3>" : "";
       fishDataHtmlString += "<ul>";
-      fishDataHtmlString += (fish[index].alt_names !== "") ? "<li>Alternate Names: " + fish[index].alt_names + "</li>" : "";
+      fishDataHtmlString += (fish[index].alt_names.length > 0) ? "<li>Alternate Names: " + fish[index].alt_names + "</li>" : "";
       fishDataHtmlString += (fish[index].scientific_name !== "") ? "<li>Scientific Name: " + fish[index].scientific_name + "</li>" : "";
       fishDataHtmlString += (fish[index].appearance !== "") ? "<li>Appearance: " + fish[index].appearance + "</li>" : "";
       fishDataHtmlString += (fish[index].average_size !== "") ? "<li>Average Size: " + fish[index].average_size + "</li>" : "";
       fishDataHtmlString += (fish[index].estimated_population !== "") ? "<li>Estimated Population: " + fish[index].estimated_population + "</li>" : "";
-      fishDataHtmlString += (fish[index].states !== "") ? "<li>State Located: " + fish[index].states + "</li>" : "";
-      fishDataHtmlString += (fish[index].popular_lakes !== "") ? "<li>Popular Lakes: " + fish[index].popular_lakes + "</li>" : "";
-      fishDataHtmlString += (fish[index].popular_rivers !== "") ? "<li>Popular Rivers: " + fish[index].popular_rivers + "</li>" : "";
-      fishDataHtmlString += (fish[index].bait !== "") ? "<li>Baits: " + fish[index].bait + "</li>" : "";
+      fishDataHtmlString += (fish[index].states.length > 0) ? "<li>State Located: " + fish[index].states + "</li>" : "";
+      fishDataHtmlString += (fish[index].popular_lakes.length > 0) ? "<li>Popular Lakes: " + fish[index].popular_lakes + "</li>" : "";
+      fishDataHtmlString += (fish[index].popular_rivers.length > 0) ? "<li>Popular Rivers: " + fish[index].popular_rivers + "</li>" : "";
+      fishDataHtmlString += (fish[index].bait.length > 0) ? "<li>Baits: " + fish[index].bait + "</li>" : "";
       fishDataHtmlString += (fish[index].hotspots !== "") ? "<li>Hotspot Tips: " + fish[index].hotspots + "</li>" : "";
       fishDataHtmlString += (fish[index].season !== "") ? "<li>Season: " + fish[index].season + "</li>" : "";
       fishDataHtmlString += (fish[index].time_of_day !== "") ? "<li>Best Time of Day: " + fish[index].time_of_day + "</li>" : "";
       fishDataHtmlString += (fish[index].lifespan !== "") ? "<li>Lifespan: " + fish[index].lifespan + "</li>" : "";
 
+      console.log(fish[index].popular_lakes.length);
       // Add the google link if there was a scientific name found
       if(fish[index].scientific_name !== "") {
         fishDataHtmlString += "<p><a href='http://www.google.com/search?q=" + encodeURIComponent(fish[index].scientific_name) + "' target='_blank'>Search Google</a>" + 

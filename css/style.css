@@ -19,11 +19,12 @@ header {
   z-index: 1000;
 }
 
-.mainimagelakeriver img {
+.mainimagelakeriver img,
+.water {
+  height: 300px;
   width: 100%;
-  float: left;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  object-fit: cover;
+  object-position: center 53%;
 }
 
 .main-image-fish img {
@@ -65,6 +66,10 @@ nav a {
   text-decoration: none;
 }
 
+nav a.selected {
+  color: #ffa500;
+}
+
 .resource-list a {
   text-decoration: none;
 }
@@ -86,13 +91,18 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
+/* moved here to pass stylelint validation */
+.lake-river-image img {
+  width: auto;
+}
+
 /* Overlap all of the slideshow images to allow for crossfade */
 #slideshow img {
   position: absolute;
   height: 300px;
   width: 100%;
   object-fit: cover;
-  object-position: middle center;
+  object-position: center 53%;
 }
 
 .site-description-container {
@@ -137,25 +147,44 @@ nav a:hover {
 /* End of styling for the Home Page
 CSS Styling for Lakes/Rivers page */
 
-.lake-1-container {
-  width: fit-content;
-  height: fit-content;
+.lake-river-list {
   display: flex;
-  flex-direction: row;
-  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: auto;
+  width: 60%;
 }
 
-.lake-1-image {
-  width: fit-content;
+.lake-river-list h2 {
+  margin-top: 100px;
+  text-align: center;
+  text-decoration: underline;
+  width: 100%;
+}
+
+.lake-river-container {
+  width: 100%;
   height: fit-content;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  gap: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.lake-river-container:last-child {
+  border-bottom: 0;
+}
+
+.lake-river-image {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 10px;
 }
 
-.lake-1-content {
-  width: fit-content;
+.lake-river-content {
+  width: 100%;
   height: fit-content;
   text-align: justify;
   display: flex;
@@ -163,582 +192,14 @@ CSS Styling for Lakes/Rivers page */
   padding: 10px;
 }
 
-.lake-1-content h3 {
-  text-align: center;
-}
-
-.lake-2-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.lake-2-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.lake-2-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.lake-2-content h3 {
-  text-align: center;
-}
-
-.lake-3-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.lake-3-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.lake-3-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.lake-3-content h3 {
-  text-align: center;
-}
-
-.lake-4-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.lake-4-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.lake-4-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.lake-4-content h3 {
-  text-align: center;
-}
-
-.lake-5-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.lake-5-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.lake-5-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.lake-5-content h3 {
-  text-align: center;
-}
-
-.lake-6-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.lake-6-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.lake-6-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.lake-6-content h3 {
-  text-align: center;
-}
-
-.lake-7-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.lake-7-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.lake-7-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.lake-7-content h3 {
-  text-align: center;
-}
-
-.lake-8-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.lake-8-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.lake-8-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.lake-8-content h3 {
-  text-align: center;
-}
-
-.lake-9-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.lake-9-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.lake-9-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.lake-9-content h3 {
-  text-align: center;
-}
-
-.lake-10-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.lake-10-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.lake-10-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.lake-10-content h3 {
-  text-align: center;
-}
-
-.river-1-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.river-1-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.river-1-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.river-1-content h3 {
-  text-align: center;
-}
-
-.river-2-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.river-2-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.river-2-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.river-2-content h3 {
-  text-align: center;
-}
-
-.river-3-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.river-3-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.river-3-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.river-3-content h3 {
-  text-align: center;
-}
-
-.river-4-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.river-4-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.river-4-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.river-4-content h3 {
-  text-align: center;
-}
-
-.river-5-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.river-5-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.river-5-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.river-5-content h3 {
-  text-align: center;
-}
-
-.river-6-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.river-6-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.river-6-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.river-6-content h3 {
-  text-align: center;
-}
-
-.river-7-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.river-7-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.river-7-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.river-7-content h3 {
-  text-align: center;
-}
-
-.river-8-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.river-8-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.river-8-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.river-8-content h3 {
-  text-align: center;
-}
-
-.river-9-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.river-9-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.river-9-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.river-9-content h3 {
-  text-align: center;
-}
-
-.river-10-container {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-}
-
-.river-10-image {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-}
-
-.river-10-content {
-  width: fit-content;
-  height: fit-content;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.river-10-content h3 {
+.lake-river-content h3 {
   text-align: center;
 }
 
 #weather-search {
+  margin: 0 auto;
   padding: 10px;
+  width: fit-content;
 }
 
 #weather {
@@ -946,12 +407,6 @@ Start of styling for Fish Page */
   text-align: center;
 }
 
-.water {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .resource-list a:hover {
   text-decoration: underline;
 }
@@ -1006,14 +461,19 @@ footer {
 
 .fish-list {
   clear: both;
-  width: 50%;
+  width: 60%;
   margin: auto;
   padding-bottom: 1%;
 }
 
 .fish-list-wrapper {
+  border-bottom: 1px solid #000;
   display: flex;
   justify-content: left;
+}
+
+.fish-list-wrapper:last-child {
+  border-bottom: 0;
 }
 
 .fish-list-image {
@@ -1025,9 +485,81 @@ footer {
 }
 
 .fish-list-title {
+  font-weight: bold;
+  margin-top: 50px;
   padding-top: 1%;
+  text-align: center;
+  width: 300px;
 }
 
 .fish-list-wrapper li {
   padding: 2px;
+}
+
+@media only screen and (max-width: 1200px) {
+  /* For medium & small monitors: */
+  .lake-river-list {
+    width: 90%;
+  }
+
+  .fish-list {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* For tablets: */
+
+  /* Disable sticky header */
+  header {
+    position: relative;
+  }
+
+  .site-description-container {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .lake-river-list {
+    width: 100%;
+  }
+
+  .lake-river-container {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .lake-river-content {
+    align-items: center;
+    width: 90%;
+  }
+
+  .lake-river-image {
+    padding: 0;
+    width: 100%;
+  }
+
+  #fish-data {
+    flex-direction: column;
+  }
+
+  .fish-search-inner-details {
+    padding: 0;
+  }
+
+  .fish-search-inner-details h3 {
+    text-align: center;
+  }
+
+  .fish-list-title {
+    text-align: center;
+    padding: 0;
+    width: 100%;
+  }
+
+  .fish-list-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
