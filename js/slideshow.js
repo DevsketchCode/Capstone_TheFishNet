@@ -9,7 +9,7 @@ function startSlideshow() {
   let count = $('#slideshow img').length;
   setInterval(function() {
       // Fade out the last image
-      $("#slide-img-" + slideInt).fadeOut(500);
+      $("#slide-img-" + slideInt).fadeOut(1500);
       // Fade in the next image
       $("#slide-img-" + nextSlide).fadeIn(1000);
       slideInt++;
@@ -22,7 +22,7 @@ function startSlideshow() {
       if(slideInt > count) {
         slideInt = 1;
       }
-  }, 5000);
+  }, 8000);
 }
 
 $(function() {
