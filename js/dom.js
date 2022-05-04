@@ -14,6 +14,9 @@ $("#fish-search").click(function(){
   if(userData !== "") {
     let index = FindFishData(userData);
 
+    // Get API "English_Name" and strip out any extra characters
+    let defaultNameFromAPI = fish[index].api_id_name.replace(/ *\([^)]*\) */g, "");
+
     if(index !== -1) { 
       // Set initial html string with the english name and scientific name
       let fishDataHtmlString = "";
@@ -23,6 +26,7 @@ $("#fish-search").click(function(){
       fishDataHtmlString += (fish[index].common_name !== "") ? "<h3>" + fish[index].common_name + "</h3>" : "";
       fishDataHtmlString += "<ul>";
       fishDataHtmlString += (fish[index].alt_names.length > 0) ? "<li>Alternate Names: " + fish[index].alt_names + "</li>" : "";
+      fishDataHtmlString += (fish[index].common_name === "" && fish[index].alt_names.length <= 0) ? "<h3>" + defaultNameFromAPI + "</h3>" : "";
       fishDataHtmlString += (fish[index].scientific_name !== "") ? "<li>Scientific Name: " + fish[index].scientific_name + "</li>" : "";
       fishDataHtmlString += (fish[index].appearance !== "") ? "<li>Appearance: " + fish[index].appearance + "</li>" : "";
       fishDataHtmlString += (fish[index].average_size !== "") ? "<li>Average Size: " + fish[index].average_size + "</li>" : "";
