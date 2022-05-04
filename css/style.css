@@ -152,6 +152,18 @@ nav a:hover {
   text-shadow: 2px 2px 4px #000;
 }
 
+.registration {
+  flex: 1 100%;
+}
+
+.registration-links {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10%;
+}
+
 /* End of styling for the Home Page
 CSS Styling for Lakes/Rivers page */
 
