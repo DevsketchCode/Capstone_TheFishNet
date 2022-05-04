@@ -392,10 +392,6 @@ Start of styling for Fish Page */
   padding: 0 15px;
 }
 
-.fish-search-inner-details li {
-  list-style-type: " - ";
-}
-
 footer {
   clear: both;
   background-color: #222;
