@@ -7,18 +7,18 @@ function FishObject(api_id_name, scientific_name, common_name, alt_names, appear
   this.api_id_name = api_id_name;
   this.scientific_name = scientific_name;
   this.common_name = common_name || "";
-  this.alt_names = alt_names || [""];
+  this.alt_names = alt_names || [];
   this.appearance = appearance || "";
   this.average_size = average_size || "";
   this.estimated_population = estimated_population || "";
   // This item would want an array of states they could be found in
-  this.states = states || [""];
+  this.states = states || [];
   // This item would want an array of lakes
-  this.popular_lakes = popular_lakes || [""];
+  this.popular_lakes = popular_lakes || [];
   // This item would want an array of rivers
-  this.popular_rivers = popular_rivers || [""];
+  this.popular_rivers = popular_rivers || [];
   // This item would want an array of baits
-  this.bait = bait || [""];
+  this.bait = bait || [];
   this.hotspots = hotspots || "";
   this.season = season || "";
   this.time_of_day = time_of_day || "";
@@ -69,7 +69,7 @@ function FindFishData(fishName) {
 }
 
 function FillInFishDetails() {
-  //TODO: Loop through known fish details and put them into the fishes object if they are not there already
+  // Merge API fish results with custom fish details
   $.each(knownFishDetails, function(key, value) {
     // Find the knownFish index in the API list and get the index number
     let fishIndex = FindFishData(value.api_id_name);
@@ -77,8 +77,6 @@ function FillInFishDetails() {
     if(fishIndex === -1 && value.scientific_name !== "") {
       // Add the new fish to the fish object array
       fish.push(new FishObject(value.api_id_name, value.scientific_name, value.common_name, value.alt_names, value.appearance, value.average_size, value.estimated_population, value.states, value.popular_lakes, value.popular_rivers, value.bait, value.hotspots, value.season, value.time_of_day, value.lifespan, value.image));
-      //console.log("Fish Added: " + value.name + ": Scientific: " + value.scientific_name);
-
     } else {
       // Add the additional details for each of the known fish to the appropriate fish Object
       fish[fishIndex].common_name = value.common_name;
