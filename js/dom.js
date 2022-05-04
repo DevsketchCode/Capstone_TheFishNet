@@ -14,12 +14,13 @@ $("#fish-search").click(function(){
   if(userData !== "") {
     let index = FindFishData(userData);
 
-    // Get API "English_Name" and strip out any extra characters
-    let defaultNameFromAPI = fish[index].api_id_name.replace(/ *\([^)]*\) */g, "");
-
     if(index !== -1) { 
+      // Get API "English_Name" and strip out any extra characters
+      let defaultNameFromAPI = fish[index].api_id_name.replace(/ *\([^)]*\) */g, "");
+
       // Set initial html string with the english name and scientific name
       let fishDataHtmlString = "";
+      
       // Only display fields if it has data
       fishDataHtmlString = (fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>";
       fishDataHtmlString += "<div class='fish-search-inner-details'>";      
@@ -40,7 +41,6 @@ $("#fish-search").click(function(){
       fishDataHtmlString += (fish[index].time_of_day !== "") ? "<li>Best Time of Day: " + fish[index].time_of_day + "</li>" : "";
       fishDataHtmlString += (fish[index].lifespan !== "") ? "<li>Lifespan: " + fish[index].lifespan + "</li>" : "";
 
-      console.log(fish[index].popular_lakes.length);
       // Add the google link if there was a scientific name found
       if(fish[index].scientific_name !== "") {
         fishDataHtmlString += "<p><a href='http://www.google.com/search?q=" + encodeURIComponent(fish[index].scientific_name) + "' target='_blank'>Search Google</a>" + 
