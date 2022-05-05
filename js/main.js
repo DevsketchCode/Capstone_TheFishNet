@@ -12,6 +12,19 @@ $(function() {
     // Populate the rest of the details
     FillInFishDetails();
 
+    // First check to see if the URL includes any parameters for a fish to show
+    let url_string = window.location.href;
+    let url = new URL(url_string);
+    let findFish = url.searchParams.get("findFish");
+
+    if(findFish !== null && findFish!== "") {
+      // decode the URL parameter value
+      findFish = decodeURIComponent(findFish);
+
+      // Display the fish search results from the URL parameter
+      displayFishSearchDetails(decodeURIComponent(findFish));
+    }
+
     displayFish();
   });
 });

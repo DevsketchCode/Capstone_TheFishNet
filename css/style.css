@@ -382,6 +382,11 @@ Start of styling for Fish Page */
   width: fit-content;
 }
 
+#fish-search-reset-button {
+  margin-left: 10px;
+  display: none;
+}
+
 #fish-search-details {
   border: 1px solid #ccc;
   display: none;

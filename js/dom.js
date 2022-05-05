@@ -2,18 +2,17 @@
 $("#users-fish-name").keypress(function(e) {
   // If enter is pressed on the search field, display the fish data
   if (e.which === 13) {
-    $('#fish-search').click();
+    $('#fish-search-button').click();
   }
 });
 
-// Display fish data
-$("#fish-search").click(function(){
-  // Get a fish name from the input field
-  let userData = $("#users-fish-name").val();
-
-  if(userData !== "") {
+// Function to display fish search data
+function displayFishSearchDetails(userData) {
+  if(userData !== null && userData !== "") {
+    // Get the index number of the searched fish from the fish object array
     let index = FindFishData(userData);
 
+    // If the index returns -1, then no fish was found
     if(index !== -1) { 
       // Get API "English_Name" and strip out any extra characters
       let defaultNameFromAPI = fish[index].api_id_name.replace(/ *\([^)]*\) */g, "");
@@ -46,6 +45,7 @@ $("#fish-search").click(function(){
         fishDataHtmlString += "<p><a href='http://www.google.com/search?q=" + encodeURIComponent(fish[index].scientific_name) + "' target='_blank'>Search Google</a>" + 
         " | <a href='https://www.google.com/search?q=" + encodeURIComponent(fish[index].scientific_name) + "&hl=en&source=lnms&tbm=isch' target='_blank'>Google Images</a></p>";
       }
+      fishDataHtmlString += "<p>Search results could also include non-local fish</p>";      
       fishDataHtmlString += "</ul>";
       fishDataHtmlString += "</div>";
 
@@ -54,10 +54,45 @@ $("#fish-search").click(function(){
     } else {
       $("#fish-data").html("<div><p>There was no fish named \"" + userData + "\" found. </p>" + "<p>You may want to try and be more specific.<br><i>Example: \"rainbow trout\" instead of \"trout\".</i></p></div>");
     }
-  }
 
-  // Display the fish search results
-  $("#fish-search-details").show();
+    // Adjust the header to let the user know search results are displayed
+    $("#fish-header").html("Search Results for \"" + userData + "\"");
+
+    // Display the fish search results
+    $("#fish-search-details").show();
+
+    // Hide known fish list, so it is not confused from search results
+    $(".fish-list").hide();
+
+    // Show reset search button
+    $("#fish-search-reset-button").show();
+  }
+}
+
+// Hide search results and show Known Fish list
+$("#fish-search-reset-button").click(function() {
+
+  // Adjust the header to let the user know known fish are displayed
+  $("#fish-header").html("Common Fish in Wisconsin");
+
+  // Hide the fish search results, so it is not confused from the known fish list
+  $("#fish-search-details").hide();
+
+  // Show known fish list
+  $(".fish-list").show();
+
+  // Hide reset search button
+  $("#fish-search-reset-button").hide();
+});
+
+// Display fish data
+$("#fish-search-button").click(function(){
+  // Get a fish name from the input field
+  let userData = $("#users-fish-name").val();
+  
+  // Display the fish search results from the input field
+  displayFishSearchDetails(userData);
+
 });
 
 // Function displays 10 fish on fish page
