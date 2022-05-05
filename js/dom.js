@@ -107,7 +107,7 @@ function displayFish(){
     let currentFishString = "";
     currentFishString += "<div class='fish-list-title'>" + knownFishDetails[i].common_name + "</div>";
     currentFishString += "<div class='fish-list-wrapper'>";
-    currentFishString += "<div id='" + i + "'>";
+    currentFishString += "<div id='f" + i + "' onclick='fadeImage(" + i + ")'>";
     currentFishString += (fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>";
     currentFishString += "</div>";
     currentFishString += "<div>";
@@ -127,14 +127,27 @@ function displayFish(){
     // Grab html element and insert string into it
     let fishListBody = document.querySelector("#fish-list-body");
     fishListBody.innerHTML += currentFishString;
-    
-    
-
-    let fishOrgPic = document.getElementById(i);
-    fishOrgPic.onclick = function(){
-      console.log("hello");
-    };
-    
+   
   
+  }
+}
+
+// Variable to set status of fish image
+// Cannot define in function or the it will reset every click.
+imageStatus = 1;
+
+// Function to switch image
+// For now just switching to default "no image found" image
+function fadeImage(index){
+  if(imageStatus === 1){
+    $("#f" + index).html("<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
+    imageStatus = 2;
+    return imageStatus;
+  } else {
+    // Switch back to original image when clicked again.
+    $("#f" + index).html("<img src='images/" + knownFishDetails[index].image + "' class='fish-search-photo' alt='Photo of the fish'>");
+    console.log(knownFishDetails[index].image);
+    imageStatus = 1;
+    return imageStatus;
   }
 }
