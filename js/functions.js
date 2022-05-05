@@ -3,7 +3,7 @@ let fish = [];
 
 // Create FishDataObject Constructor
 // OPTIONAL parameters have defaults set using two pipes: || then the default value
-function FishObject(api_id_name, scientific_name, common_name, alt_names, appearance, average_size, estimated_population, states, popular_lakes, popular_rivers, bait, hotspots, season, time_of_day, lifespan, image) {
+function FishObject(api_id_name, scientific_name, common_name, alt_names, appearance, average_size, estimated_population, states, popular_lakes, popular_rivers, bait, hotspots, season, time_of_day, lifespan, image, real_image) {
   this.api_id_name = api_id_name;
   this.scientific_name = scientific_name;
   this.common_name = common_name || "";
@@ -24,6 +24,7 @@ function FishObject(api_id_name, scientific_name, common_name, alt_names, appear
   this.time_of_day = time_of_day || "";
   this.lifespan = lifespan || "";
   this.image = image || "";
+  this.real_image = real_image || "";
 }
 
 // NOTE: This function MUST be called from the main.js file, the last file loaded or to a file after main.js
@@ -76,7 +77,7 @@ function FillInFishDetails() {
     // Loop through the knownFish, if it is not found in the API data and its scientific name is not empty, add the full knownFish entry to the list
     if(fishIndex === -1 && value.scientific_name !== "") {
       // Add the new fish to the fish object array
-      fish.push(new FishObject(value.api_id_name, value.scientific_name, value.common_name, value.alt_names, value.appearance, value.average_size, value.estimated_population, value.states, value.popular_lakes, value.popular_rivers, value.bait, value.hotspots, value.season, value.time_of_day, value.lifespan, value.image));
+      fish.push(new FishObject(value.api_id_name, value.scientific_name, value.common_name, value.alt_names, value.appearance, value.average_size, value.estimated_population, value.states, value.popular_lakes, value.popular_rivers, value.bait, value.hotspots, value.season, value.time_of_day, value.lifespan, value.image, value.real_image));
     } else {
       // Add the additional details for each of the known fish to the appropriate fish Object
       fish[fishIndex].common_name = value.common_name;
@@ -93,7 +94,7 @@ function FillInFishDetails() {
       fish[fishIndex].time_of_day = value.time_of_day;
       fish[fishIndex].lifespan = value.lifespan;
       fish[fishIndex].image = value.image;
+      fish[fishIndex].real_image = value.real_image;
     }
-
   });
 }

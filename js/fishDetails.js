@@ -22,6 +22,7 @@ const knownFishDetails = [
     "time_of_day": "Early morning or evening",
     "lifespan": "16 years",
     "image": "largemouthBass.png",
+    "real_image": "",
   },
   {
     "api_id_name": "Rock bass",
@@ -40,6 +41,7 @@ const knownFishDetails = [
     "time_of_day": "Early morning or evening",
     "lifespan": "10 years",
     "image": "rockBass.png",
+    "real_image": "",    
   },
   {
     "api_id_name": "Smallmouth bass",
@@ -58,6 +60,7 @@ const knownFishDetails = [
     "time_of_day": "Early morning or evening",
     "lifespan": "6-14 years.",
     "image": "smallmouthBass.png",
+    "real_image": "",    
   },
   {
     "api_id_name": "White bass",
@@ -76,6 +79,7 @@ const knownFishDetails = [
     "time_of_day": "Prior to sunrise and just after sunset.",
     "lifespan": "8 years",
     "image": "whiteBass.png",
+    "real_image": "",    
   },
   {
     "api_id_name": "Bluegill",  
@@ -94,6 +98,7 @@ const knownFishDetails = [
     "time_of_day": "Daytime usually is best",
     "lifespan": "6 years",
     "image": "bluegill.png",
+    "real_image": "",    
   },
   {
     "api_id_name": "Black bullhead",
@@ -112,6 +117,7 @@ const knownFishDetails = [
     "time_of_day": "During day will work but they are more active at night.",
     "lifespan": "5 years",
     "image": "blackBullhead.png",
+    "real_image": "",    
   },
   {
     "api_id_name": "Yellow bullhead",
@@ -130,6 +136,7 @@ const knownFishDetails = [
     "time_of_day": "During day will work but better luck at night.",
     "lifespan": "7 years",
     "image": "yellowBullhead.png",
+    "real_image": "",    
   },
   {
     "api_id_name": "Brown bullhead",
@@ -148,6 +155,7 @@ const knownFishDetails = [
     "time_of_day": "Anytime, but low light hours being best.",
     "lifespan": "7 years",
     "image": "brownBullhead.png",
+    "real_image": "",    
   },
   {
     "api_id_name": "Channel catfish",
@@ -166,6 +174,7 @@ const knownFishDetails = [
     "time_of_day": "Low light hours in summer and daytime in winter.",
     "lifespan": "15 years",
     "image": "channelCatfish.png",
+    "real_image": "",    
   },
   {
     "api_id_name": "Flathead catfish",
@@ -184,6 +193,7 @@ const knownFishDetails = [
     "time_of_day": "Lower light hours",
     "lifespan": "5-22 years",
     "image": "flatheadCatfish.png",
+    "real_image": "",    
   },
   {
     "api_id_name": "Black crappie",
@@ -202,6 +212,7 @@ const knownFishDetails = [
     "time_of_day": "Early morning and evening",
     "lifespan": "15 years",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "Muskellunge",
@@ -220,6 +231,7 @@ const knownFishDetails = [
     "time_of_day": "Dawn and dusk",
     "lifespan": "18 years",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "American yellow perch",
@@ -238,6 +250,7 @@ const knownFishDetails = [
     "time_of_day": "Daylight hours in the early morning or late evening.",
     "lifespan": "9-10 years",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "Northern pike",
@@ -256,6 +269,7 @@ const knownFishDetails = [
     "time_of_day": "Sunrise or Sunset, or during the day in early spring",
     "lifespan": "7-10 years",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "Pumpkinseed",
@@ -274,6 +288,7 @@ const knownFishDetails = [
     "time_of_day": "Best time is early morning or evening but can be caught anytime during the day.",
     "lifespan": "6-8 years",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "Chinook(=Spring=King)salmon",
@@ -292,6 +307,7 @@ const knownFishDetails = [
     "time_of_day": "early morning just before sunrise or just after sunset, best chance on a stream is 5-15 minutes for the day",
     "lifespan": "4-5 years",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "Coho(=Silver)salmon",
@@ -310,6 +326,7 @@ const knownFishDetails = [
     "time_of_day": "early morning or evening",
     "lifespan": "4-5 years",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "Lake sturgeon",
@@ -328,6 +345,7 @@ const knownFishDetails = [
     "time_of_day": "early morning and evening",
     "lifespan": "55 years for males, 80-150 years for females",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "Brook trout",
@@ -346,6 +364,7 @@ const knownFishDetails = [
     "time_of_day": "Early morning after dawn or late evening before dusk",
     "lifespan": "2-3 years",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "Lake trout(=Char)", 
@@ -364,6 +383,7 @@ const knownFishDetails = [
     "time_of_day": "Avoid light, so overcast conditions are better. Before 11am in summer. During early spring, the are in more parts of the lake throughout the day. ",
     "lifespan": "25 years",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "Brown trout",
@@ -382,6 +402,7 @@ const knownFishDetails = [
     "time_of_day": "early morning after sunrise or late afternoon before sunset.",
     "lifespan": "5 years",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "Walleye",
@@ -400,6 +421,7 @@ const knownFishDetails = [
     "time_of_day": "Early morning or late evening. During midday, they hide in deeper water or in the shade.",
     "lifespan": "7 years",
     "image": "",
+    "real_image": "",    
   },
   {
     "api_id_name": "Rainbow trout",
@@ -418,6 +440,7 @@ const knownFishDetails = [
     "time_of_day": "early morning",
     "lifespan": "7 years",
     "image": "rainbow_trout_sm.jpg",
+    "real_image": "",    
   },
 ];
 // To display the list of these objects in the console for quick verification
