@@ -22,7 +22,7 @@ const knownFishDetails = [
     "time_of_day": "Early morning or evening",
     "lifespan": "16 years",
     "image": "largemouthBass.png",
-    "real_image": "",
+    "real_image": "realLargemouthBass.png",
   },
   {
     "api_id_name": "Rock bass",
@@ -41,7 +41,7 @@ const knownFishDetails = [
     "time_of_day": "Early morning or evening",
     "lifespan": "10 years",
     "image": "rockBass.png",
-    "real_image": "",    
+    "real_image": "realRockbass.png",    
   },
   {
     "api_id_name": "Smallmouth bass",
@@ -60,7 +60,7 @@ const knownFishDetails = [
     "time_of_day": "Early morning or evening",
     "lifespan": "6-14 years.",
     "image": "smallmouthBass.png",
-    "real_image": "",    
+    "real_image": "realSmallmouthBass.png",    
   },
   {
     "api_id_name": "White bass",
@@ -79,7 +79,7 @@ const knownFishDetails = [
     "time_of_day": "Prior to sunrise and just after sunset.",
     "lifespan": "8 years",
     "image": "whiteBass.png",
-    "real_image": "",    
+    "real_image": "realWhitebass.png",    
   },
   {
     "api_id_name": "Bluegill",  
@@ -98,7 +98,7 @@ const knownFishDetails = [
     "time_of_day": "Daytime usually is best",
     "lifespan": "6 years",
     "image": "bluegill.png",
-    "real_image": "",    
+    "real_image": "realBluegill.png",    
   },
   {
     "api_id_name": "Black bullhead",
@@ -117,7 +117,7 @@ const knownFishDetails = [
     "time_of_day": "During day will work but they are more active at night.",
     "lifespan": "5 years",
     "image": "blackBullhead.png",
-    "real_image": "",    
+    "real_image": "realBlackbullhead.png",    
   },
   {
     "api_id_name": "Yellow bullhead",
@@ -136,7 +136,7 @@ const knownFishDetails = [
     "time_of_day": "During day will work but better luck at night.",
     "lifespan": "7 years",
     "image": "yellowBullhead.png",
-    "real_image": "",    
+    "real_image": "realYellowbullhead.png",    
   },
   {
     "api_id_name": "Brown bullhead",
@@ -155,7 +155,7 @@ const knownFishDetails = [
     "time_of_day": "Anytime, but low light hours being best.",
     "lifespan": "7 years",
     "image": "brownBullhead.png",
-    "real_image": "",    
+    "real_image": "realBrownbullhead.png",    
   },
   {
     "api_id_name": "Channel catfish",
@@ -174,7 +174,7 @@ const knownFishDetails = [
     "time_of_day": "Low light hours in summer and daytime in winter.",
     "lifespan": "15 years",
     "image": "channelCatfish.png",
-    "real_image": "",    
+    "real_image": "realChannelCatfish.png",    
   },
   {
     "api_id_name": "Flathead catfish",
@@ -193,7 +193,7 @@ const knownFishDetails = [
     "time_of_day": "Lower light hours",
     "lifespan": "5-22 years",
     "image": "flatheadCatfish.png",
-    "real_image": "",    
+    "real_image": "realFlatheadCatfish.png",    
   },
   {
     "api_id_name": "Black crappie",
@@ -211,8 +211,8 @@ const knownFishDetails = [
     "season": "May and June",
     "time_of_day": "Early morning and evening",
     "lifespan": "15 years",
-    "image": "",
-    "real_image": "",    
+    "image": "crappie.png",
+    "real_image": "realCrappie.png",    
   },
   {
     "api_id_name": "Muskellunge",
@@ -230,8 +230,8 @@ const knownFishDetails = [
     "season": "Summer, when the water is warm.",
     "time_of_day": "Dawn and dusk",
     "lifespan": "18 years",
-    "image": "",
-    "real_image": "",    
+    "image": "musky.png",
+    "real_image": "realMusky.png",    
   },
   {
     "api_id_name": "American yellow perch",

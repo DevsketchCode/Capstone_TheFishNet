@@ -99,7 +99,7 @@ $("#fish-search-button").click(function(){
 // Function cannot be called on page load due to API needed to be loaded
 // Function call comes on main.js
 function displayFish(){
-  for(let i = 0; i < 10; i++){
+  for(let i = 0; i < 12; i++){
     // Create index for fish API
     let index = FindFishData(knownFishDetails[i].common_name);
     
@@ -132,22 +132,39 @@ function displayFish(){
   }
 }
 
-// Variable to set status of fish image
+// Variables for image rollover
 // Cannot define in function or the it will reset every click.
-let imageStatus = 1;
+let imageStatusVar = [];
+for(let i = 0; i < 12; i++){
+  imageStatusVar[i] = 1;
+}
 
 // Function to switch image
 // For now just switching to default "no image found" image
 function fadeImage(index){
-  if(imageStatus === 1){
-    $("#f" + index).html("<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
-    imageStatus = 2;
+  imageStatusVar[index]
+  let fishImgRollover = "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>";
+  if(imageStatusVar[index] === 1){
+    if(knownFishDetails[index].real_image != ""){
+      fishImgRollover = "<img src='images/" + knownFishDetails[index].real_image + "' class='fish-search-photo' alt='Photo of the fish'>";
+    }
+    $("#f" + index).fadeOut("fast", function(){
+      $("#f" + index).html(fishImgRollover);
+      $("#f" + index).fadeIn("fast");
+    });
+    
+    
+    imageStatusVar[index] = 2;
+    
     return imageStatus;
   } else {
     // Switch back to original image when clicked again.
-    $("#f" + index).html("<img src='images/" + knownFishDetails[index].image + "' class='fish-search-photo' alt='Photo of the fish'>");
-    console.log(knownFishDetails[index].image);
-    imageStatus = 1;
+    $("#f" + index).fadeOut("fast", function(){
+      $("#f" + index).html("<img src='images/" + knownFishDetails[index].image + "' class='fish-search-photo' alt='Photo of the fish'>");
+      $("#f" + index).fadeIn("fast");
+    });
+    
+    imageStatusVar[index] = 1;
     return imageStatus;
   }
 }
