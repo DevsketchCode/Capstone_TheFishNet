@@ -132,39 +132,40 @@ function displayFish(){
   }
 }
 
-// Variables for image rollover
-// Cannot define in function or the it will reset every click.
+// Create array to hold status variables for each saperate image using the index
 let imageStatusVar = [];
 for(let i = 0; i < 12; i++){
+  // Set all variables to 1 because when the page loads all images are set to first image (unclicked)
   imageStatusVar[i] = 1;
 }
 
+
 // Function to switch image
-// For now just switching to default "no image found" image
 function fadeImage(index){
-  imageStatusVar[index]
-  let fishImgRollover = "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>";
+  
+  // Check status of image variable
   if(imageStatusVar[index] === 1){
-    if(knownFishDetails[index].real_image != ""){
-      fishImgRollover = "<img src='images/" + knownFishDetails[index].real_image + "' class='fish-search-photo' alt='Photo of the fish'>";
-    }
+    
+    // Fade original image out then perform image switch and fade back in
     $("#f" + index).fadeOut("fast", function(){
-      $("#f" + index).html(fishImgRollover);
+      // Checks if a real image is present and if not will set to default "no image found" image
+      $("#f" + index).html((knownFishDetails[index].real_image !== "") ? "<img src='images/" + knownFishDetails[index].real_image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
       $("#f" + index).fadeIn("fast");
     });
     
-    
+    // Grab particular images status variable in array and update to 2 (clicked). Returning is not required.
     imageStatusVar[index] = 2;
     
-    return imageStatus;
+    return imageStatusVar;
   } else {
     // Switch back to original image when clicked again.
     $("#f" + index).fadeOut("fast", function(){
-      $("#f" + index).html("<img src='images/" + knownFishDetails[index].image + "' class='fish-search-photo' alt='Photo of the fish'>");
+      $("#f" + index).html((knownFishDetails[index].image !== "") ? "<img src='images/" + knownFishDetails[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
       $("#f" + index).fadeIn("fast");
     });
     
+    // Update status variable to 1 (clicked).
     imageStatusVar[index] = 1;
-    return imageStatus;
+    return imageStatusVar;
   }
 }
