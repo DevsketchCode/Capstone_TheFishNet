@@ -134,7 +134,7 @@ function displayFish(){
 
 // Variable to set status of fish image
 // Cannot define in function or the it will reset every click.
-imageStatus = 1;
+let imageStatus = 1;
 
 // Function to switch image
 // For now just switching to default "no image found" image
