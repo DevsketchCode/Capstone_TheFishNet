@@ -99,7 +99,7 @@ $("#fish-search-button").click(function(){
 // Function cannot be called on page load due to API needed to be loaded
 // Function call comes on main.js
 function displayFish(){
-  for(let i = 0; i < 10; i++){
+  for(let i = 0; i < 12; i++){
     // Create index for fish API
     let index = FindFishData(knownFishDetails[i].common_name);
     
@@ -132,22 +132,40 @@ function displayFish(){
   }
 }
 
-// Variable to set status of fish image
-// Cannot define in function or the it will reset every click.
-let imageStatus = 1;
+// Create array to hold status variables for each saperate image using the index
+let imageStatusVar = [];
+for(let i = 0; i < 12; i++){
+  // Set all variables to 1 because when the page loads all images are set to first image (unclicked)
+  imageStatusVar[i] = 1;
+}
+
 
 // Function to switch image
-// For now just switching to default "no image found" image
 function fadeImage(index){
-  if(imageStatus === 1){
-    $("#f" + index).html("<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
-    imageStatus = 2;
-    return imageStatus;
+  
+  // Check status of image variable
+  if(imageStatusVar[index] === 1){
+    
+    // Fade original image out then perform image switch and fade back in
+    $("#f" + index).fadeOut("fast", function(){
+      // Checks if a real image is present and if not will set to default "no image found" image
+      $("#f" + index).html((knownFishDetails[index].real_image !== "") ? "<img src='images/" + knownFishDetails[index].real_image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
+      $("#f" + index).fadeIn("fast");
+    });
+    
+    // Grab particular images status variable in array and update to 2 (clicked). Returning is not required.
+    imageStatusVar[index] = 2;
+    
+    return imageStatusVar;
   } else {
     // Switch back to original image when clicked again.
-    $("#f" + index).html("<img src='images/" + knownFishDetails[index].image + "' class='fish-search-photo' alt='Photo of the fish'>");
-    console.log(knownFishDetails[index].image);
-    imageStatus = 1;
-    return imageStatus;
+    $("#f" + index).fadeOut("fast", function(){
+      $("#f" + index).html((knownFishDetails[index].image !== "") ? "<img src='images/" + knownFishDetails[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
+      $("#f" + index).fadeIn("fast");
+    });
+    
+    // Update status variable to 1 (clicked).
+    imageStatusVar[index] = 1;
+    return imageStatusVar;
   }
 }
