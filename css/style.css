@@ -471,7 +471,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   /* For tablets: */
 
   /* Disable sticky header */
@@ -526,5 +526,94 @@ footer {
   .fish-list-wrapper {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* Lake Images */
+  #lake-1-image img ::after {
+    content: url("..images/lakes/small/bigsaintgermainlake.jpg");
+  }
+
+  #lake-2-image img ::after {
+    content: url("..images/lakes/small/lakewinnebago.jpg");
+  }
+
+  #lake-3-image img ::after {
+    content: url("..images/lakes/small/lakeeauclaire.jpg");
+  }
+
+  #lake-4-image img ::after {
+    content: url("..images/lakes/small/jutelake.jpg");
+  }
+
+  #lake-5-image img ::after {
+    content: url("..images/lakes/small/lakewisconsin.jpg");
+  }
+
+  #lake-6-image img ::after {
+    content: url("..images/lakes/small/callahanlake.jpg");
+  }
+
+  #lake-7-image img ::after {
+    content: url("..images/lakes/small/lakepepin.jpg");
+  }
+
+  #lake-8-image img ::after {
+    content: url("..images/lakes/small/laclabelle.jpg");
+  }
+
+  #lake-9-image img ::after {
+    content: url("..images/lakes/small/lakemonona.jpg");
+  }
+
+  #lake-10-image img ::after {
+    content: url("..images/lakes/small/lakechippewa.jpg");
+  }
+
+  /* River Images */
+  #river-1-image img ::after {
+    content: url("..images/rivers/small/kickapooriver.jpg");
+  }
+
+  #river-2-image img ::after {
+    content: url("..images/rivers/small/blackearthcreek.jpg");
+  }
+
+  #river-3-image img ::after {
+    content: url("..images/rivers/small/mississippiriver.jpg");
+  }
+
+  #river-4-image img ::after {
+    content: url("..images/rivers/small/eagleriver.jpg");
+  }
+
+  #river-5-image img ::after {
+    content: url("..images/rivers/small/chippewariver.jpg");
+  }
+
+  #river-6-image img ::after {
+    content: url("..images/rivers/small/pikeriver.jpg");
+  }
+
+  #river-7-image img ::after {
+    content: url("..images/rivers/small/flambeauriver.jpg");
+  }
+
+  #river-8-image img ::after {
+    content: url("..images/rivers/small/kinnickinnicriver.jpg");
+  }
+
+  #river-9-image img ::after {
+    content: url("..images/rivers/small/namekagonriver.jpg");
+  }
+
+  #river-10-image img ::after {
+    content: url("../images/rivers/small/badriver.jpg");
+  }
+
+  .lake-river-list img {
+    width: auto;
+    height: auto;
   }
 }
