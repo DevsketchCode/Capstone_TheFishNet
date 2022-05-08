@@ -252,6 +252,10 @@ CSS Styling for Lakes/Rivers page */
   display: none;
 }
 
+.map-info {
+  text-align: center;
+}
+
 /* End of styling for lakes/Rivers Page
 
 Start of styling for Fish Page */
