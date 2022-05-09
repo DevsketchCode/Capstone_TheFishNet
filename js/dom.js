@@ -242,7 +242,7 @@ $(function() {
 $('#quadrant-form').submit(function(event) {
   event.preventDefault();
 
-  //Make sure all quandrants and additional info are hidden upon selection
+  //Make sure all quandrants are hidden upon selection
   quandrantHide();
 
   let quadrantSelection = $('#quadrant-selection option:selected').val();
