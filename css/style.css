@@ -391,6 +391,15 @@ Start of styling for Fish Page */
   flex: 1 40%;
 }
 
+.fact-card a {
+  color: #ffa500;
+}
+
+.fact-card a:hover {
+  color: #4abdff;
+  text-shadow: 2px 2px 4px #000;
+}
+
 /* End of fun facts styling
    Start of resource styling */
 
