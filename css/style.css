@@ -238,6 +238,14 @@ CSS Styling for Lakes/Rivers page */
   padding: 10px;
 }
 
+#btn-refresh,
+.north,
+.south,
+.east,
+.west {
+  display: none;
+}
+
 /* Add some padding inside the card container */
 .city-temp {
   padding: 2px 16px;
@@ -249,12 +257,37 @@ CSS Styling for Lakes/Rivers page */
   padding: 0 10px;
 }
 
-#btn-refresh {
+.map-info {
+  text-align: center;
   display: none;
 }
 
-.map-info {
+#quadrant-form {
   text-align: center;
+}
+
+#quadrant-label {
+  font-size: larger;
+}
+
+#btn-submit,
+#btn-refresh,
+#zip,
+#quadrant-selection,
+#quandrant-submit {
+  border-radius: 5px;
+  border: 2px solid rgb(136 209 252);
+  box-shadow: 0 4px 8px 0 rgba(0 0 0 / 20%);
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+#btn-submit:hover,
+#btn-refresh:hover,
+#zip:hover,
+#quadrant-selection:hover,
+#quandrant-submit:hover {
+  background-color: rgb(136 209 252);
 }
 
 /* End of styling for lakes/Rivers Page

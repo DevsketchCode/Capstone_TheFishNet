@@ -27,222 +27,268 @@
         <div>
             <h1>Lakes and Rivers</h1>
             <h4 class="map-info">Click on images for a geographical view.</h4>
-        </div>
+        </div><br>
+
+        <div>
+            <form method="post" id="quadrant-form">
+                <div>
+                    <label for="quadrant-selection" id="quadrant-label">
+                        <strong>Select all or a quadrant to display lakes and rivers: </strong>
+                    </label>
+                    <select name="quadrant-selection" id="quadrant-selection">
+                        <option value="all">All</option>
+                        <option value="north">North</option>
+                        <option value="south">South</option>
+                        <option value="east">East</option>
+                        <option value="west">West</option>
+                    </select>
+                    <input type="submit" id="quandrant-submit" value="Display">
+                </div>
+            </form>
+        </div><br>
 
         <div class="lake-river-list">
             <!--Lake information-->
             <h2>Lakes</h2>
-            <div id="lake-1-container" class="lake-river-container">
-                <div id="lake-1-image" class="lake-river-image">
-                    <img src="images/lakes/bigsaintgermainlake.jpg" alt="Big Saint Germain Lake" width="500" height="340">
-                </div>
-                <div id="lake-1-content" class="lake-river-content">
-                    <h3>Big Saint Germain Lake</h3>
-                    <p>
-                        This 1,622 acre lake is located in Vilas County. It has a maximum depth of 42 feet, and the water clarity is low.
-                    </p>
-                    <p><strong>Fish commonly found in this lake:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Lake%20Trout" class="fish-name-links" target="_blank">Lake Trout</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="lake-2-container" class="lake-river-container">
-                <div id="lake-2-image" class="lake-river-image">
-                    <img src="images/lakes/lakewinnebago.jpg" alt="Lake Winnebago" width="500" height="400">
-                </div>
-                <div id="lake-2-content" class="lake-river-content">
-                    <h3>Lake Winnebago</h3>
-                    <p>
-                        This 131,939 acre lake is located in Winnebago, Calumet, and Fond du Lac Counties. It has a maximum depth of 21 feet, and the water clarity is low.
-                    </p>
-                    <p><strong>Fish commonly found in this lake:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Lake%20Sturgeon" class="fish-name-links" target="_blank">Lake Sturgeon</a></li>
-                        <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
-                        <li><a href="Fish.html?findFish=Flathead%20Catfish" class="fish-name-links" target="_blank">Flathead Catfish</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                        <li><a href="Fish.html?findFish=White%20Bass" class="fish-name-links" target="_blank">White Bass</a></li>
-                    </ul>
+            <div class="north">
+                <div id="lake-1-container" class="lake-river-container">
+                    <div id="lake-1-image" class="lake-river-image">
+                        <img src="images/lakes/bigsaintgermainlake.jpg" alt="Big Saint Germain Lake" width="500" height="340">
+                    </div>
+                    <div id="lake-1-content" class="lake-river-content">
+                        <h3>Big Saint Germain Lake</h3>
+                        <p>
+                            This 1,622 acre lake is located in Vilas County. It has a maximum depth of 42 feet, and the water clarity is low.
+                        </p>
+                        <p><strong>Zip Code:</strong> 54558</p>
+                        <p><strong>Fish commonly found in this lake:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Lake%20Trout" class="fish-name-links" target="_blank">Lake Trout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div id="lake-3-container" class="lake-river-container">
-                <div id="lake-3-image" class="lake-river-image">
-                    <img src="images/lakes/lakeeauclaire.jpg" alt="Lake Eau Claire" width="500" height="400">
-                </div>
-                <div id="lake-3-content" class="lake-river-content">
-                    <h3>Lake Eau Claire</h3>
-                    <p>
-                        This 870 acre lake is located in Eau Claire County. It has a maximum depth of 25 feet, and the water clarity is low.
-                    </p>
-                    <p><strong>Fish commonly found in this lake:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="lake-4-container" class="lake-river-container">
-                <div id="lake-4-image" class="lake-river-image">
-                    <img src="images/lakes/jutelake.jpg" alt="Jute Lake" width="500" height="400">
-                </div>
-                <div id="lake-4-content" class="lake-river-content">
-                    <h3>Jute Lake</h3>
-                    <p>
-                        This 191 acre lake is located in Vilas County. It has a maximum depth of 23 feet.
-                    </p>
-                    <p><strong>Fish commonly found in this lake:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                    </ul>
+            <div class="east">
+                <div id="lake-2-container" class="lake-river-container">
+                    <div id="lake-2-image" class="lake-river-image">
+                        <img src="images/lakes/lakewinnebago.jpg" alt="Lake Winnebago" width="500" height="400">
+                    </div>
+                    <div id="lake-2-content" class="lake-river-content">
+                        <h3>Lake Winnebago</h3>
+                        <p>
+                            This 131,939 acre lake is located in Winnebago, Calumet, and Fond du Lac Counties. It has a maximum depth of 21 feet, and the water clarity is low.
+                        </p>
+                        <p>
+                            <strong>Zip Codes:</strong> 54901, 54902, 54903, 54904, 54906, 54935, 54985, 54937, 54952, 54956, 54129, 53014, 53049, and 54935
+                        </p>
+                        <p><strong>Fish commonly found in this lake:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Lake%20Sturgeon" class="fish-name-links" target="_blank">Lake Sturgeon</a></li>
+                            <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
+                            <li><a href="Fish.html?findFish=Flathead%20Catfish" class="fish-name-links" target="_blank">Flathead Catfish</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                            <li><a href="Fish.html?findFish=White%20Bass" class="fish-name-links" target="_blank">White Bass</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div id="lake-5-container" class="lake-river-container">
-                <div id="lake-5-image" class="lake-river-image">
-                    <img src="images/lakes/lakewisconsin.jpg" alt="Lake Wisconsin" width="500" height="390">
-                </div>
-                <div id="lake-5-content" class="lake-river-content">
-                    <h3>Lake Wisconsin</h3>
-                    <p>
-                        This 7,197 acre lake is located in Sauk and Columbia Counties. It has a maximum depth of 24 feet, and the water clarity is low.
-                    </p>
-                    <p><strong>Fish commonly found in this lake:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="lake-6-container" class="lake-river-container">
-                <div id="lake-6-image" class="lake-river-image">
-                    <img src="images/lakes/callahanlake.jpg" alt="Callahan Lake" width="500" height="350">
-                </div>
-                <div id="lake-6-content" class="lake-river-content">
-                    <h3>Callahan Lake</h3>
-                    <p>
-                        This 138 acre lake is located in Sawyer County. It has a maximum depth of 18 feet.
-                    </p>
-                    <p><strong>Fish commonly found in this lake:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                    </ul>
+            <div class="west">
+                <div id="lake-3-container" class="lake-river-container">
+                    <div id="lake-3-image" class="lake-river-image">
+                        <img src="images/lakes/lakeeauclaire.jpg" alt="Lake Eau Claire" width="500" height="400">
+                    </div>
+                    <div id="lake-3-content" class="lake-river-content">
+                        <h3>Lake Eau Claire</h3>
+                        <p>
+                            This 870 acre lake is located in Eau Claire County. It has a maximum depth of 25 feet, and the water clarity is low.
+                        </p>
+                        <p><strong>Zip Code:</strong> 54722</p>
+                        <p><strong>Fish commonly found in this lake:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div id="lake-7-container" class="lake-river-container">
-                <div id="lake-7-image" class="lake-river-image">
-                    <img src="images/lakes/lakepepin.jpg" alt="Lake Pepin" width="500" height="335">
-                </div>
-                <div id="lake-7-content" class="lake-river-content">
-                    <h3>Lake Pepin</h3>
-                    <p>
-                        This 24,550 acre lake is located in Pepin, Pierce, and Buffalo Counties. It has a maximum depth of 59 feet.
-                    </p>
-                    <p><strong>Fish commonly found in this lake:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                        <li><a href="Fish.html?findFish=Sauger" class="fish-name-links" target="_blank">Sauger</a></li>
-                        <li><a href="Fish.html?findFish=White%20Bass" class="fish-name-links" target="_blank">White Bass</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="lake-8-container" class="lake-river-container">
-                <div id="lake-8-image" class="lake-river-image">
-                    <img src="images/lakes/laclabelle.jpg" alt="Lac La Belle" width="500" height="325">
-                </div>
-                <div id="lake-8-content" class="lake-river-content">
-                    <h3>Lac La Belle</h3>
-                    <p>
-                        This 1,154 acre lake is located in Waukesha County. It has a maximum depth of 45 feet, and the water clarity is moderately clear.
-                    </p>
-                    <p><strong>Fish commonly found in this lake:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                    </ul>
+            <div class="north">
+                <div id="lake-4-container" class="lake-river-container">
+                    <div id="lake-4-image" class="lake-river-image">
+                        <img src="images/lakes/jutelake.jpg" alt="Jute Lake" width="500" height="400">
+                    </div>
+                    <div id="lake-4-content" class="lake-river-content">
+                        <h3>Jute Lake</h3>
+                        <p>
+                            This 191 acre lake is located in Vilas County. It has a maximum depth of 23 feet.
+                        </p>
+                        <p><strong>Zip Code:</strong> 54540</p>
+                        <p><strong>Fish commonly found in this lake:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div id="lake-9-container" class="lake-river-container">
-                <div id="lake-9-image" class="lake-river-image">
-                    <img src="images/lakes/lakemonona.jpg" alt="Lake Monona" width="500" height="360">
-                </div>
-                <div id="lake-9-content" class="lake-river-content">
-                    <h3>Lake Monona</h3>
-                    <p>
-                        This 3,359 acre lake is located in Dane County. It has a maximum depth of 74 feet.
-                    </p>
-                    <p><strong>Fish commonly found in this lake:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Lake%20Sturgeon" class="fish-name-links" target="_blank">Lake Sturgeon</a></li>
-                        <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
-                    </ul>
+            <div class="south">
+                <div id="lake-5-container" class="lake-river-container">
+                    <div id="lake-5-image" class="lake-river-image">
+                        <img src="images/lakes/lakewisconsin.jpg" alt="Lake Wisconsin" width="500" height="390">
+                    </div>
+                    <div id="lake-5-content" class="lake-river-content">
+                        <h3>Lake Wisconsin</h3>
+                        <p>
+                            This 7,197 acre lake is located in Sauk and Columbia Counties. It has a maximum depth of 24 feet, and the water clarity is low.
+                        </p>
+                        <p><strong>Zip Codes:</strong> 53555, 53561, 53578, and 53955</p>
+                        <p><strong>Fish commonly found in this lake:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div id="lake-10-container" class="lake-river-container">
-                <div id="lake-10-image" class="lake-river-image">
-                    <img src="images/lakes/lakechippewa.jpg" alt="Lake Chippewa" width="500" height="375">
+            <div class="north">
+                <div id="lake-6-container" class="lake-river-container">
+                    <div id="lake-6-image" class="lake-river-image">
+                        <img src="images/lakes/callahanlake.jpg" alt="Callahan Lake" width="500" height="350">
+                    </div>
+                    <div id="lake-6-content" class="lake-river-content">
+                        <h3>Callahan Lake</h3>
+                        <p>
+                            This 138 acre lake is located in Sawyer County. It has a maximum depth of 18 feet.
+                        </p>
+                        <p><strong>Zip Code:</strong> 54843</p>
+                        <p><strong>Fish commonly found in this lake:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="lake-10-content" class="lake-river-content">
-                    <h3>Lake Chippewa</h3>
-                    <p>
-                        This 14,593 acre lake is located in Sawyer County. It has a maximum depth of 92 feet.
-                    </p>
-                    <p><strong>Fish commonly found in this lake:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                        <li><a href="Fish.html?findFish=Lake%20Sturgeon" class="fish-name-links" target="_blank">Lake Sturgeon</a></li>
-                        <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
-                    </ul>
+            </div>
+
+            <div class="west">
+                <div id="lake-7-container" class="lake-river-container">
+                    <div id="lake-7-image" class="lake-river-image">
+                        <img src="images/lakes/lakepepin.jpg" alt="Lake Pepin" width="500" height="335">
+                    </div>
+                    <div id="lake-7-content" class="lake-river-content">
+                        <h3>Lake Pepin</h3>
+                        <p>
+                            This 24,550 acre lake is located in Pepin, Pierce, and Buffalo Counties. It has a maximum depth of 59 feet.
+                        </p>
+                        <p><strong>Zip Code:</strong> 54759</p>
+                        <p><strong>Fish commonly found in this lake:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                            <li><a href="Fish.html?findFish=Sauger" class="fish-name-links" target="_blank">Sauger</a></li>
+                            <li><a href="Fish.html?findFish=White%20Bass" class="fish-name-links" target="_blank">White Bass</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="south">
+                <div id="lake-8-container" class="lake-river-container">
+                    <div id="lake-8-image" class="lake-river-image">
+                        <img src="images/lakes/laclabelle.jpg" alt="Lac La Belle" width="500" height="325">
+                    </div>
+                    <div id="lake-8-content" class="lake-river-content">
+                        <h3>Lac La Belle</h3>
+                        <p>
+                            This 1,154 acre lake is located in Waukesha County. It has a maximum depth of 45 feet, and the water clarity is moderately clear.
+                        </p>
+                        <p><strong>Zip Code:</strong> 53066</p>
+                        <p><strong>Fish commonly found in this lake:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="south">
+                <div id="lake-9-container" class="lake-river-container">
+                    <div id="lake-9-image" class="lake-river-image">
+                        <img src="images/lakes/lakemonona.jpg" alt="Lake Monona" width="500" height="360">
+                    </div>
+                    <div id="lake-9-content" class="lake-river-content">
+                        <h3>Lake Monona</h3>
+                        <p>This 3,359 acre lake is located in Dane County. It has a maximum depth of 74 feet.</p>
+                        <p><strong>Zip Code:</strong> 53716</p>
+                        <p><strong>Fish commonly found in this lake:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Lake%20Sturgeon" class="fish-name-links" target="_blank">Lake Sturgeon</a></li>
+                            <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="north">
+                <div id="lake-10-container" class="lake-river-container">
+                    <div id="lake-10-image" class="lake-river-image">
+                        <img src="images/lakes/lakechippewa.jpg" alt="Lake Chippewa" width="500" height="375">
+                    </div>
+                    <div id="lake-10-content" class="lake-river-content">
+                        <h3>Lake Chippewa</h3>
+                        <p>This 14,593 acre lake is located in Sawyer County. It has a maximum depth of 92 feet.</p>
+                        <p><strong>Zip Codes:</strong> 54828 and 54896.</p> 
+                        <p><strong>Fish commonly found in this lake:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                            <li><a href="Fish.html?findFish=Lake%20Sturgeon" class="fish-name-links" target="_blank">Lake Sturgeon</a></li>
+                            <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
@@ -251,221 +297,241 @@
         <div class="lake-river-list">
             <!--River information-->
             <h2>Rivers</h2>
-            <div id="river-1-container" class="lake-river-container">
-                <div id="river-1-image" class="lake-river-image">
-                    <img src="images/rivers/kickapooriver.jpg" alt="Kickapoo River" width="500" height="340">
-                </div>
-                <div id="river-1-content" class="lake-river-content">
-                    <h3>Kickapoo River</h3>
-                    <p>
-                        This 126 mile river was named after the Kickapoo tribe that once inhabited this area of Wisconsin. Known as the crookedest river in the world.
-                    </p>
-                    <p><strong>Fish commonly found in this river:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Brown%20Trout" class="fish-name-links" target="_blank">Brown Trout</a></li>
-                        <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Brook%20Trout" class="fish-name-links" target="_blank">Brook Trout</a></li>
-                        <li><a href="Fish.html?findFish=Rainbow%20Trout" class="fish-name-links" target="_blank">Rainbow Trout</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="river-2-container" class="lake-river-container">
-                <div id="river-2-image" class="lake-river-image">
-                    <img src="images/rivers/blackearthcreek.jpg" alt="Black Earth Creek" width="500" height="375">
-                </div>
-                <div id="river-2-content" class="lake-river-content">
-                    <h3>Black Earth Creek</h3>
-                    <p>
-                        This spring-fed stream flows through the Village of Cross Plains. It begins as a cold-water spring just west of Madison, and empties past Mazomanie into the Wisconsin River. The water quality is clean and very clear.
-                    </p>
-                    <p><strong>Fish commonly found in this river:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Brown%20Trout" class="fish-name-links" target="_blank">Brown Trout</a></li>
-                        <li><a href="Fish.html?findFish=Brook%20Trout" class="fish-name-links" target="_blank">Brook Trout</a></li>
-                        <li><a href="Fish.html?findFish=Rainbow%20Trout" class="fish-name-links" target="_blank">Rainbow Trout</a></li>
-                    </ul>
+            <div class="south">
+                <div id="river-1-container" class="lake-river-container">
+                    <div id="river-1-image" class="lake-river-image">
+                        <img src="images/rivers/kickapooriver.jpg" alt="Kickapoo River" width="500" height="340">
+                    </div>
+                    <div id="river-1-content" class="lake-river-content">
+                        <h3>Kickapoo River</h3>
+                        <p>
+                            This 126 mile river was named after the Kickapoo tribe that once inhabited this area of Wisconsin. Known as the crookedest river in the world.
+                        </p>
+                        <p><strong>Fish commonly found in this river:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Brown%20Trout" class="fish-name-links" target="_blank">Brown Trout</a></li>
+                            <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Brook%20Trout" class="fish-name-links" target="_blank">Brook Trout</a></li>
+                            <li><a href="Fish.html?findFish=Rainbow%20Trout" class="fish-name-links" target="_blank">Rainbow Trout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div id="river-3-container" class="lake-river-container">
-                <div id="river-3-image" class="lake-river-image">
-                    <img src="images/rivers/mississippiriver.jpg" alt="Mississippi River" width="500" height="400">
-                </div>
-                <div id="river-3-content" class="lake-river-content">
-                    <h3>Mississippi River (Upper)</h3>
-                    <p>
-                        The upper Mississippi River borders the western part of Wisconsin. Mississippi is an Ojibwa word meaning great river or gathering of waters. Home to over 100 species of fish.
-                    </p>
-                    <p><strong>Fish commonly found in this river:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                        <li><a href="Fish.html?findFish=Lake%20Sturgeon" class="fish-name-links" target="_blank">Lake Sturgeon</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
-                        <li><a href="Fish.html?findFish=Flathead%20Catfish" class="fish-name-links" target="_blank">Flathead Catfish</a></li>
-                        <li><a href="Fish.html?findFish=Blue%20Catfish" class="fish-name-links" target="_blank">Blue Catfish</a></li>
-                        <li><a href="Fish.html?findFish=Sauger" class="fish-name-links" target="_blank">Sauger</a></li>
-                    </ul>
+            <div class="south">
+                <div id="river-2-container" class="lake-river-container">
+                    <div id="river-2-image" class="lake-river-image">
+                        <img src="images/rivers/blackearthcreek.jpg" alt="Black Earth Creek" width="500" height="375">
+                    </div>
+                    <div id="river-2-content" class="lake-river-content">
+                        <h3>Black Earth Creek</h3>
+                        <p>
+                            This spring-fed stream flows through the Village of Cross Plains. It begins as a cold-water spring just west of Madison, and empties past Mazomanie into the Wisconsin River. The water quality is clean and very clear.
+                        </p>
+                        <p><strong>Fish commonly found in this river:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Brown%20Trout" class="fish-name-links" target="_blank">Brown Trout</a></li>
+                            <li><a href="Fish.html?findFish=Brook%20Trout" class="fish-name-links" target="_blank">Brook Trout</a></li>
+                            <li><a href="Fish.html?findFish=Rainbow%20Trout" class="fish-name-links" target="_blank">Rainbow Trout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div id="river-4-container" class="lake-river-container">
-                <div id="river-4-image" class="lake-river-image">
-                    <img src="images/rivers/eagleriver.jpg" alt="Eagle River" width="500" height="350">
-                </div>
-                <div id="river-4-content" class="lake-river-content">
-                    <h3>Eagle River</h3>
-                    <p>
-                        This river is a tributary of the Wisconsin River in northeastern Wisconsin and part of the watershed of the Mississippi River.
-                    </p>
-                    <p><strong>Fish commonly found in this river:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=White%20Bass" class="fish-name-links" target="_blank">White Bass</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                        <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
-                        <li><a href="Fish.html?findFish=Striped%20Bass%2Chybrid" class="fish-name-links" target="_blank">Hybrid Striped Bass</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="river-5-container" class="lake-river-container">
-                <div id="river-5-image" class="lake-river-image">
-                    <img src="images/rivers/chippewariver.jpg" alt="Chippewa River" width="500" height="350">
-                </div>
-                <div id="river-5-content" class="lake-river-content">
-                    <h3>Chippewa River</h3>
-                    <p>
-                        This river flows approximately 183 miles through west-central and northwestern Wisconsin. The river is easily accessible via the Chippewa River State Trail, which follows the river from Eau Claire to Durand.
-                    </p>
-                    <p><strong>Fish commonly found in this river:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                    </ul>
+            <div class="west">
+                <div id="river-3-container" class="lake-river-container">
+                    <div id="river-3-image" class="lake-river-image">
+                        <img src="images/rivers/mississippiriver.jpg" alt="Mississippi River" width="500" height="400">
+                    </div>
+                    <div id="river-3-content" class="lake-river-content">
+                        <h3>Mississippi River (Upper)</h3>
+                        <p>
+                            The upper Mississippi River borders the western part of Wisconsin. Mississippi is an Ojibwa word meaning great river or gathering of waters. Home to over 100 species of fish.
+                        </p>
+                        <p><strong>Fish commonly found in this river:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                            <li><a href="Fish.html?findFish=Lake%20Sturgeon" class="fish-name-links" target="_blank">Lake Sturgeon</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
+                            <li><a href="Fish.html?findFish=Flathead%20Catfish" class="fish-name-links" target="_blank">Flathead Catfish</a></li>
+                            <li><a href="Fish.html?findFish=Blue%20Catfish" class="fish-name-links" target="_blank">Blue Catfish</a></li>
+                            <li><a href="Fish.html?findFish=Sauger" class="fish-name-links" target="_blank">Sauger</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div id="river-6-container" class="lake-river-container">
-                <div id="river-6-image" class="lake-river-image">
-                    <img src="images/rivers/pikeriver.jpg" alt="Pike River" width="500" height="350">
-                </div>
-                <div id="river-6-content" class="lake-river-content">
-                    <h3>Pike River</h3>
-                    <p>
-                        This river is 15.8 miles long. It is a tributary of the Menominee River and its entire length is in Marinette County.
-                    </p>
-                    <p><strong>Fish commonly found in this river:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Chinook%20Salmon" class="fish-name-links" target="_blank">Chinook Salmon</a></li>
-                        <li><a href="Fish.html?findFish=Brown%20Trout" class="fish-name-links" target="_blank">Brown Trout</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Black%20Bullhead" class="fish-name-links" target="_blank">Black Bullhead</a></li>
-                        <li><a href="Fish.html?findFish=Brown%20Bullhead" class="fish-name-links" target="_blank">Brown Bullhead</a></li>
-                        <li><a href="Fish.html?findFish=Yellow%20Bullhead" class="fish-name-links" target="_blank">Yellow Bullhead</a></li>
-                        <li><a href="Fish.html?findFish=Coho%20Salmon" class="fish-name-links" target="_blank">Coho Salmon</a></li>
-                        <li><a href="Fish.html?findFish=Pumpkinseed" class="fish-name-links" target="_blank">Pumpkinseed</a></li>
-                        <li><a href="Fish.html?findFish=Rainbow%20Trout" class="fish-name-links" target="_blank">Rainbow Trout</a></li>
-                        <li><a href="Fish.html?findFish=Brook%20Trout" class="fish-name-links" target="_blank">Brook Trout</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="river-7-container" class="lake-river-container">
-                <div id="river-7-image" class="lake-river-image">
-                    <img src="images/rivers/flambeauriver.jpg" alt="Flambeau River" width="500" height="400">
-                </div>
-                <div id="river-7-content" class="lake-river-content">
-                    <h3>Flambeau River</h3>
-                    <p>
-                        This river is a tributary of the Chippewa River in northern Wisconsin. Known as one of the best whitewater rivers in the Midwest.
-                    </p>
-                    <p><strong>Fish commonly found in this river:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                    </ul>
+            <div class="north">
+                <div id="river-4-container" class="lake-river-container">
+                    <div id="river-4-image" class="lake-river-image">
+                        <img src="images/rivers/eagleriver.jpg" alt="Eagle River" width="500" height="350">
+                    </div>
+                    <div id="river-4-content" class="lake-river-content">
+                        <h3>Eagle River</h3>
+                        <p>
+                            This river is a tributary of the Wisconsin River in northeastern Wisconsin and part of the watershed of the Mississippi River.
+                        </p>
+                        <p><strong>Fish commonly found in this river:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=White%20Bass" class="fish-name-links" target="_blank">White Bass</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                            <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
+                            <li><a href="Fish.html?findFish=Striped%20Bass%2Chybrid" class="fish-name-links" target="_blank">Hybrid Striped Bass</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div id="river-8-container" class="lake-river-container">
-                <div id="river-8-image" class="lake-river-image">
-                    <img src="images/rivers/kinnickinnicriver.jpg" alt="Kinnickinnic River" width="500" height="380">
-                </div>
-                <div id="river-8-content" class="lake-river-content">
-                    <h3>Kinnickinnic River</h3>
-                    <p>
-                        This 22-mile-long river in northwestern Wisconsin is called "Kinni" for short. It is a world-class trout stream with over 8,000 trout per mile in some areas. Flows through the city of River Falls.
-                    </p>
-                    <p><strong>Fish commonly found in this river:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Brook%20Trout" class="fish-name-links" target="_blank">Brook Trout</a></li>
-                        <li><a href="Fish.html?findFish=Brown%20Trout" class="fish-name-links" target="_blank">Brown Trout</a></li>
-                        <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="river-9-container" class="lake-river-container">
-                <div id="river-9-image" class="lake-river-image">
-                    <img src="images/rivers/namekagonriver.jpg" alt="Namekagon River" width="500" height="410">
-                </div>
-                <div id="river-9-content" class="lake-river-content">
-                    <h3>Namekagon River</h3>
-                    <p>
-                        This river is a tributary of the St. Croix River. It is 101 miles long and located in northwestern Wisconsin. Its name comes from an Ojibwa word meaning "river at the place abundant with sturgeons".
-                    </p>
-                    <p><strong>Fish commonly found in this river:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Brook%20Trout" class="fish-name-links" target="_blank">Brook Trout</a></li>
-                        <li><a href="Fish.html?findFish=Brown%20Trout" class="fish-name-links" target="_blank">Brown Trout</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                        <li><a href="Fish.html?findFish=Lake%20Sturgeon" class="fish-name-links" target="_blank">Lake Sturgeon</a></li>
-                        <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
-                        <li><a href="Fish.html?findFish=Flathead%20Catfish" class="fish-name-links" target="_blank">Flathead Catfish</a></li>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                    </ul>
+            <div class="west">
+                <div id="river-5-container" class="lake-river-container">
+                    <div id="river-5-image" class="lake-river-image">
+                        <img src="images/rivers/chippewariver.jpg" alt="Chippewa River" width="500" height="350">
+                    </div>
+                    <div id="river-5-content" class="lake-river-content">
+                        <h3>Chippewa River</h3>
+                        <p>
+                            This river flows approximately 183 miles through west-central and northwestern Wisconsin. The river is easily accessible via the Chippewa River State Trail, which follows the river from Eau Claire to Durand.
+                        </p>
+                        <p><strong>Fish commonly found in this river:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div id="river-10-container" class="lake-river-container">
-                <div id="river-10-image" class="lake-river-image">
-                    <img src="images/rivers/badriver.jpg" alt="Bad River" width="500" height="275">
+            <div class="north">
+                <div id="river-6-container" class="lake-river-container">
+                    <div id="river-6-image" class="lake-river-image">
+                        <img src="images/rivers/pikeriver.jpg" alt="Pike River" width="500" height="350">
+                    </div>
+                    <div id="river-6-content" class="lake-river-content">
+                        <h3>Pike River</h3>
+                        <p>
+                            This river is 15.8 miles long. It is a tributary of the Menominee River and its entire length is in Marinette County.
+                        </p>
+                        <p><strong>Fish commonly found in this river:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Chinook%20Salmon" class="fish-name-links" target="_blank">Chinook Salmon</a></li>
+                            <li><a href="Fish.html?findFish=Brown%20Trout" class="fish-name-links" target="_blank">Brown Trout</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Black%20Bullhead" class="fish-name-links" target="_blank">Black Bullhead</a></li>
+                            <li><a href="Fish.html?findFish=Brown%20Bullhead" class="fish-name-links" target="_blank">Brown Bullhead</a></li>
+                            <li><a href="Fish.html?findFish=Yellow%20Bullhead" class="fish-name-links" target="_blank">Yellow Bullhead</a></li>
+                            <li><a href="Fish.html?findFish=Coho%20Salmon" class="fish-name-links" target="_blank">Coho Salmon</a></li>
+                            <li><a href="Fish.html?findFish=Pumpkinseed" class="fish-name-links" target="_blank">Pumpkinseed</a></li>
+                            <li><a href="Fish.html?findFish=Rainbow%20Trout" class="fish-name-links" target="_blank">Rainbow Trout</a></li>
+                            <li><a href="Fish.html?findFish=Brook%20Trout" class="fish-name-links" target="_blank">Brook Trout</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="river-10-content" class="lake-river-content">
-                    <h3>Bad River</h3>
-                    <p>
-                        This 74.3 mile long river flows to Lake Superior in northern Wisconsin through portions of Ashland, Bayfield and Iron counties.
-                    </p>
-                    <p><strong>Fish commonly found in this river:</strong></p>
-                    <ul>
-                        <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
-                        <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
-                        <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
-                        <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
-                        <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
-                    </ul>
+            </div>
+
+            <div class="north">
+                <div id="river-7-container" class="lake-river-container">
+                    <div id="river-7-image" class="lake-river-image">
+                        <img src="images/rivers/flambeauriver.jpg" alt="Flambeau River" width="500" height="400">
+                    </div>
+                    <div id="river-7-content" class="lake-river-content">
+                        <h3>Flambeau River</h3>
+                        <p>
+                            This river is a tributary of the Chippewa River in northern Wisconsin. Known as one of the best whitewater rivers in the Midwest.
+                        </p>
+                        <p><strong>Fish commonly found in this river:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="west">
+                <div id="river-8-container" class="lake-river-container">
+                    <div id="river-8-image" class="lake-river-image">
+                        <img src="images/rivers/kinnickinnicriver.jpg" alt="Kinnickinnic River" width="500" height="380">
+                    </div>
+                    <div id="river-8-content" class="lake-river-content">
+                        <h3>Kinnickinnic River</h3>
+                        <p>
+                            This 22-mile-long river in northwestern Wisconsin is called "Kinni" for short. It is a world-class trout stream with over 8,000 trout per mile in some areas. Flows through the city of River Falls.
+                        </p>
+                        <p><strong>Fish commonly found in this river:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Brook%20Trout" class="fish-name-links" target="_blank">Brook Trout</a></li>
+                            <li><a href="Fish.html?findFish=Brown%20Trout" class="fish-name-links" target="_blank">Brown Trout</a></li>
+                            <li><a href="Fish.html?findFish=Largemouth%20Bass" class="fish-name-links" target="_blank">Largemouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="north">
+                <div id="river-9-container" class="lake-river-container">
+                    <div id="river-9-image" class="lake-river-image">
+                        <img src="images/rivers/namekagonriver.jpg" alt="Namekagon River" width="500" height="410">
+                    </div>
+                    <div id="river-9-content" class="lake-river-content">
+                        <h3>Namekagon River</h3>
+                        <p>
+                            This river is a tributary of the St. Croix River. It is 101 miles long and located in northwestern Wisconsin. Its name comes from an Ojibwa word meaning "river at the place abundant with sturgeons".
+                        </p>
+                        <p><strong>Fish commonly found in this river:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Brook%20Trout" class="fish-name-links" target="_blank">Brook Trout</a></li>
+                            <li><a href="Fish.html?findFish=Brown%20Trout" class="fish-name-links" target="_blank">Brown Trout</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                            <li><a href="Fish.html?findFish=Lake%20Sturgeon" class="fish-name-links" target="_blank">Lake Sturgeon</a></li>
+                            <li><a href="Fish.html?findFish=Channel%20Catfish" class="fish-name-links" target="_blank">Channel Catfish</a></li>
+                            <li><a href="Fish.html?findFish=Flathead%20Catfish" class="fish-name-links" target="_blank">Flathead Catfish</a></li>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="north">
+                <div id="river-10-container" class="lake-river-container">
+                    <div id="river-10-image" class="lake-river-image">
+                        <img src="images/rivers/badriver.jpg" alt="Bad River" width="500" height="275">
+                    </div>
+                    <div id="river-10-content" class="lake-river-content">
+                        <h3>Bad River</h3>
+                        <p>
+                            This 74.3 mile long river flows to Lake Superior in northern Wisconsin through portions of Ashland, Bayfield and Iron counties.
+                        </p>
+                        <p><strong>Fish commonly found in this river:</strong></p>
+                        <ul>
+                            <li><a href="Fish.html?findFish=Walleye" class="fish-name-links" target="_blank">Walleye</a></li>
+                            <li><a href="Fish.html?findFish=Northern%20Pike" class="fish-name-links" target="_blank">Northern Pike</a></li>
+                            <li><a href="Fish.html?findFish=Smallmouth%20Bass" class="fish-name-links" target="_blank">Smallmouth Bass</a></li>
+                            <li><a href="Fish.html?findFish=Panfish" class="fish-name-links" target="_blank">Panfish</a></li>
+                            <li><a href="Fish.html?findFish=Musky" class="fish-name-links" target="_blank">Musky</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
@@ -486,7 +552,7 @@
                 </form>
             </div> 
         </div>
-        
+
     </main>
     <footer>
         <p>Copyright &copy; 2022; Developed by: Bruce Brown, David Oberlander, Mason Johnson, and Timothy Harper</p>

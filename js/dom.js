@@ -6,6 +6,51 @@ $("#users-fish-name").keypress(function(e) {
   }
 });
 
+// Function to hide all Lakes and Rivers
+function quandrantHide() {
+  $('.map-info').hide();
+  $('.lake-river-list').hide();
+  $('.north').hide();
+  $('.south').hide();
+  $('.east').hide();
+  $('.west').hide();
+}
+
+// Function to display the Lakes and Rivers quadrant selection
+function quadrantDisplay(quadrantSelection) {
+  // Displays the image click information
+  $('.map-info').show();
+
+  // Displays the lakes and rivers
+  $('.lake-river-list').show();
+
+  switch(quadrantSelection) {
+    case 'north':
+      $('.north').show('slow');
+    break;
+
+    case 'south':
+      $('.south').show('slow');
+    break;
+
+    case 'east':
+      $('.east').show('slow');
+    break;
+
+    case 'west':
+      $('.west').show('slow');
+    break;
+
+    case 'all':
+      $('.north').show('slow');
+      $('.south').show('slow');
+      $('.east').show('slow');
+      $('.west').show('slow');
+    break;
+  }
+
+}
+
 // Function to display fish search data
 function displayFishSearchDetails(userData) {
   if(userData !== null && userData !== "") {
@@ -173,9 +218,8 @@ function fadeImage(index){
 // Display Geographical Maps
 $('.lake-river-list img').click(function() {
 
-  // Sets the width and height
+  // Sets the width
   let imageWidth = this.width;
-  let imageHeight = this.height;
 
   if (this.src.indexOf("map") !== -1) {
     //removes the _map.jpg from the image to set up new image
@@ -187,4 +231,20 @@ $('.lake-river-list img').click(function() {
     $(this).fadeOut('fast');
     $(this).attr('src', $(this).attr('src').replace('.jpg', '_map.jpg')).width(imageWidth).fadeIn('slow');
   }
+});
+
+// Hide the lakes and rivers when loaded
+$(function() {
+  $('.lake-river-list').hide();
+});
+
+// Display lakes and rivers based on input selection
+$('#quadrant-form').submit(function(event) {
+  event.preventDefault();
+
+  //Make sure all quandrants are hidden upon selection
+  quandrantHide();
+
+  let quadrantSelection = $('#quadrant-selection option:selected').val();
+  quadrantDisplay(quadrantSelection);
 });
