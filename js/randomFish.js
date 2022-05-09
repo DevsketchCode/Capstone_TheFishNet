@@ -17,42 +17,42 @@ function randomFishSelector() {
     case "Sunday":
       let currentFishSunday = ["Largemouth Black Bass", "Rock Bass", "Smallmouth Bass"];
       
-      document.getElementById("presentFish").innerHTML = "The Fish Of The Day Is " + currentFishSunday[randomNumber1] + "!";
+      document.getElementById("presentFish").innerHTML = "The Fishing Challenge Is " + currentFishSunday[randomNumber1] + "!";
       break;
       
     case "Monday":
       let currentFishMonday = ["White Bass", "Bluegill", "Black Bullhead"];
       
-      document.getElementById("presentFish").innerHTML = "The Fish Of The Day Is " + currentFishMonday[randomNumber1] + "!";
+      document.getElementById("presentFish").innerHTML = "The Fishing Challenge Is " + currentFishMonday[randomNumber1] + "!";
       break;
       
     case "Tuesday":
       let currentFishTuesday = ["Yellow Bullhead", "Brown Bullhead", "Channel Catfish"];
       
-      document.getElementById("presentFish").innerHTML = "The Fish Of The Day Is " + currentFishTuesday[randomNumber1] + "!";
+      document.getElementById("presentFish").innerHTML = "The Fishing Challenge Is " + currentFishTuesday[randomNumber1] + "!";
       break;
       
     case "Wednesday":
       let currentFishWednesday = ["Flathead Catfish", "Black Crappie", "Muskellunge"];
-      document.getElementById("presentFish").innerHTML = "The Fish Of The Day Is " + currentFishWednesday[randomNumber1] + "!";
+      document.getElementById("presentFish").innerHTML = "The Fishing Challenge Is " + currentFishWednesday[randomNumber1] + "!";
       break;
       
     case "Thursday":
       let currentFishThursday = ["American Yellow Perch", "Northern Pike", "Pumpkinseed"];
       
-      document.getElementById("presentFish").innerHTML = "The Fish Of The Day Is " + currentFishThursday[randomNumber1] + "!";
+      document.getElementById("presentFish").innerHTML = "The Fishing Challenge Is " + currentFishThursday[randomNumber1] + "!";
       break;
       
     case "Friday":
       let currentFishFriday = ["Chinook Salmon", "Coho Salmon", "Lake Sturgeon", "Brook Trout"];
       
-      document.getElementById("presentFish").innerHTML = "The Fish Of The Day Is " + currentFishFriday[randomNumber2] + "!";
+      document.getElementById("presentFish").innerHTML = "The Fishing Challenge Is " + currentFishFriday[randomNumber2] + "!";
       break;
       
     case "Saturday":
       let currentFishSaturday = ["Lake Trout", "Brown Trout", "Walleye", "Rainbow Trout"];
       
-      document.getElementById("presentFish").innerHTML = "The Fish Of The Day Is " + currentFishSaturday[randomNumber2] + "!";
+      document.getElementById("presentFish").innerHTML = "The Fishing Challenge Is " + currentFishSaturday[randomNumber2] + "!";
       break;
       
     default:
