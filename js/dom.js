@@ -169,3 +169,22 @@ function fadeImage(index){
     return imageStatusVar;
   }
 }
+
+// Display Geographical Maps
+$('.lake-river-list img').click(function() {
+
+  // Sets the width and height
+  let imageWidth = this.width;
+  let imageHeight = this.height;
+
+  if (this.src.indexOf("map") !== -1) {
+    //removes the _map.jpg from the image to set up new image
+    $(this).fadeOut('fast');
+    $(this).attr('src', $(this).attr('src').replace('_map.jpg', '.jpg')).width('auto').fadeIn('slow');
+
+  } else {
+    //removes the .jpg from the image to set up new image
+    $(this).fadeOut('fast');
+    $(this).attr('src', $(this).attr('src').replace('.jpg', '_map.jpg')).width(imageWidth).fadeIn('slow');
+  }
+});

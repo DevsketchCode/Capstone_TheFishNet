@@ -23,25 +23,10 @@
         <div class="main-image-lake-river">
             <img src="images/wisconsinLakeRiver.jpg" alt="Wisconsin river and lake">
         </div>
-        <div id="weather-search">
-            <h3>Search Weather by Zip Code</h3><br>
-            <form method="post">
-                <div id="input-zip">
-                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Five digit zip code" maxlength="5" value="54703">
-                    <input type="submit" value="Submit" id="btn-submit"><br>
-                </div> 
-            </form>
-            <div id="weather"></div><br>
-            <div id="refresh">
-                <form method="post">
-                    <input type="submit" value="Refresh" id="btn-refresh"><br>
-                </form>
-            </div> 
-        </div>
 
         <div>
             <h1>Lakes and Rivers</h1>
-            <h4 class="map-info">Click on lake and river images for a geographical view.</h4>
+            <h4 class="map-info">Click on images for a geographical view.</h4>
         </div>
 
         <div class="lake-river-list">
@@ -485,11 +470,29 @@
             </div>
             
         </div>
+
+        <div id="weather-search">
+            <h3>Search Weather by Zip Code</h3><br>
+            <form method="post">
+                <div id="input-zip">
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Five digit zip code" maxlength="5" value="54703">
+                    <input type="submit" value="Submit" id="btn-submit"><br>
+                </div> 
+            </form>
+            <div id="weather"></div><br>
+            <div id="refresh">
+                <form method="post">
+                    <input type="submit" value="Refresh" id="btn-refresh"><br>
+                </form>
+            </div> 
+        </div>
+        
     </main>
     <footer>
         <p>Copyright &copy; 2022; Developed by: Bruce Brown, David Oberlander, Mason Johnson, and Timothy Harper</p>
     </footer>
     <!-- The order of the JS files can be critical -->
     <script src="js/weather.js"></script>
+    <script src="js/dom.js"></script> 
 </body>
 </html>

@@ -101,6 +101,7 @@ nav a:hover {
 
 /* moved here to pass stylelint validation */
 .lake-river-image img {
+  border-radius: 25px;
   width: auto;
 }
 
@@ -475,7 +476,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
   /* For tablets: */
 
   /* Disable sticky header */
