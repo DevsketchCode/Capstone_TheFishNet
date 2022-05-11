@@ -65,6 +65,11 @@ function FindFishData(fishName) {
         }
       });
     }
+
+    // Check API id name with a partial match, returns first fish found
+    if(index === -1) {
+      index = fish.findIndex(i => i.api_id_name.toLowerCase().replaceAll(/\s/g,'').includes(fishName.toLowerCase().replaceAll(/\s/g,'')));
+    }    
   }
   return index;
 }

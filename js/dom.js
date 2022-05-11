@@ -51,6 +51,8 @@ function quadrantDisplay(quadrantSelection) {
 
 }
 
+let searchRealImageShown;
+
 // Function to display fish search data
 function displayFishSearchDetails(userData) {
   if(userData !== null && userData !== "") {
@@ -64,9 +66,12 @@ function displayFishSearchDetails(userData) {
 
       // Set initial html string with the english name and scientific name
       let fishDataHtmlString = "";
-      
+
+      // Set default for drawing image instead of real image
+      searchRealImageShown = false;
+
       // Only display fields if it has data
-      fishDataHtmlString = (fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>";
+      fishDataHtmlString = (fish[index].image !== "") ? "<div id='f999999' onclick='fadeImage(" + index + ", 999999)'><img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'></div>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'></div>";
       fishDataHtmlString += "<div class='fish-search-inner-details'>";      
       fishDataHtmlString += (fish[index].common_name !== "") ? "<h3>" + fish[index].common_name + "</h3>" : "";
       fishDataHtmlString += "<ul>";
@@ -152,7 +157,7 @@ function displayFish(){
     let currentFishString = "";
     currentFishString += "<div class='fish-list-title'>" + knownFishDetails[i].common_name + "</div>";
     currentFishString += "<div class='fish-list-wrapper'>";
-    currentFishString += "<div id='f" + i + "' onclick='fadeImage(" + i + ")'>";
+    currentFishString += "<div id='f" + i + "' onclick='fadeImage(" + index + ", " + i + ")'>";
     currentFishString += (fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>";
     currentFishString += "</div>";
     currentFishString += "<div>";
@@ -177,7 +182,7 @@ function displayFish(){
   }
 }
 
-// Create array to hold status variables for each saperate image using the index
+// Create array to hold status variables for each separate image using the index
 let imageStatusVar = [];
 for(let i = 0; i < 12; i++){
   // Set all variables to 1 because when the page loads all images are set to first image (unclicked)
@@ -186,32 +191,53 @@ for(let i = 0; i < 12; i++){
 
 
 // Function to switch image
-function fadeImage(index){
+function fadeImage(index, knownFishIndex){
   
   // Check status of image variable
-  if(imageStatusVar[index] === 1){
+  if(imageStatusVar[knownFishIndex] === 1){
     
     // Fade original image out then perform image switch and fade back in
-    $("#f" + index).fadeOut("fast", function(){
+    $("#f" + knownFishIndex).fadeOut("fast", function(){
       // Checks if a real image is present and if not will set to default "no image found" image
-      $("#f" + index).html((knownFishDetails[index].real_image !== "") ? "<img src='images/" + knownFishDetails[index].real_image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
-      $("#f" + index).fadeIn("fast");
+      $("#f" + knownFishIndex).html((fish[index].real_image !== "") ? "<img src='images/" + fish[index].real_image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
+      $("#f" + knownFishIndex).fadeIn("fast");
     });
     
     // Grab particular images status variable in array and update to 2 (clicked). Returning is not required.
-    imageStatusVar[index] = 2;
+    imageStatusVar[knownFishIndex] = 2;
     
-    return imageStatusVar;
-  } else {
+    //return imageStatusVar;
+
+    } else {
     // Switch back to original image when clicked again.
-    $("#f" + index).fadeOut("fast", function(){
-      $("#f" + index).html((knownFishDetails[index].image !== "") ? "<img src='images/" + knownFishDetails[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
-      $("#f" + index).fadeIn("fast");
+    $("#f" + knownFishIndex).fadeOut("fast", function(){
+      $("#f" + knownFishIndex).html((fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
+      $("#f" + knownFishIndex).fadeIn("fast");
     });
     
     // Update status variable to 1 (clicked).
-    imageStatusVar[index] = 1;
-    return imageStatusVar;
+    imageStatusVar[knownFishIndex] = 1;
+    //return imageStatusVar;
+  }
+
+  if(knownFishIndex === 999999) {
+    if (searchRealImageShown === true) {
+      // This else if statement is to swap images for the search results fish image.
+      $("#f" + knownFishIndex).fadeOut("fast", function(){
+        $("#f" + knownFishIndex).html((fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
+        $("#f" + knownFishIndex).fadeIn("fast");
+      });
+
+      searchRealImageShown = false;
+    } else {
+      // Get the alternate image depending on which one is shown.
+      $("#f" + knownFishIndex).fadeOut("fast", function(){
+        $("#f" + knownFishIndex).html((fish[index].real_image !== "") ? "<img src='images/" + fish[index].real_image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
+        $("#f" + knownFishIndex).fadeIn("fast");
+      });
+
+      searchRealImageShown = true;
+    }
   }
 }
 
@@ -242,7 +268,7 @@ $(function() {
 $('#quadrant-form').submit(function(event) {
   event.preventDefault();
 
-  //Make sure all quandrants are hidden upon selection
+  //Make sure all quadrants are hidden upon selection
   quandrantHide();
 
   let quadrantSelection = $('#quadrant-selection option:selected').val();
