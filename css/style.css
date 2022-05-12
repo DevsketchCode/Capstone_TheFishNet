@@ -672,7 +672,7 @@ footer {
   }
 
   .fish-list-data {
-   width: 80%; 
+    width: 80%;
   }
 
   .fish-image {
@@ -732,12 +732,12 @@ footer {
   }
 
   .fish-list-data {
-    width: 90%; 
-   }
- 
-   .fish-image {
-     width: 50%;
-   }
+    width: 90%;
+  }
+
+  .fish-image {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -877,12 +877,12 @@ footer {
   }
 
   .fish-list-data {
-    width: 100%; 
-   }
- 
-   .fish-image {
-     width: 80%;
-   }
+    width: 100%;
+  }
+
+  .fish-image {
+    width: 80%;
+  }
 
   .site-card {
     width: 85%;
