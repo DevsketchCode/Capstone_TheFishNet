@@ -366,6 +366,11 @@ CSS Styling for Lakes/Rivers page */
   background-color: rgb(136 209 252);
 }
 
+#return-to-lake {
+  width: 100%;
+  text-align: right;
+}
+
 /* End of styling for lakes/Rivers Page
 
 Start of styling for Fish Page */

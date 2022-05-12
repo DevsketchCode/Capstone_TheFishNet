@@ -345,3 +345,22 @@ $('#quadrant-form').submit(function(event) {
   let quadrantSelection = $('#quadrant-selection option:selected').val();
   quadrantDisplay(quadrantSelection);
 });
+
+function resetWeather() {
+  $('#weather').html('').hide();
+  $("#input-zip").show();  
+  $("#btn-refresh").hide(); 
+}
+
+function goToWeather(zip, lake) {
+  resetWeather();
+  $('#zip').val(zip);
+  $('#btn-submit').trigger("click");
+  $('#return-to-lake').html("<a href='#" + lake + "-offset-link'>Return to the lake at zip: " + zip + ".</a>");
+}
+
+// Reset and hide the weather field
+$('#return-to-lake').click(function(event) {
+  resetWeather();
+  $('#return-to-lake').html('');
+});

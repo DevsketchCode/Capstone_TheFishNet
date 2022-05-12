@@ -67,7 +67,7 @@ $(function() {
       $("#input-zip").hide("fast");
 
       // Displays the weather card and refresh button
-      $("#weather").show("normal");
+      $("#weather").show();
       $("#btn-refresh").show("slow");
     })
     .catch((err) => {
