@@ -574,6 +574,19 @@ footer {
   flex: 1 100%;
 }
 
+.video-container {
+  display: flex;
+  column-gap: 5%;
+}
+
+.video-text {
+  width: 50%;
+}
+
+.youtube-video {
+  width: 50%;
+}
+
 @media only screen and (max-width: 1350px) {
   /* For medium & small monitors: */
   .lake-river-list {
@@ -834,7 +847,7 @@ footer {
   }
 
   .youtube-video {
-    width: 300;
-    height: 169;
+    width: 280;
+    height: 158;
   }
 }
