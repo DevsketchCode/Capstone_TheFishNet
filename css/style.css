@@ -26,11 +26,6 @@ header {
   object-position: center 40%;
 }
 
-.main-image-fish img {
-  float: left;
-  padding-top: 5%;
-}
-
 .main-image-fun-facts img {
   height: 300px;
   width: 100%;
@@ -83,7 +78,7 @@ nav a.selected {
   text-decoration: none;
 }
 
-.site-description-card a {
+.site-card a {
   color: #ffa500;
 }
 
@@ -127,7 +122,7 @@ nav a:hover {
   margin: 2% 5%;
 }
 
-.site-description-card {
+.site-card {
   color: #fff;
   background-color: #444;
   border-radius: 10px;
@@ -137,7 +132,7 @@ nav a:hover {
   flex: 1 40%;
 }
 
-.site-description-card h2 {
+.site-card h2 {
   color: #fff;
   text-shadow: 2px 2px 2px #000;
   font-size: 1.5em;
@@ -145,15 +140,19 @@ nav a:hover {
   margin: 0;
 }
 
-.site-description-card p {
+.site-card p {
   margin: 10px 0;
 }
 
-.site-description-card li {
+.site-card li {
   margin: 10px 0;
 }
 
-.site-description-card a:hover {
+.fish-search-card-upper p a {
+  padding-right: 5px;
+}
+
+.site-card a:hover {
   color: #4abdff;
   text-shadow: 2px 2px 4px #000;
 }
@@ -187,6 +186,11 @@ CSS Styling for Lakes/Rivers page */
 .fact-card a:hover {
   color: #4abdff;
   text-shadow: 2px 2px 4px #000;
+}
+
+.fish-search-card-upper p a:last-child {
+  border-left: 1px solid #fff;
+  padding: 0 0 0 5px;
 }
 
 #main-lakes-rivers h1 {
@@ -366,80 +370,43 @@ CSS Styling for Lakes/Rivers page */
 
 Start of styling for Fish Page */
 
-.fish-1-container {
-  width: 50%;
-  height: 150px;
-  margin: auto;
+/* alterations to the site-card used above */
+
+.fish-search-cards {
+  flex: 1 15%;
+  min-width: 350px;
+  margin: 10px;
+  padding: 25px 15px;
+  min-height: 100px;
 }
 
-.fish-1-image {
-  width: 150px;
-  height: 150px;
-  background-color: grey;
-  float: left;
-  text-align: center;
+.fish-search-wi-cards {
+  background-color: #153c53;
 }
 
-.fish-1-content {
-  width: 500px;
-  height: 150px;
-  background-color: grey;
-  float: right;
-  margin-right: 10%;
+.fish-search-card-upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fish-search-card-upper h4 {
+  margin: 0;
+}
+
+.fish-search-card-upper p {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  height: 22px;
+  width: 400px;
+}
+
+.click-on-images {
+  display: block;
 }
 
 #fish-title {
   text-align: center;
-}
-
-.fish-2-container {
-  width: 45%;
-  height: 150px;
-  float: right;
-  margin-top: 1%;
-  margin-right: 10%;
-}
-
-.fish-2-image {
-  width: 150px;
-  height: 150px;
-  background-color: grey;
-  float: left;
-  text-align: center;
-}
-
-.fish-2-content {
-  width: 500px;
-  height: 150px;
-  background-color: grey;
-  text-align: center;
-  float: right;
-  margin-right: 10%;
-}
-
-.fish-3-container {
-  width: 45%;
-  height: 150px;
-  float: right;
-  margin-top: 1%;
-  margin-right: 10%;
-}
-
-.fish-3-image {
-  width: 150px;
-  height: 175px;
-  background-color: grey;
-  float: left;
-  text-align: center;
-}
-
-.fish-3-content {
-  width: 500px;
-  height: 150px;
-  background-color: grey;
-  text-align: center;
-  float: right;
-  margin-right: 10%;
 }
 
 /* End of styling for Fish page
@@ -488,13 +455,30 @@ Start of styling for Fish Page */
   width: fit-content;
 }
 
+.fish-search-results {
+  width: 95%;
+}
+
+.fish-search h4 {
+  margin-bottom: 0;
+}
+
+.fish-search p {
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+.alert-message {
+  color: red;
+  font-style: italic;
+}
+
 #fish-search-reset-button {
   margin-left: 10px;
   display: none;
 }
 
 #fish-search-details {
-  border: 1px solid #ccc;
   display: none;
   margin: 2px auto;
   padding: 0 15px;
@@ -502,10 +486,15 @@ Start of styling for Fish Page */
   width: 70%;
 }
 
-#fish-data {
+.fish-data {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.fish-data-multiple-results {
+  flex-direction: row wrap;
+  justify-content: space-around;
 }
 
 .fish-search-photo {
@@ -524,10 +513,6 @@ footer {
   padding: 15px 0;
   text-align: center;
   width: 100%;
-}
-
-.old-place-holders {
-  display: none;
 }
 
 .fish-list {
@@ -565,6 +550,10 @@ footer {
 
 .fish-list-wrapper li {
   padding: 2px;
+}
+
+.fish-list-heading {
+  display: none;
 }
 
 .flex-full-width {
@@ -633,8 +622,15 @@ footer {
     width: 100%;
   }
 
-  #fish-data {
+  .fish-data {
     flex-direction: column;
+  }
+
+  .fish-search-cards {
+    flex: 1 100%;
+    min-width: auto;
+    margin: 5px 0;
+    width: 95%;
   }
 
   .fish-search-inner-details {
@@ -785,5 +781,20 @@ footer {
   input[type="text"] {
     padding: 0;
     width: 95%;
+  }
+
+  .fish-search-results {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .fish-data-multiple-results {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-card {
+    width: 85%;
   }
 }

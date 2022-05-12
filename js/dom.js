@@ -51,71 +51,138 @@ function quadrantDisplay(quadrantSelection) {
 
 }
 
+// Used for multiple functions to keep track of which image is displaying for the search
 let searchRealImageShown;
 
 // Function to display fish search data
 function displayFishSearchDetails(userData) {
   if(userData !== null && userData !== "") {
-    // Get the index number of the searched fish from the fish object array
-    let index = FindFishData(userData);
+    if(userData.length >= 3 && userData.length <= 23) {
+      // Get the index number of the searched fish from the fish object array
+      let index = findFishData(userData);
 
-    // If the index returns -1, then no fish was found
-    if(index !== -1) { 
-      // Get API "English_Name" and strip out any extra characters
-      let defaultNameFromAPI = fish[index].api_id_name.replace(/ *\([^)]*\) */g, "");
+      // Place the passed string into the search bar, to allow the user to adjust
+      $('#users-fish-name').val(userData);
 
-      // Set initial html string with the english name and scientific name
-      let fishDataHtmlString = "";
+      // If the index returns -1, then no fish was found
+      if(index !== -1) { 
+        // Get API "English_Name" and strip out any extra characters
+        let defaultNameFromAPI = fish[index].api_id_name.replace(/ *\([^)]*\) */g, "");
 
-      // Set default for drawing image instead of real image
-      searchRealImageShown = false;
+        // Set initial html string with the english name and scientific name
+        let fishDataHtmlString = "";
 
-      // Only display fields if it has data
-      fishDataHtmlString = (fish[index].image !== "") ? "<div id='f999999' onclick='fadeImage(" + index + ", 999999)'><img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'></div>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'></div>";
-      fishDataHtmlString += "<div class='fish-search-inner-details'>";      
-      fishDataHtmlString += (fish[index].common_name !== "") ? "<h3>" + fish[index].common_name + "</h3>" : "";
-      fishDataHtmlString += "<ul>";
-      fishDataHtmlString += (fish[index].alt_names.length > 0) ? "<li>Alternate Names: " + fish[index].alt_names + "</li>" : "";
-      fishDataHtmlString += (fish[index].common_name === "" && fish[index].alt_names.length <= 0) ? "<h3>" + defaultNameFromAPI + "</h3>" : "";
-      fishDataHtmlString += (fish[index].scientific_name !== "") ? "<li>Scientific Name: " + fish[index].scientific_name + "</li>" : "";
-      fishDataHtmlString += (fish[index].appearance !== "") ? "<li>Appearance: " + fish[index].appearance + "</li>" : "";
-      fishDataHtmlString += (fish[index].average_size !== "") ? "<li>Average Size: " + fish[index].average_size + "</li>" : "";
-      fishDataHtmlString += (fish[index].estimated_population !== "") ? "<li>Estimated Population: " + fish[index].estimated_population + "</li>" : "";
-      fishDataHtmlString += (fish[index].states.length > 0) ? "<li>State Located: " + fish[index].states + "</li>" : "";
-      fishDataHtmlString += (fish[index].popular_lakes.length > 0) ? "<li>Popular Lakes: " + fish[index].popular_lakes + "</li>" : "";
-      fishDataHtmlString += (fish[index].popular_rivers.length > 0) ? "<li>Popular Rivers: " + fish[index].popular_rivers + "</li>" : "";
-      fishDataHtmlString += (fish[index].bait.length > 0) ? "<li>Baits: " + fish[index].bait + "</li>" : "";
-      fishDataHtmlString += (fish[index].hotspots !== "") ? "<li>Hotspot Tips: " + fish[index].hotspots + "</li>" : "";
-      fishDataHtmlString += (fish[index].season !== "") ? "<li>Season: " + fish[index].season + "</li>" : "";
-      fishDataHtmlString += (fish[index].time_of_day !== "") ? "<li>Best Time of Day: " + fish[index].time_of_day + "</li>" : "";
-      fishDataHtmlString += (fish[index].lifespan !== "") ? "<li>Lifespan: " + fish[index].lifespan + "</li>" : "";
+        // Set default for drawing image instead of real image
+        searchRealImageShown = false;
 
-      // Add the google link if there was a scientific name found
-      if(fish[index].scientific_name !== "") {
-        fishDataHtmlString += "<p><a href='http://www.google.com/search?q=" + encodeURIComponent(fish[index].scientific_name) + "' target='_blank'>Search Google</a>" + 
-        " | <a href='https://www.google.com/search?q=" + encodeURIComponent(fish[index].scientific_name) + "&hl=en&source=lnms&tbm=isch' target='_blank'>Google Images</a></p>";
+        // Only display fields if it has data
+        fishDataHtmlString = (fish[index].image !== "") ? "<div class='fish-data'><div id='f999999' onclick='fadeImage(" + index + ", 999999)'><img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'></div>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'></div>";
+        fishDataHtmlString += "<div class='fish-search-inner-details'>";      
+        fishDataHtmlString += (fish[index].common_name !== "") ? "<h3>" + fish[index].common_name + "</h3>" : "";
+        fishDataHtmlString += "<ul>";
+        fishDataHtmlString += (fish[index].alt_names.length > 0) ? "<li>Alternate Names: " + fish[index].alt_names + "</li>" : "";
+        fishDataHtmlString += (fish[index].common_name === "" && fish[index].alt_names.length <= 0) ? "<h3>" + defaultNameFromAPI + "</h3>" : "";
+        fishDataHtmlString += (fish[index].scientific_name !== "") ? "<li>Scientific Name: " + fish[index].scientific_name + "</li>" : "";
+        fishDataHtmlString += (fish[index].appearance !== "") ? "<li>Appearance: " + fish[index].appearance + "</li>" : "";
+        fishDataHtmlString += (fish[index].average_size !== "") ? "<li>Average Size: " + fish[index].average_size + "</li>" : "";
+        fishDataHtmlString += (fish[index].estimated_population !== "") ? "<li>Estimated Population: " + fish[index].estimated_population + "</li>" : "";
+        fishDataHtmlString += (fish[index].states.length > 0) ? "<li>State Located: " + fish[index].states + "</li>" : "";
+        fishDataHtmlString += (fish[index].popular_lakes.length > 0) ? "<li>Popular Lakes: " + fish[index].popular_lakes + "</li>" : "";
+        fishDataHtmlString += (fish[index].popular_rivers.length > 0) ? "<li>Popular Rivers: " + fish[index].popular_rivers + "</li>" : "";
+        fishDataHtmlString += (fish[index].bait.length > 0) ? "<li>Baits: " + fish[index].bait + "</li>" : "";
+        fishDataHtmlString += (fish[index].hotspots !== "") ? "<li>Hotspot Tips: " + fish[index].hotspots + "</li>" : "";
+        fishDataHtmlString += (fish[index].season !== "") ? "<li>Season: " + fish[index].season + "</li>" : "";
+        fishDataHtmlString += (fish[index].time_of_day !== "") ? "<li>Best Time of Day: " + fish[index].time_of_day + "</li>" : "";
+        fishDataHtmlString += (fish[index].lifespan !== "") ? "<li>Lifespan: " + fish[index].lifespan + "</li>" : "";
+
+        // Add the google link if there was a scientific name found
+        if(fish[index].scientific_name !== "") {
+
+
+          fishDataHtmlString += "<p><a href='http://www.google.com/search?q=";
+          fishDataHtmlString += encodeURIComponent(fish[index].scientific_name);
+          console.log(fishDataHtmlString);
+          fishDataHtmlString += "' target='_blank'>Search Google</a>" + 
+          " | <a href='https://www.google.com/search?q=" + encodeURIComponent(fish[index].scientific_name) + "&hl=en&source=lnms&tbm=isch' target='_blank'>Google Images</a></p>";
+        }
+        fishDataHtmlString += "<p>Search results could also include non-local fish</p>";      
+        fishDataHtmlString += "</ul>";
+        fishDataHtmlString += "</div></div>";
+
+        // Display Fish Data
+        $("#fish-data").html(fishDataHtmlString);
+      } else {
+
+        // Populate fish cards if multiple results come back.
+        if(multipleFishFoundIndices.length > 0) {
+
+          fishDataHtmlString = "";
+          // List all the possible matches
+          $.each(multipleFishFoundIndices, function(i) {
+
+            // Set variable to adjust card if known WI fish
+            let wiFish = "";
+            if(fish[multipleFishFoundIndices[i]].common_name !== "") {
+              wiFish = " fish-search-wi-cards";
+            }
+
+            fishDataHtmlString += "<div id='fs" + i + "' class='site-card fish-search-cards" + wiFish + "'><div class='fish-search-card-upper'>";
+            fishDataHtmlString += "<h4>" + fish[multipleFishFoundIndices[i]].api_id_name.replace(/ *\([^)]*\) */g, "") + "</h4>";
+            fishDataHtmlString += "<p><a href='http://www.google.com/search?q=" + encodeURIComponent(fish[multipleFishFoundIndices[i]].scientific_name) + "' target='_blank'>Search Google</a><a href='https://www.google.com/search?q=" + 
+            encodeURIComponent(fish[multipleFishFoundIndices[i]].scientific_name) + "&hl=en&source=lnms&tbm=isch' target='_blank'>Google Images</a></p></div>" + 
+            " <p style='margin: 0'><i>Scientific Name: " + fish[multipleFishFoundIndices[i]].scientific_name + "</i></p>";
+          
+            if(fish[multipleFishFoundIndices[i]].common_name !== "") {
+              fishDataHtmlString += "<p><p>Common Wisconsin Fish</p> <a href='Fish.html?findFish=" + encodeURIComponent(fish[multipleFishFoundIndices[i]].common_name) + "'>View More Details</a></p>";
+            }
+            
+            fishDataHtmlString += "</div>";
+          }); 
+
+          $(".click-on-images").hide();
+
+          // Adjust CSS for multiple results displayed
+          $("#fish-data").append(fishDataHtmlString);
+          $("#fish-data").addClass("fish-data-multiple-results");
+          $(".fish-search").addClass("fish-search-results");
+          
+          if(multipleFishFoundIndices.length > 4) {
+            $("#fish-search-details").css("width", "100%");
+          }
+
+        } else {
+          $("#fish-data").html("<div><p>There was no fish named \"" + userData + "\" found. </p></div>");
+        }
       }
-      fishDataHtmlString += "<p>Search results could also include non-local fish</p>";      
-      fishDataHtmlString += "</ul>";
-      fishDataHtmlString += "</div>";
 
-      // Display Fish Data
-      $("#fish-data").html(fishDataHtmlString);
+      // Adjust the header to let the user know search results are displayed
+      if (multipleFishFoundIndices.length > 0) {
+        $("#fish-header").html("Multiple Search Results for \"" + userData + "\"");
+      } else {
+        $("#fish-header").html("Search Results for \"" + userData + "\"");
+      }
+     
+
+      // Display the fish search results
+      $("#fish-search-details").show();
+
+      // Hide known fish list, so it is not confused from search results
+      $(".fish-list").hide();
+
+      $("#fish-search-reset-button").show();
+
+      $("#user-input-alert").hide();
     } else {
-      $("#fish-data").html("<div><p>There was no fish named \"" + userData + "\" found. </p>" + "<p>You may want to try and be more specific.<br><i>Example: \"rainbow trout\" instead of \"trout\".</i></p></div>");
+      if(userData.length < 3) {
+        // User input is too short, notify user
+        $("#user-input-alert").html('Please enter more than two characters.');
+        $("#user-input-alert").show();
+      } else if(userData.length > 23) {
+        $("#user-input-alert").html('Too many characters. Limit: 23');
+        $("#user-input-alert").show();
+      }
     }
 
-    // Adjust the header to let the user know search results are displayed
-    $("#fish-header").html("Search Results for \"" + userData + "\"");
-
-    // Display the fish search results
-    $("#fish-search-details").show();
-
-    // Hide known fish list, so it is not confused from search results
-    $(".fish-list").hide();
-
-    // Show reset search button
-    $("#fish-search-reset-button").show();
   }
 }
 
@@ -131,27 +198,33 @@ $("#fish-search-reset-button").click(function() {
   // Show known fish list
   $(".fish-list").show();
 
-  // Hide reset search button
+  // Clear the input fields
+  $('#users-fish-name').val('');
+
   $("#fish-search-reset-button").hide();
+
+  $(".click-on-images").show();
 });
 
 // Display fish data
 $("#fish-search-button").click(function(){
   // Get a fish name from the input field
   let userData = $("#users-fish-name").val();
+
+  // remove previous data
+  $("#fish-data > div").remove();
   
   // Display the fish search results from the input field
   displayFishSearchDetails(userData);
-
 });
 
-// Function displays 10 fish on fish page
+// Function displays multiple Wisconsin fish on the fish page
 // Function cannot be called on page load due to API needed to be loaded
 // Function call comes on main.js
 function displayFish(){
   for(let i = 0; i < 12; i++){
     // Create index for fish API
-    let index = FindFishData(knownFishDetails[i].common_name);
+    let index = findFishData(knownFishDetails[i].common_name);
     
     // Create string to insert into html
     let currentFishString = "";
@@ -177,8 +250,6 @@ function displayFish(){
     // Grab html element and insert string into it
     let fishListBody = document.querySelector("#fish-list-body");
     fishListBody.innerHTML += currentFishString;
-   
-  
   }
 }
 

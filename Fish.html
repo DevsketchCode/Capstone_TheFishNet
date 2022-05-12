@@ -20,74 +20,24 @@
     </header>
     <main>
         <section class="fish-search">
-            <h2>
-                <input id="users-fish-name" type="text" value="Musky">
-                <button id="fish-search-button">Search For Any Fish</button><button id="fish-search-reset-button">Clear</button>
-            </h2>
+            <h4>Search to get the Scientific Name of a fish.</h4>
+            <p>If it is a common fish known to Wisconsin, you will be provided with additional information.</p>
+
+            <input id="users-fish-name" type="text" value="" maxlength="23" placeholder="Enter a fish name">
+            <button id="fish-search-button">Search</button><button id="fish-search-reset-button">Clear</button>
+            <div id='user-input-alert' class="alert-message"></div>
             <div>
                 <h2 id="fish-header">Common Fish in Wisconsin</h2>
-                <h4>Click on Images for a more realistic view.</h4>
+                <h4 class="click-on-images">Click on Images for a more realistic view.</h4>
             </div>
             <div id="fish-search-details">
-                <div id="fish-data"><p>You fish details will display here.</p></div>
+                <div id="fish-data" class="fish-data"></div>
             </div>
         </section>  
-
-        <div>
-            <!--Content for page....Using divs for the moment just to show
-            rough layout. Will switch images and content in soon-->
-            <section class="old-place-holders">
-
-                <div class="main-image-fish">
-                    <img src="images/fishingEquip.jpg" alt="Fish Equipment">
-                </div>
-
-                <div class="fish-1-container">
-                    <div class="fish-1-image">
-                        <p>Fish One Image</p>
-                    </div>
-                    <div class="fish-1-content">
-                        <h3>Fish1 Name</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices, augue ullamcorper hendrerit 
-                            condimentum, nisi ante interdum ante, at rutrum diam tellus vel elit. 
-                            Aenean hendrerit ullamcorper enim, in laoreet elit suscipit eget. Nullam molestie euismod tortor, 
-                            non placerat sapien dapibus at.</p>
-                    </div>
-                </div>
-
-                <div class="fish-2-container">
-                    <div class="fish-2-image">
-                        <p>Fish Two Image</p>
-                    </div>
-                    <div class="fish-2-content">
-                        <h3>Fish2 Name</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices, augue ullamcorper hendrerit 
-                            condimentum, nisi ante interdum ante, at rutrum diam tellus vel elit. 
-                            Aenean hendrerit ullamcorper enim, in laoreet elit suscipit eget. Nullam molestie euismod tortor, 
-                            non placerat sapien dapibus at.</p>
-                    </div>
-                </div>
-
-                <div class="fish-3-container">
-                    <div class="fish-3-image">
-                        <p>Fish Three Image</p>
-                    </div>
-                    <div class="fish-3-content">
-                        <h3>Fish3 Name</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices, augue ullamcorper hendrerit 
-                            condimentum, nisi ante interdum ante, at rutrum diam tellus vel elit. 
-                            Aenean hendrerit ullamcorper enim, in laoreet elit suscipit eget. Nullam molestie euismod tortor, 
-                            non placerat sapien dapibus at.</p>
-                    </div>
-                </div>    
-            </section>
-            <div class="fish-list">
-                    <div id="fish-list-body">
-
-                    </div>
-
-            </div>
-        </div> 
+        <section class="fish-list">
+            <h3 class="fish-list-heading">Fish Information</h3>
+            <div id="fish-list-body"></div>
+        </section> 
     </main>
     <footer>
         <p>Copyright &copy; 2022; Developed by: Bruce Brown, David Oberlander, Mason Johnson, and Timothy Harper</p>
