@@ -593,6 +593,11 @@ footer {
     padding: 0;
     width: 100%;
   }
+
+  .youtube-video {
+    width: 500px;
+    height: 281px;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
@@ -669,6 +674,11 @@ footer {
   .fish-search-photo {
     height: auto;
     width: 100%;
+  }
+
+  .youtube-video {
+    width: 450px;
+    height: 253px;
   }
 }
 
@@ -810,5 +820,10 @@ footer {
 
   .site-card {
     width: 85%;
+  }
+
+  .youtube-video {
+    width: 300;
+    height: 169;
   }
 }
