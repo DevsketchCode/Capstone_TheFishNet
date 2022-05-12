@@ -584,12 +584,13 @@ footer {
 }
 
 .video-text {
-  width: 50%;
+  margin: 10px auto;
+  width: 60%;
 }
 
 .youtube-video {
   max-width: 540px;
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
 @media only screen and (max-width: 1350px) {
