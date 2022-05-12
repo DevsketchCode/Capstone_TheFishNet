@@ -498,7 +498,7 @@ Start of styling for Fish Page */
 }
 
 .fish-data-multiple-results {
-  flex-direction: row wrap;
+  flex-flow: row wrap;
   justify-content: space-around;
 }
 

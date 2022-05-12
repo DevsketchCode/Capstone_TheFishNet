@@ -210,10 +210,11 @@ $("#fish-search-reset-button").click(function() {
 $("#fish-search-button").click(function(){
   // Get a fish name from the input field
   let userData = $("#users-fish-name").val();
-
-  // remove previous data
-  $("#fish-data > div").remove();
   
+    // remove previous data
+    $("#fish-data > div").remove();
+    $("#fish-data > img").remove();
+
   // Display the fish search results from the input field
   displayFishSearchDetails(userData);
 });
