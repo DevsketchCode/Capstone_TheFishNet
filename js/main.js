@@ -7,10 +7,12 @@ $(function() {
     // Loop through the json array and insert a new fish for each entry with it's english and scientific names
     $.each(data, function(key,value) {
       // This json only has the english_name and the scientific_name columns, the rest of the object will be set to the defaults      
-      fish.push(new FishObject(value.english_name, value.scientific_name));
+      if(value.english_name !== "") {
+        fish.push(new fishObject(value.english_name, value.scientific_name));
+      }
     }); 
     // Populate the rest of the details
-    FillInFishDetails();
+    fillInFishDetails();
 
     // First check to see if the URL includes any parameters for a fish to show
     let url_string = window.location.href;
@@ -19,7 +21,7 @@ $(function() {
 
     if(findFish !== null && findFish!== "") {
       // decode the URL parameter value
-      findFish = decodeURIComponent(findFish);
+      findFish = decodeURIComponent(findFish);        
 
       // Display the fish search results from the URL parameter
       displayFishSearchDetails(decodeURIComponent(findFish));
