@@ -574,9 +574,13 @@ footer {
   flex: 1 100%;
 }
 
+.video-list-content {
+  margin: 0 auto;
+  width: 90%;
+}
+
 .video-container {
   display: flex;
-  column-gap: 5%;
 }
 
 .video-text {
@@ -584,7 +588,8 @@ footer {
 }
 
 .youtube-video {
-  width: 50%;
+  max-width: 540px;
+  margin-right: 40px;
 }
 
 @media only screen and (max-width: 1350px) {
@@ -666,6 +671,14 @@ footer {
     width: 95%;
   }
 
+  .fish-list-data {
+   width: 80%; 
+  }
+
+  .fish-image {
+    width: 45%;
+  }
+
   #fish-search-details {
     width: 90%;
   }
@@ -698,12 +711,33 @@ footer {
     width: 450px;
     height: 253px;
   }
+
+  .video-container {
+    flex-direction: column;
+  }
+
+  .video-container iframe {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .video-text {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 700px) {
   .fish-data {
     flex-direction: column;
   }
+
+  .fish-list-data {
+    width: 90%; 
+   }
+ 
+   .fish-image {
+     width: 50%;
+   }
 }
 
 @media only screen and (max-width: 500px) {
@@ -841,6 +875,14 @@ footer {
     margin: 0;
     padding: 0;
   }
+
+  .fish-list-data {
+    width: 100%; 
+   }
+ 
+   .fish-image {
+     width: 80%;
+   }
 
   .site-card {
     width: 85%;
