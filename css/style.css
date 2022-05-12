@@ -503,7 +503,7 @@ Start of styling for Fish Page */
 }
 
 .fish-search-photo {
-  height: 200px;
+  height: auto;
   width: 100%;
 }
 
@@ -591,7 +591,7 @@ footer {
   #fish-search-details {
     border: 0;
     padding: 0;
-    width: 100%;
+    width: 80%;
   }
 
   .youtube-video {
@@ -642,7 +642,8 @@ footer {
   }
 
   .fish-data {
-    flex-direction: column;
+    width: 100%;
+    flex-direction: row;
   }
 
   .fish-search-cards {
@@ -650,6 +651,10 @@ footer {
     min-width: auto;
     margin: 5px 0;
     width: 95%;
+  }
+
+  #fish-search-details {
+    width: 90%;
   }
 
   .fish-search-inner-details {
@@ -679,6 +684,12 @@ footer {
   .youtube-video {
     width: 450px;
     height: 253px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .fish-data {
+    flex-direction: column;
   }
 }
 

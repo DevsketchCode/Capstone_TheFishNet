@@ -76,7 +76,8 @@ function displayFishSearchDetails(userData) {
         searchRealImageShown = false;
 
         // Only display fields if it has data
-        fishDataHtmlString = (fish[index].image !== "") ? "<div class='fish-data'><div id='f999999' onclick='fadeImage(" + index + ", 999999)'><img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'></div>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'></div>";
+        fishDataHtmlString = "<div class='fish-data'>";
+        fishDataHtmlString += (fish[index].image !== "") ? "<div id='f999999' onclick='fadeImage(" + index + ", 999999)'><img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'></div>" : "<div id='f999999'><img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'></div>";
         fishDataHtmlString += "<div class='fish-search-inner-details'>";      
         fishDataHtmlString += (fish[index].common_name !== "") ? "<h3>" + fish[index].common_name + "</h3>" : "";
         fishDataHtmlString += "<ul>";
