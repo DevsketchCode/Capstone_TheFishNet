@@ -230,10 +230,10 @@ function displayFish(){
     let currentFishString = "";
     currentFishString += "<div class='fish-list-title'>" + knownFishDetails[i].common_name + "</div>";
     currentFishString += "<div class='fish-list-wrapper'>";
-    currentFishString += "<div id='f" + i + "' onclick='fadeImage(" + index + ", " + i + ")'>";
-    currentFishString += (fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>";
+    currentFishString += "<div id='f" + i + "' class='fish-image' onclick='fadeImage(" + index + ", " + i + ")'>";
+    currentFishString += (fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>";
     currentFishString += "</div>";
-    currentFishString += "<div>";
+    currentFishString += "<div class='fish-list-data'>";
     currentFishString += "<ul>";
     currentFishString += "<li>Scientific Name: " + fish[index].scientific_name + "</li>";
     currentFishString += "<li>Appearance: " + knownFishDetails[i].appearance + "</li>";
@@ -282,7 +282,7 @@ function fadeImage(index, knownFishIndex){
     } else {
     // Switch back to original image when clicked again.
     $("#f" + knownFishIndex).fadeOut("fast", function(){
-      $("#f" + knownFishIndex).html((fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish'>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
+      $("#f" + knownFishIndex).html((fish[index].image !== "") ? "<img src='images/" + fish[index].image + "' class='fish-search-photo' alt='Photo of the fish''>" : "<img src='images/no_photo.png' class='fish-search-photo' alt='Photo of the fish'>");
       $("#f" + knownFishIndex).fadeIn("fast");
     });
     

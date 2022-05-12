@@ -504,6 +504,15 @@ Start of styling for Fish Page */
 
 .fish-search-photo {
   height: 200px;
+  width: 100%;
+}
+
+.fish-image {
+  width: 30%;
+}
+
+.fish-list-data {
+  width: 70%;
 }
 
 .fish-search-inner-details {
