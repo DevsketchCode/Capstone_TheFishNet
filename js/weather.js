@@ -8,15 +8,7 @@ $(function() {
   }
 
   function windDirection(degree) {
-    /*// Sets the array for the direction
-    const direction =  ["N", "NW", "W", "SW", "S", "SE", "E", "NE"];
-    
-
-    // Converts the inputted degree angle to the quadrant direction between 0 and 360 degrees
-    const converted = Math.round((degree * Math.PI / 180) - 1);
-
     // returns the direction text
-    return direction[converted];*/
     const direction = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
     const converted = Math.floor((degree / 22.5) + 0.5);
     
@@ -35,7 +27,7 @@ $(function() {
     .then(response => response.json())
     .then(data => {
       // Displays the API data in console
-      console.log(data);
+      //console.log(data);
 
       // Set the API response JSON objects to local object variables
       const {main, name, weather, wind} = data;

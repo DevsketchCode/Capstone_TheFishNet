@@ -33,19 +33,36 @@
             <form method="post" id="quadrant-form">
                 <div>
                     <label for="quadrant-selection" id="quadrant-label">
-                        <strong>Select all or a quadrant to display lakes and rivers: </strong>
+                        <strong>Select all or a specific state region to display lakes and rivers: </strong>
                     </label>
                     <select name="quadrant-selection" id="quadrant-selection">
-                        <option value="all">All</option>
-                        <option value="north">North</option>
-                        <option value="south">South</option>
-                        <option value="east">East</option>
-                        <option value="west">West</option>
+                        <option value="all">All Regions</option>
+                        <option value="north">Northern Wisconsin</option>
+                        <option value="south">Southern Wisconsin</option>
+                        <option value="east">Eastern Wisconsin</option>
+                        <option value="west">Western Wisconsin</option>
                     </select>
                     <input type="submit" id="quandrant-submit" value="Display">
                 </div>
             </form>
         </div><br>
+
+        
+        <div id="weather-search">
+            <h3>Search Weather by Zip Code</h3>
+            <form method="post">
+                <div id="input-zip">
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Five digit zip code" maxlength="5" placeholder="54703">
+                    <input type="submit" value="Submit" id="btn-submit"><br>
+                </div> 
+            </form>
+            <div id="weather"></div>
+            <div id="refresh">
+                <form method="post">
+                    <input type="submit" value="Refresh" id="btn-refresh"><br>
+                </form>
+            </div> 
+        </div>
 
         <div class="lake-river-list">
             <!--Lake information-->
@@ -535,22 +552,6 @@
                 </div>
             </div>
             
-        </div>
-
-        <div id="weather-search">
-            <h3>Search Weather by Zip Code</h3><br>
-            <form method="post">
-                <div id="input-zip">
-                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Five digit zip code" maxlength="5" value="54703">
-                    <input type="submit" value="Submit" id="btn-submit"><br>
-                </div> 
-            </form>
-            <div id="weather"></div><br>
-            <div id="refresh">
-                <form method="post">
-                    <input type="submit" value="Refresh" id="btn-refresh"><br>
-                </form>
-            </div> 
         </div>
 
     </main>

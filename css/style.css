@@ -106,7 +106,7 @@ nav a:hover {
 /* moved here to pass stylelint validation */
 .lake-river-image img {
   border-radius: 25px;
-  width: auto;
+  width: inherit;
 }
 
 /* Overlap all of the slideshow images to allow for crossfade */
@@ -207,7 +207,7 @@ CSS Styling for Lakes/Rivers page */
 .lake-river-content {
   width: 100%;
   height: fit-content;
-  text-align: justify;
+  text-align: right;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -278,8 +278,9 @@ CSS Styling for Lakes/Rivers page */
   border-radius: 5px;
   border: 2px solid rgb(136 209 252);
   box-shadow: 0 4px 8px 0 rgba(0 0 0 / 20%);
-  padding: 5px 15px;
+  padding: 5px;
   font-weight: bold;
+  text-align: center;
 }
 
 #btn-submit:hover,
@@ -518,7 +519,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   /* For tablets: */
 
   /* Disable sticky header */
@@ -558,6 +559,10 @@ footer {
   .lake-river-image {
     padding: 0;
     width: 100%;
+  }
+
+  .lake-river-image img{
+    width: inherit !important;
   }
 
   #fish-data {
@@ -668,8 +673,8 @@ footer {
   }
 
   .lake-river-list img {
-    width: auto;
-    height: auto;
+    width: inherit;
+    height: inherit;
   }
 
   #title {

@@ -7,7 +7,7 @@ $("#users-fish-name").keypress(function(e) {
 });
 
 // Function to hide all Lakes and Rivers
-function quandrantHide() {
+function quadrantHide() {
   $('.map-info').hide();
   $('.lake-river-list').hide();
   $('.north').hide();
@@ -19,33 +19,33 @@ function quandrantHide() {
 // Function to display the Lakes and Rivers quadrant selection
 function quadrantDisplay(quadrantSelection) {
   // Displays the image click information
-  $('.map-info').show();
+  $('.map-info').fadeIn('fast');
 
   // Displays the lakes and rivers
-  $('.lake-river-list').show();
+  $('.lake-river-list').fadeIn();
 
   switch(quadrantSelection) {
     case 'north':
-      $('.north').show('slow');
+      $('.north').fadeIn('fast');
     break;
 
     case 'south':
-      $('.south').show('slow');
+      $('.south').fadeIn('fast');
     break;
 
     case 'east':
-      $('.east').show('slow');
+      $('.east').fadeIn('fast');
     break;
 
     case 'west':
-      $('.west').show('slow');
+      $('.west').fadeIn('fast');
     break;
 
     case 'all':
-      $('.north').show('slow');
-      $('.south').show('slow');
-      $('.east').show('slow');
-      $('.west').show('slow');
+      $('.north').fadeIn('fast');
+      $('.south').fadeIn('fast');
+      $('.east').fadeIn('fast');
+      $('.west').fadeIn('fast');
     break;
   }
 
@@ -223,13 +223,16 @@ $('.lake-river-list img').click(function() {
 
   if (this.src.indexOf("map") !== -1) {
     //removes the _map.jpg from the image to set up new image
-    $(this).fadeOut('fast');
-    $(this).attr('src', $(this).attr('src').replace('_map.jpg', '.jpg')).width('auto').fadeIn('slow');
+    $(this).stop().fadeOut('fast', function(){
+      $(this).attr('src', $(this).attr('src').replace('_map.jpg', '.jpg')).stop().fadeIn('fast');
+    });
 
   } else {
     //removes the .jpg from the image to set up new image
-    $(this).fadeOut('fast');
-    $(this).attr('src', $(this).attr('src').replace('.jpg', '_map.jpg')).width(imageWidth).fadeIn('slow');
+    $(this).stop().fadeOut('fast', function() {
+        $(this).attr('src', $(this).attr('src').replace('.jpg', '_map.jpg')).width(imageWidth).stop().fadeIn('fast');
+    });
+    
   }
 });
 
@@ -242,8 +245,8 @@ $(function() {
 $('#quadrant-form').submit(function(event) {
   event.preventDefault();
 
-  //Make sure all quandrants are hidden upon selection
-  quandrantHide();
+  //Make sure all quadrants are hidden upon selection
+  quadrantHide();
 
   let quadrantSelection = $('#quadrant-selection option:selected').val();
   quadrantDisplay(quadrantSelection);
