@@ -632,6 +632,10 @@ footer {
     height: 200px;
   }
 
+  .lake-river-image img {
+    width: inherit !important;
+  }
+
   #slideshow-wrapper img {
     height: 200px;
   }
@@ -661,10 +665,6 @@ footer {
     width: 100%;
   }
 
-  .lake-river-image img{
-    width: inherit !important;
-  }
-  
   .fish-data {
     width: 100%;
     flex-direction: row;
