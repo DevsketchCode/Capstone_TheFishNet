@@ -898,4 +898,9 @@ footer {
     width: 280;
     height: 158;
   }
+
+  .handling-image {
+    width: 80%;
+    height: 80%;
+  }
 }
