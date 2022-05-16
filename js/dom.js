@@ -170,6 +170,8 @@ function displayFishSearchDetails(userData) {
       // Hide known fish list, so it is not confused from search results
       $(".fish-list").hide();
 
+      $(".fish-search p").css("visibility", "visible");      
+
       $("#fish-search-reset-button").show();
 
       $("#user-input-alert").hide();
@@ -203,6 +205,8 @@ $("#fish-search-reset-button").click(function() {
   $('#users-fish-name').val('');
 
   $("#fish-search-reset-button").hide();
+
+  $(".fish-search p").css("visibility", "hidden");
 
   $(".click-on-images").show();
 });
