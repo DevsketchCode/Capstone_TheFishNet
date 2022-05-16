@@ -17,6 +17,7 @@ $(function() {
     const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const d = new Date();
     let currentDay = d.getDay();
+    let listedDay = "";
 
     // Subtracts the necessary days to loop if current day amount is more than 6
     if ((currentDay + increase) > 6) {
@@ -45,7 +46,13 @@ $(function() {
       }
     }
 
-    return day[(currentDay + increase)];
+    if (increase === 0) {
+      listedDay = "Today";
+    } else {
+      listedDay = day[(currentDay + increase)];
+    }
+
+    return listedDay;
   }
 
   function windDirection(degree) {
@@ -83,7 +90,7 @@ $(function() {
           <h2 class="city-name" data-name="${name}"><span>${name}</span></h2>
           <div class="city-temp">
             <h4>Temp: ${Math.round(main.temp)}<sup>°</sup>F</h4>
-            <h4>Feels Like: ${Math.round(main.feels_like)}<sup>°</sup>F</h4>
+            <h4 id="feels">Feels Like: ${Math.round(main.feels_like)}<sup>°</sup>F</h4>
           </div>
           <figure class="icon-weather">
             <img class="icon" src=${icon} alt=${weather[0].main}>
@@ -149,7 +156,7 @@ $(function() {
         .then(response => response.json())
         .then(data => {
           // Displays the API data in console
-          //console.log(data);
+          console.log(data);
 
           // Set the API response JSON objects to local object variables
           const {daily} = data;
