@@ -32,7 +32,7 @@
         </div><br>
 
         <div>
-            <form method="post" id="quadrant-form">
+            <form method="post" id="quadrant-form" onsubmit="return false;">
                 <div>
                     <label for="quadrant-selection" id="quadrant-label">
                         <strong>Select all or a specific state region to display lakes and rivers: </strong>
@@ -51,16 +51,18 @@
 
         <div id="weather-link" class="lakes-rivers-link-offset"></div>
         <div id="weather-search">
-            <h3>Search Weather by Zip Code</h3>
-            <form method="post">
+            <h3 id="search-zip-title">Search Weather by Zip Code</h3>
+            <form method="post" onsubmit="return false;">
                 <div id="input-zip">
-                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Five digit zip code" maxlength="5" placeholder="54703">
-                    <input type="submit" value="Submit" id="btn-submit"><br>
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="Five digit zip code" maxlength="5" value="54703">
+                    <input type="submit" value="Current Weather" id="btn-submit">
+                    <input type="submit" value="Daily Forecast" id="btn-submit-weekly" class="weekly"><br>
                 </div> 
             </form>
-            <div id="weather"></div>
+            <div id="weather"></div><br>
             <div id="refresh">
-                <form method="post">
+                <form method="post" onsubmit="return false;">
+                    <input type="submit" value="Daily Forecast" id="btn-weekly" class="weekly">
                     <input type="submit" value="Refresh" id="btn-refresh"><br>
                 </form>
             </div> 

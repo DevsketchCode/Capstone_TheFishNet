@@ -168,6 +168,10 @@ nav a:hover {
 /* End of styling for the Home Page
 CSS Styling for Lakes/Rivers page */
 
+#search-zip-title {
+  text-align: center;
+}
+
 .back-to-top {
   margin: 10px;
   text-align: center;
@@ -294,20 +298,42 @@ CSS Styling for Lakes/Rivers page */
 
 #weather {
   display: none;
-  height: fit-content;
-  width: fit-content;
+  width: auto;
+  flex-wrap: wrap;
   text-transform: capitalize;
   text-align: center;
   background-color: rgb(136 209 252);
   box-shadow: 0 4px 8px 0 rgba(0 0 0 / 20%);
   transition: 0.3s;
-  border: 1rem outset lightsteelblue;
+  border: 0.5rem outset lightsteelblue;
   border-radius: 5px;
-  list-style-type: none;
-  padding: 10px;
+}
+
+.city-name {
+  display: block;
+  text-align: center;
+}
+
+.current-weather-container,
+.weather-container {
+  display: none;
+  text-transform: capitalize;
+  text-align: center;
+  background-color: rgb(136 209 252);
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.current-weather-container {
+  width: 100%;
+}
+
+.weather-container {
+  width: fit-content;
 }
 
 #btn-refresh,
+#btn-weekly,
 .north,
 .south,
 .east,
@@ -323,14 +349,14 @@ CSS Styling for Lakes/Rivers page */
 }
 
 /* Add some padding inside the card container */
-.city-temp {
-  padding: 2px 16px;
-}
 
 .city-temp h4,
 .icon-weather h5 {
-  display: inline-block;
-  padding: 0 10px;
+  display: block;
+}
+
+.icon-weather {
+  margin: 0 5px;
 }
 
 .map-info {
@@ -347,6 +373,7 @@ CSS Styling for Lakes/Rivers page */
 }
 
 #btn-submit,
+.weekly,
 #btn-refresh,
 #zip,
 #quadrant-selection,
@@ -360,6 +387,7 @@ CSS Styling for Lakes/Rivers page */
 }
 
 #btn-submit:hover,
+.weekly:hover,
 #btn-refresh:hover,
 #zip:hover,
 #quadrant-selection:hover,
@@ -728,6 +756,23 @@ footer {
   }
 
   .video-text {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #weather {
+    border: 0.25rem outset lightsteelblue;
+    width: inherit;
+  }
+
+  .current-weather-container {
+    border: 0.5px solid white;
+    width: fit-content;
+  }
+
+  .weather-container {
+    border: 0.5px solid white;
     width: 100%;
   }
 }
