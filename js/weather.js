@@ -15,40 +15,27 @@ $(function() {
 
   function getDayName(increase) {
     const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const recycleDays = [-7, -6, -5, -4, -3, -2, -1];
     const d = new Date();
     let currentDay = d.getDay();
+    let dayCount = 0;
     let listedDay = "";
 
     // Subtracts the necessary days to loop if current day amount is more than 6
     if ((currentDay + increase) > 6) {
-      switch(currentDay){
-        case 0:
-          currentDay = -7;
-        break;
-        case 1:
-          currentDay = -6;
-          break;
-        case 2:
-          currentDay = -5;
-        break;
-        case 3:
-          currentDay = -4;
-        break;
-        case 4:
-          currentDay = -3;
-        break;
-        case 5:
-          currentDay = -2;
-        break;
-        case 6:
-          currentDay = -1;
-        break;
-      }
+      dayCount = recycleDays[currentDay];
     }
 
+    // Sets the name of the day
     if (increase === 0) {
       listedDay = "Today";
+
     } else {
+
+      if (dayCount < 0) {
+        currentDay = dayCount;
+      }
+
       listedDay = day[(currentDay + increase)];
     }
 
@@ -161,7 +148,7 @@ $(function() {
         .then(response => response.json())
         .then(data => {
           // Displays the API data in console
-          console.log(data);
+          //console.log(data);
 
           // Set the API response JSON objects to local object variables
           const {daily} = data;
