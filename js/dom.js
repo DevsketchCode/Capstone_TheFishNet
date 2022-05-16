@@ -224,7 +224,7 @@ $("#fish-search-button").click(function(){
 // Function cannot be called on page load due to API needed to be loaded
 // Function call comes on main.js
 function displayFish(){
-  for(let i = 0; i < 12; i++){
+  for(let i = 0; i < knownFishDetails.length; i++){
     // Create index for fish API
     let index = findFishData(knownFishDetails[i].common_name);
     
@@ -257,7 +257,7 @@ function displayFish(){
 
 // Create array to hold status variables for each separate image using the index
 let imageStatusVar = [];
-for(let i = 0; i < 12; i++){
+for(let i = 0; i < knownFishDetails.length; i++){
   // Set all variables to 1 because when the page loads all images are set to first image (unclicked)
   imageStatusVar[i] = 1;
 }
