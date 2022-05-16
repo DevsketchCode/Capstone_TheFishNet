@@ -257,14 +257,15 @@ function displayFish(){
     let fishListBody = document.querySelector("#fish-list-body");
     fishListBody.innerHTML += currentFishString;
   }
-
-  // Create array to hold status variables for each separate image using the index
-  let imageStatusVar = [];
-  for(let i = 0; i < knownFishDetails.length; i++){
-    // Set all variables to 1 because when the page loads all images are set to first image (unclicked)
-    imageStatusVar[i] = 1;
-  }
 }
+
+// Create array to hold status variables for each separate image using the index
+let imageStatusVar = [];
+for(let i = 0; i < knownFishDetails.length; i++){
+  // Set all variables to 1 because when the page loads all images are set to first image (unclicked)
+  imageStatusVar[i] = 1;
+}
+
 
 // Function to switch image
 function fadeImage(index, knownFishIndex){
