@@ -72,6 +72,9 @@ $(function() {
       // Sending the OpenWeather API URL through the Fetch API's fetch method
       const zipCode = $("#zip").val();
 
+      // Remove city-name h2 element if already displayed
+      $(".city-name").remove();
+
       fetch(getURL(zipCode))
       .then(response => response.json())
       .then(data => {
@@ -147,6 +150,8 @@ $(function() {
         const {coord, name} = data;
         const latitude = coord.lat;
         const longitude = coord.lon;
+        // Clear previous content if already set from current weather search
+        $("#weather").stop().hide("Fast").empty();
 
         // Set title
         const cityName = `<h2 class="city-name" data-name="${name}"><span>${name}</span></h2><br>`;
@@ -162,7 +167,7 @@ $(function() {
           const {daily} = data;
 
           // Clear previous content if already set from current weather search
-          $("#weather").empty();
+          //$("#weather").hide("Fast").empty();
 
           // Creates weather container displaying data from API for each day
           for (let i = 0; i < daily.length; i++) {
@@ -183,7 +188,7 @@ $(function() {
               <figure class="icon-weather">
                 <img class="icon" src=${icon} alt=${daily[i].weather[0].main}>
                 <figcaption><strong>${daily[i].weather[0].description}</strong></figcaption>
-                <h5>${daily[i].pop * 100}%</h5>
+                <h5>${Math.round(daily[i].pop * 100)}%</h5>
               </figure>
             </div>`;
             $("#weather").append(dailyData);
