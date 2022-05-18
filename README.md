@@ -24,3 +24,6 @@ Scientific names for the fish search engine are found from the OpenFisheries API
 
 ## Fish Search Engine
 This search engine on the Fish page searches through over 11,500 fish species that are gathered from the Fish API. The API primarily provides the scientific names for all of these fish. For fish local to Wisconsin, there is additional information merged into the API's data that will be shown in the search results. The additional information includes the fishes appearance, bait, lifespan, alternate names, images, and more.
+
+## Licensing
+The code for this website is released to the public domain under the [Creative Commons CC0 License](https://creativecommons.org/publicdomain/zero/1.0/).
