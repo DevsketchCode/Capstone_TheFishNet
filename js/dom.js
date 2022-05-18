@@ -27,18 +27,22 @@ function quadrantDisplay(quadrantSelection) {
   switch(quadrantSelection) {
     case 'north':
       $('.north').fadeIn('fast');
+      $('#rivers-list > h2').fadeIn('fast');
     break;
 
     case 'south':
       $('.south').fadeIn('fast');
+      $('#rivers-list > h2').fadeIn('fast');
     break;
 
     case 'east':
       $('.east').fadeIn('fast');
+      $('#rivers-list > h2').fadeOut('fast');
     break;
 
     case 'west':
       $('.west').fadeIn('fast');
+      $('#rivers-list > h2').fadeIn('fast');
     break;
 
     case 'all':
@@ -46,6 +50,7 @@ function quadrantDisplay(quadrantSelection) {
       $('.south').fadeIn('fast');
       $('.east').fadeIn('fast');
       $('.west').fadeIn('fast');
+      $('#rivers-list > h2').fadeIn('fast');
     break;
   }
 

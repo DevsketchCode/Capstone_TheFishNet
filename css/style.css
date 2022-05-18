@@ -367,6 +367,7 @@ CSS Styling for Lakes/Rivers page */
 .map-info {
   text-align: center;
   display: none;
+  width: 100%;
 }
 
 #quadrant-form {
@@ -611,7 +612,7 @@ footer {
 
 .video-list-content {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
 
 .video-container {
@@ -729,6 +730,11 @@ footer {
     padding: 0;
   }
 
+  .fish-search-inner-details ul li {
+    word-wrap: break-word;
+    width: 90%;
+  }
+
   .fish-search-inner-details h3 {
     text-align: center;
   }
@@ -772,6 +778,7 @@ footer {
   #weather {
     border: 0.25rem outset lightsteelblue;
     width: inherit;
+    margin: 0 auto;
   }
 
   .current-weather-container {
@@ -910,6 +917,10 @@ footer {
     padding: 0;
   }
 
+  .fish-search {
+    width: auto;
+  }
+
   #weather-search {
     padding: 0;
     text-align: center;
@@ -937,6 +948,7 @@ footer {
 
   .fish-list-data {
     width: 100%;
+    word-wrap: break-word;
   }
 
   .fish-image {
@@ -944,7 +956,7 @@ footer {
   }
 
   .site-card {
-    width: 85%;
+    width: auto;
   }
 
   .youtube-video {
@@ -955,5 +967,9 @@ footer {
   .handling-image {
     width: 80%;
     height: 80%;
+  }
+
+  #additional-resources {
+    word-wrap: break-word;
   }
 }
